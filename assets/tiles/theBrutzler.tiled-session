@@ -1,0 +1,76 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "theBrutzer.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "Tree_medium.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "background.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 127.99999999999999,
+                "y": 127.83333333333334
+            }
+        },
+        "screen.tmx": {
+            "scale": 6.036458333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 79.84814495254531,
+                "y": 48.786885245901644
+            }
+        },
+        "theBrutzer.tmx": {
+            "scale": 4.189236111111111,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 79.72813924575217,
+                "y": 105.15043514297555
+            }
+        },
+        "theBrutzler-tiles.tsx": {
+            "scaleInDock": 4,
+            "scaleInEditor": 8
+        },
+        "theBrutzler.tsx": {
+            "scaleInDock": 4,
+            "scaleInEditor": 23
+        }
+    },
+    "last.externalTilesetPath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
+    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
+    "map.height": 18,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 8,
+    "map.tileWidth": 8,
+    "map.width": 20,
+    "openFiles": [
+        "background.tmx",
+        "screen.tmx",
+        "Tree_medium.tsx",
+        "theBrutzer.tmx"
+    ],
+    "project": "theBrutzler.tiled-project",
+    "recentFiles": [
+        "background.tmx",
+        "screen.tmx",
+        "Tree_medium.tsx",
+        "theBrutzler-tiles.tsx",
+        "theBrutzer.tmx",
+        "theBrutzler.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    }
+}
