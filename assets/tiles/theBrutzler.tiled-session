@@ -32,8 +32,8 @@
             "scale": 4.189236111111111,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 79.72813924575217,
-                "y": 105.15043514297555
+                "x": 84.50227932034812,
+                "y": 80.56361375880647
             }
         },
         "theBrutzler-tiles.tsx": {
@@ -53,18 +53,16 @@
     "map.tileWidth": 8,
     "map.width": 20,
     "openFiles": [
-        "background.tmx",
-        "screen.tmx",
-        "Tree_medium.tsx",
-        "theBrutzer.tmx"
+        "theBrutzer.tmx",
+        "theBrutzler-tiles.tsx"
     ],
     "project": "theBrutzler.tiled-project",
     "recentFiles": [
+        "theBrutzler-tiles.tsx",
+        "theBrutzer.tmx",
         "background.tmx",
         "screen.tmx",
         "Tree_medium.tsx",
-        "theBrutzler-tiles.tsx",
-        "theBrutzer.tmx",
         "theBrutzler.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)",
