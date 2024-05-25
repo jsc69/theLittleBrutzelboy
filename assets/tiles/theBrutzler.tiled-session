@@ -20,6 +20,22 @@
                 "y": 127.83333333333334
             }
         },
+        "bom.tmx": {
+            "scale": 5.699999999999999,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 79.38596491228071,
+                "y": 71.8421052631579
+            }
+        },
+        "jsc69-logo.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 69.375,
+                "y": 95.875
+            }
+        },
         "screen.tmx": {
             "scale": 6.036458333333333,
             "selectedLayer": 0,
@@ -29,11 +45,11 @@
             }
         },
         "theBrutzer.tmx": {
-            "scale": 4.189236111111111,
-            "selectedLayer": 0,
+            "scale": 5.5,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 84.50227932034812,
-                "y": 80.56361375880647
+                "x": 78.36363636363637,
+                "y": 80.45454545454547
             }
         },
         "theBrutzler-tiles.tsx": {
