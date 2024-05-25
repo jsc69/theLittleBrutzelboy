@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "theBrutzer.tmx",
+    "activeFile": "title.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -24,17 +24,28 @@
             "scale": 5.699999999999999,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.38596491228071,
+                "x": 64.2105263157895,
                 "y": 71.8421052631579
             }
+        },
+        "gbs-mono.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 8
+        },
+        "gbs-var.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 8
         },
         "jsc69-logo.tmx": {
             "scale": 4,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 69.375,
-                "y": 95.875
+                "x": 47.5,
+                "y": 95.375
             }
+        },
+        "jsc69-logo.tmx#theBrutzler-tiles": {
+            "scaleInDock": 1
         },
         "screen.tmx": {
             "scale": 6.036458333333333,
@@ -48,8 +59,8 @@
             "scale": 5.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 78.36363636363637,
-                "y": 80.45454545454547
+                "x": 64,
+                "y": 79.90909090909092
             }
         },
         "theBrutzler-tiles.tsx": {
@@ -59,10 +70,18 @@
         "theBrutzler.tsx": {
             "scaleInDock": 4,
             "scaleInEditor": 23
+        },
+        "title.tmx": {
+            "scale": 5.569375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 66.61429693637078,
+                "y": 72.09067444731232
+            }
         }
     },
     "last.externalTilesetPath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
-    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
+    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzlerBoy/assets/fonts",
     "map.height": 18,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 8,
@@ -70,12 +89,21 @@
     "map.width": 20,
     "openFiles": [
         "theBrutzer.tmx",
-        "theBrutzler-tiles.tsx"
+        "jsc69-logo.tmx",
+        "bom.tmx",
+        "title.tmx",
+        "gbs-mono.tsx",
+        "gbs-var.tsx"
     ],
     "project": "theBrutzler.tiled-project",
     "recentFiles": [
-        "theBrutzler-tiles.tsx",
         "theBrutzer.tmx",
+        "jsc69-logo.tmx",
+        "bom.tmx",
+        "gbs-var.tsx",
+        "gbs-mono.tsx",
+        "title.tmx",
+        "theBrutzler-tiles.tsx",
         "background.tmx",
         "screen.tmx",
         "Tree_medium.tsx",
