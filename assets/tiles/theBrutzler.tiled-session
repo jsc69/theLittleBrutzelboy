@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "title.tmx",
+    "activeFile": "pcb.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -24,28 +24,44 @@
             "scale": 5.699999999999999,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.82456140350878,
-                "y": 71.8421052631579
+                "x": 79.56140350877193,
+                "y": 71.49122807017545
+            }
+        },
+        "box.tmx": {
+            "scale": 5.4921875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 80.02275960170697,
+                "y": 72.01137980085349
             }
         },
         "gbs-mono.tsx": {
             "scaleInDock": 3,
-            "scaleInEditor": 8
+            "scaleInEditor": 4
         },
         "gbs-var.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 8
+            "scaleInEditor": 4
         },
         "jsc69-logo.tmx": {
             "scale": 4,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 80,
-                "y": 71.875
+                "x": 79.375,
+                "y": 71.125
             }
         },
         "jsc69-logo.tmx#theBrutzler-tiles": {
             "scaleInDock": 1
+        },
+        "pcb.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 79.36363636363637,
+                "y": 79.90909090909092
+            }
         },
         "screen.tmx": {
             "scale": 6.036458333333333,
@@ -55,11 +71,23 @@
                 "y": 48.786885245901644
             }
         },
+        "storage.tmx": {
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 123.5,
+                "y": 132.16666666666669
+            }
+        },
+        "tb-logo.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
         "theBrutzer.tmx": {
             "scale": 5.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.63636363636364,
+                "x": 79.36363636363637,
                 "y": 79.90909090909092
             }
         },
@@ -72,42 +100,46 @@
             "scaleInEditor": 23
         },
         "title.tmx": {
-            "scale": 5.569375,
+            "scale": 5.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 78.28526540231175,
-                "y": 72.09067444731232
+                "x": 84.09090909090908,
+                "y": 93
             }
         }
     },
     "last.externalTilesetPath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
-    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzlerBoy/assets/fonts",
+    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/tmp",
+    "last.worldFilePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
+    "loadedWorlds": [
+        "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles/storage.world"
+    ],
     "map.height": 18,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 8,
     "map.tileWidth": 8,
     "map.width": 20,
     "openFiles": [
-        "theBrutzer.tmx",
-        "jsc69-logo.tmx",
-        "bom.tmx",
         "title.tmx",
-        "gbs-mono.tsx",
-        "gbs-var.tsx"
+        "theBrutzler-tiles.tsx",
+        "jsc69-logo.tmx",
+        "storage.tmx",
+        "pcb.tmx"
     ],
     "project": "theBrutzler.tiled-project",
     "recentFiles": [
-        "theBrutzer.tmx",
-        "jsc69-logo.tmx",
-        "bom.tmx",
-        "gbs-var.tsx",
-        "gbs-mono.tsx",
         "title.tmx",
         "theBrutzler-tiles.tsx",
-        "background.tmx",
-        "screen.tmx",
-        "Tree_medium.tsx",
-        "theBrutzler.tsx"
+        "jsc69-logo.tmx",
+        "storage.tmx",
+        "pcb.tmx",
+        "box.tmx",
+        "bom.tmx",
+        "theBrutzer.tmx",
+        "theBrutzler.tsx",
+        "tb-logo.tsx",
+        "gbs-var.tsx",
+        "gbs-mono.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
