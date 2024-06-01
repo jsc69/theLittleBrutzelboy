@@ -57,10 +57,10 @@
         },
         "pcb.tmx": {
             "scale": 5.5,
-            "selectedLayer": 2,
+            "selectedLayer": 3,
             "viewCenter": {
-                "x": 76.36363636363637,
-                "y": 101.72727272727273
+                "x": 76.18181818181817,
+                "y": 101.54545454545453
             }
         },
         "screen.tmx": {
@@ -100,6 +100,7 @@
             "scaleInEditor": 23
         },
         "tileset.tsx": {
+            "scaleInDock": 4,
             "scaleInEditor": 8
         },
         "title.tmx": {
@@ -131,12 +132,12 @@
     ],
     "project": "theBrutzler.tiled-project",
     "recentFiles": [
-        "tileset.tsx",
         "title.tmx",
         "theBrutzler-tiles.tsx",
         "jsc69-logo.tmx",
         "storage.tmx",
         "pcb.tmx",
+        "tileset.tsx",
         "box.tmx",
         "bom.tmx",
         "theBrutzer.tmx",
