@@ -48,8 +48,8 @@
             "scale": 4,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 79.375,
-                "y": 71.125
+                "x": 79.125,
+                "y": 70.875
             }
         },
         "jsc69-logo.tmx#theBrutzler-tiles": {
@@ -59,8 +59,8 @@
             "scale": 5.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 79.36363636363637,
-                "y": 79.90909090909092
+                "x": 76.36363636363637,
+                "y": 101.72727272727273
             }
         },
         "screen.tmx": {
@@ -75,7 +75,7 @@
             "scale": 3,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 123.5,
+                "x": 123.16666666666664,
                 "y": 132.16666666666669
             }
         },
@@ -99,17 +99,20 @@
             "scaleInDock": 4,
             "scaleInEditor": 23
         },
+        "tileset.tsx": {
+            "scaleInEditor": 8
+        },
         "title.tmx": {
             "scale": 5.5,
-            "selectedLayer": 1,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 84.09090909090908,
-                "y": 93
+                "x": 80.54545454545456,
+                "y": 92.45454545454547
             }
         }
     },
     "last.externalTilesetPath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
-    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/tmp",
+    "last.imagePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/backgrounds",
     "last.worldFilePath": "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles",
     "loadedWorlds": [
         "/home/jsc69/Dokumente/projekte/gb-studio/theBrutzler/assets/tiles/storage.world"
@@ -128,6 +131,7 @@
     ],
     "project": "theBrutzler.tiled-project",
     "recentFiles": [
+        "tileset.tsx",
         "title.tmx",
         "theBrutzler-tiles.tsx",
         "jsc69-logo.tmx",
@@ -138,8 +142,7 @@
         "theBrutzer.tmx",
         "theBrutzler.tsx",
         "tb-logo.tsx",
-        "gbs-var.tsx",
-        "gbs-mono.tsx"
+        "gbs-var.tsx"
     ],
     "tileset.lastUsedFilter": "Tiled-Kachelsatzdateien (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx",
