@@ -1,0 +1,77 @@
+Description on variables
+========================
+
+TutorialsFlags:
+1. solder
+2. bom
+3. storage
+4. box
+5. part taken
+
+Places:
+R3 = 1 (331)
+C1 = 2 (10uF)
+R1 = 3 (473)
+R2 = 4 (563)
+D1 = 5 (LED)
+C2 = 6 (10nF)
+U1 = 7 (NE555)
+
+Components:
+-Resistors
+00 = 151 - 150
+01 = 153 - 15k
+02 = 155 - 1500k
+03 = 361 - 360
+04 = 363 - 36k
+05 = 365 - 3600k
+06 = 561 - 560
+*07 = 563 - 56k
+08 = 565 - 5600k
+09 = 271 - 270
+10 = 272 -2,7k
+11 = 273 - 27k
+*12 = 331 - 330
+13 = 332 - 3,3k
+14 = 333 - 33k
+15 = 471 - 470
+16 = 472 - 4,7k
+*17 = 473 - 47k
+- Capacitors
+18 = 10pF
+19 = 47pF
+20 = 56pF
+21 = 100pF
+22 = 2,2nF
+*23 = 10nF
+24 = 47nF
+25 = 56nF
+26 = 220nF
+*27 = 10uF
+28 = 22uF
+29 = 47uF
+30 = 56uF
+31 = 100uF
+32 = 470uF
+- Diodes
+33 = 1N4007
+34 = 1N4001
+35 = 1N4004
+- ICs
+36 = MC34063A
+37 = ATTINY13A
+*38 = NE555
+- extra
+*39 = LED
+
+Orientation:
+0 = horizontal
+1 = vertical
+
+Footprint:
+0 = SND 2 pin
+1 = SMD 3 pin
+2 = THT 2 pin
+3 = THT 3 pin
+8 = IC SMD 8 pin
+
