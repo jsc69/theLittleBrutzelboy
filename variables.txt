@@ -2,7 +2,7 @@ Description on variables
 ========================
 
 TutorialsFlags:
-1. solder
+1. pcb
 2. bom
 3. storage
 4. box
