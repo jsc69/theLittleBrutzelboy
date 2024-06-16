@@ -833,7 +833,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Es sind noch nicht\nalles verlötet."
+                                                "Es ist noch nicht\nalles verlötet."
                                             ],
                                             "avatarId": "",
                                             "__collapse": true
@@ -19055,7 +19055,7 @@
                             "type": "number",
                             "value": 0
                         },
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "49a6dedb-8d17-4626-bcf6-8283c1f0a59e"
                 },
@@ -26702,6 +26702,11 @@
             "symbol": "var_partu1_7"
         },
         {
+            "id": "75",
+            "name": "soldered",
+            "symbol": "var_soldered"
+        },
+        {
             "id": "94361a6f-a1f8-48ac-9be2-3e7ffcb8a484__L0",
             "name": "Menu Choise",
             "symbol": "var_menu_choise"
@@ -26810,11 +26815,6 @@
             "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L0",
             "name": "blink",
             "symbol": "var_blink"
-        },
-        {
-            "id": "75",
-            "name": "soldered",
-            "symbol": "var_soldered"
         }
     ],
     "engineFieldValues": [
@@ -26838,9 +26838,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 111,
+        "worldScrollX": 232,
+        "worldScrollY": 362,
+        "zoom": 164,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
