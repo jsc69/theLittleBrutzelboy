@@ -602,12 +602,43 @@
                             "id": "9ba65282-b662-4f4c-b110-a34667061b2e"
                         },
                         {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "75",
+                                "operator": "==",
+                                "comparator": 127,
+                                "__collapseElse": true,
+                                "__collapse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Ist doch schon\nalles gelötet."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "0b095db1-6863-40a6-aad7-eba4a502ce86"
+                                    },
+                                    {
+                                        "command": "EVENT_STOP",
+                                        "args": {},
+                                        "id": "bf54491c-f938-4dd8-a915-e370e3c517ef"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d9de8831-c614-4545-8d89-a22433ef0880"
+                        },
+                        {
                             "command": "EVENT_IF_EXPRESSION",
                             "args": {
                                 "expression": "$67$== 255 \n|| $68$ == 255 \n|| $69$ == 255 \n|| $70$ == 255 \n|| $71$ == 255 \n|| $72$ == 255\n|| $73$ == 255",
                                 "__collapseElse": true,
                                 "__collapse": true,
-                                "__comment": true
+                                "__comment": false
                             },
                             "children": {
                                 "true": [
@@ -639,9 +670,34 @@
                                     "Aber auf wunder-\nsameweise wird \nalles gelötet...",
                                     "...und dir dadurch\nder komplette Spaß\ngenommen."
                                 ],
-                                "avatarId": ""
+                                "avatarId": "",
+                                "__collapse": true
                             },
                             "id": "79e3260b-2aa7-4202-9a8b-2235e581734e"
+                        },
+                        {
+                            "command": "EVENT_ADD_FLAGS",
+                            "args": {
+                                "variable": "75",
+                                "flag1": true,
+                                "flag2": true,
+                                "flag3": true,
+                                "flag4": true,
+                                "flag5": true,
+                                "flag6": true,
+                                "flag7": true,
+                                "flag8": false,
+                                "flag9": false,
+                                "flag10": false,
+                                "flag11": false,
+                                "flag12": false,
+                                "flag13": false,
+                                "flag14": false,
+                                "flag15": false,
+                                "flag16": false,
+                                "__collapse": true
+                            },
+                            "id": "8d7a3687-bda7-4bbd-b9a2-1a1b54a4afc0"
                         },
                         {
                             "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -2501,7 +2557,7 @@
                         },
                         "y": {
                             "type": "number",
-                            "value": 24
+                            "value": 32
                         },
                         "units": "pixels",
                         "__collapse": true
@@ -2518,10 +2574,10 @@
                         },
                         "y": {
                             "type": "number",
-                            "value": 40
+                            "value": 48
                         },
                         "units": "pixels",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "0a52d4aa-18e3-4af1-8c95-6f3f5d18d0b4"
                 },
@@ -23515,42 +23571,21 @@
         {
             "id": "479123f7-748c-4960-a9a9-335a1d24b9ec",
             "name": "solderR3",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
+            "description": "Paint footprint of R3 soldered or not",
+            "variables": {},
             "actors": {},
             "symbol": "script_16",
             "script": [
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 0,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 39
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "63d4ce22-be97-4004-be9d-30ae029375e3"
-                            }
-                        ],
-                        "false": [
                             {
                                 "command": "EVENT_SET_VALUE",
                                 "args": {
@@ -23563,429 +23598,8 @@
                                 },
                                 "id": "2747ee26-ebb0-499c-ad98-c6370dd65ce6"
                             }
-                        ]
-                    },
-                    "id": "894f7f18-97c2-494c-b546-c2ec93307cc6"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 3, 5, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "7d7bcb02-fbc5-45a9-b9dc-45dc2ccc3bb6"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 49
-                                    }
-                                },
-                                "id": "a546bb94-cfa7-4afc-b6ad-0b048ec8a232"
-                            }
                         ],
                         "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 78
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "8a699225-b306-4071-93f7-ae6546c9e16e"
-                            }
-                        ]
-                    },
-                    "id": "b56a155a-ddb8-41d7-bf42-40b482c8521a"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 3, 8, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "b91fad19-3455-40ea-ae3d-5751e9dd4182"
-                }
-            ]
-        },
-        {
-            "id": "4ba704ac-1d73-430c-b851-1476e2a34f42",
-            "name": "solderC2",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
-            "actors": {},
-            "symbol": "script_17",
-            "script": [
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 21
-                                    }
-                                },
-                                "id": "f4f414e6-248f-4e8f-af04-362e01932749"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 20
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "5d7d0794-6bad-4165-b652-b40831f43e57"
-                            }
-                        ]
-                    },
-                    "id": "f16126bd-5c3b-4d50-bda7-b4b4c35ab916"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 13, 10, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "dec9227c-beaf-4063-a341-669e2b55df28"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 24
-                                    }
-                                },
-                                "id": "01f63293-806e-4720-87f0-a9f25441816c"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 25
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "7581fe5a-52f4-4cce-9005-5f71f3b704b0"
-                            }
-                        ]
-                    },
-                    "id": "70a6c09f-7db9-4ceb-b263-bb7ed01220a8"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 16, 10, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "fcf380cd-5fd8-48aa-ba6d-d3af6db5e040"
-                }
-            ]
-        },
-        {
-            "id": "015a4c12-1c1d-496b-b1ef-f69308a82866",
-            "name": "solderU1",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
-            "actors": {},
-            "symbol": "script_18",
-            "script": [
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 43
-                                    }
-                                },
-                                "id": "4d2b50da-4080-46be-b077-9a46e3f0d584"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 44
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "fccf6c0c-42dd-4f65-806e-2a335cfdc6e6"
-                            }
-                        ]
-                    },
-                    "id": "bd924894-a934-443e-b116-3a12354cf8eb"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 8, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "6c273500-9374-4916-a7a1-32b058c492f5"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 24
-                                    }
-                                },
-                                "id": "f05cffde-3e10-4f85-8368-387a0881e2ae"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 60
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "bb94230c-0880-4bf4-bc06-80209d3100ff"
-                            }
-                        ]
-                    },
-                    "id": "e86aea11-5a9c-479e-b04c-268f79cfadb2"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 12, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "a3769b54-aee9-423d-8c68-5a0b020bea7d"
-                }
-            ]
-        },
-        {
-            "id": "77386164-ffc6-4ff9-b741-0b35464f2fdc",
-            "name": "solderD1",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
-            "actors": {},
-            "symbol": "script_19",
-            "script": [
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 26
-                                    }
-                                },
-                                "id": "c702e8e6-10be-49b9-b08b-505d05a594c1"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 27
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "41b6a6e6-f7a1-4a16-af01-463d6612bf6b"
-                            }
-                        ]
-                    },
-                    "id": "a2a40441-8986-414c-880e-38132dfbb009"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 5, 9, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "3f90abb1-152f-43db-bb05-1ba9d2b3a827"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 33
-                                    }
-                                },
-                                "id": "8c839f0f-ccca-40f0-b41b-2915b4a8e8d7"
-                            }
-                        ],
-                        "false": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 32
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "71301955-d573-4d91-bb30-21b54cbc8623"
-                            }
-                        ]
-                    },
-                    "id": "4bd99d66-5f59-4b10-bca7-0d8ea23d6de6"
-                },
-                {
-                    "command": "EVENT_GBVM_SCRIPT",
-                    "args": {
-                        "script": "VM_REPLACE_TILE_XY 7, 9, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
-                    },
-                    "id": "2b7f5c0d-661c-4b38-a9b0-267d1f1a5ffe"
-                }
-            ]
-        },
-        {
-            "id": "a2b954d9-566c-4e64-8875-7dea8527cfc8",
-            "name": "solderC1",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
-            "actors": {},
-            "symbol": "script_20",
-            "script": [
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": false,
-                        "__collapse": false
-                    },
-                    "children": {
-                        "true": [
                             {
                                 "command": "EVENT_SET_VALUE",
                                 "args": {
@@ -23996,10 +23610,406 @@
                                     },
                                     "__collapse": true
                                 },
-                                "id": "1c0cfd4f-36f9-43ee-809a-47c749bd64a3"
+                                "id": "63d4ce22-be97-4004-be9d-30ae029375e3"
+                            }
+                        ]
+                    },
+                    "id": "600747ac-8f34-4df9-9a23-b7bf6b85863e"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 3, 5, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "7d7bcb02-fbc5-45a9-b9dc-45dc2ccc3bb6"
+                },
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 0,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 78
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "8a699225-b306-4071-93f7-ae6546c9e16e"
                             }
                         ],
                         "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 49
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "a546bb94-cfa7-4afc-b6ad-0b048ec8a232"
+                            }
+                        ]
+                    },
+                    "id": "22e123b5-a549-4f35-90a3-793a52679456"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 3, 8, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "b91fad19-3455-40ea-ae3d-5751e9dd4182"
+                }
+            ]
+        },
+        {
+            "id": "4ba704ac-1d73-430c-b851-1476e2a34f42",
+            "name": "solderC2",
+            "description": "Paint footprint of C2 soldered or not",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_17",
+            "script": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 5,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 20
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "5d7d0794-6bad-4165-b652-b40831f43e57"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 21
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "f4f414e6-248f-4e8f-af04-362e01932749"
+                            }
+                        ]
+                    },
+                    "id": "2d1ced2a-0c90-4258-8e0a-e10dca48405a"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 13, 10, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "dec9227c-beaf-4063-a341-669e2b55df28"
+                },
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 5,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 25
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "7581fe5a-52f4-4cce-9005-5f71f3b704b0"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 24
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "01f63293-806e-4720-87f0-a9f25441816c"
+                            }
+                        ]
+                    },
+                    "id": "b4cb4468-3195-4ef9-a547-084a26dac37e"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 16, 10, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "fcf380cd-5fd8-48aa-ba6d-d3af6db5e040"
+                }
+            ]
+        },
+        {
+            "id": "015a4c12-1c1d-496b-b1ef-f69308a82866",
+            "name": "solderU1",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_18",
+            "script": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 6,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 44
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "fccf6c0c-42dd-4f65-806e-2a335cfdc6e6"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 43
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "4d2b50da-4080-46be-b077-9a46e3f0d584"
+                            }
+                        ]
+                    },
+                    "id": "acb6f3c6-9787-417f-bd2f-3c33a96427a6"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 8, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "6c273500-9374-4916-a7a1-32b058c492f5"
+                },
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 6,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 60
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "bb94230c-0880-4bf4-bc06-80209d3100ff"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 24
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "f05cffde-3e10-4f85-8368-387a0881e2ae"
+                            }
+                        ]
+                    },
+                    "id": "465edb66-08ad-4041-98ec-da049fc2ee7b"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 12, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "a3769b54-aee9-423d-8c68-5a0b020bea7d"
+                }
+            ]
+        },
+        {
+            "id": "77386164-ffc6-4ff9-b741-0b35464f2fdc",
+            "name": "solderD1",
+            "description": "Paint footprint of D1 soldered or not",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_19",
+            "script": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 4,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 27
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "41b6a6e6-f7a1-4a16-af01-463d6612bf6b"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 26
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "c702e8e6-10be-49b9-b08b-505d05a594c1"
+                            }
+                        ]
+                    },
+                    "id": "3a0d6d52-1174-4cd1-afba-21e02bcc34ac"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 5, 9, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "3f90abb1-152f-43db-bb05-1ba9d2b3a827"
+                },
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 4,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 32
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "71301955-d573-4d91-bb30-21b54cbc8623"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 33
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "8c839f0f-ccca-40f0-b41b-2915b4a8e8d7"
+                            }
+                        ]
+                    },
+                    "id": "01472aab-7da2-409e-937b-773cf6eb2dc2"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_REPLACE_TILE_XY 7, 9, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
+                        "__collapse": true
+                    },
+                    "id": "2b7f5c0d-661c-4b38-a9b0-267d1f1a5ffe"
+                }
+            ]
+        },
+        {
+            "id": "a2b954d9-566c-4e64-8875-7dea8527cfc8",
+            "name": "solderC1",
+            "description": "Paint footprint of C1 soldered or not",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_20",
+            "script": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "75",
+                        "flag": 1,
+                        "__collapseElse": false,
+                        "__collapse": true
+                    },
+                    "children": {
+                        "true": [
                             {
                                 "command": "EVENT_SET_VALUE",
                                 "args": {
@@ -24012,24 +24022,37 @@
                                 },
                                 "id": "3f7caf71-5372-4c96-8b04-88873e0c54b6"
                             }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 39
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "1c0cfd4f-36f9-43ee-809a-47c749bd64a3"
+                            }
                         ]
                     },
-                    "id": "13fa945b-1299-4a52-aee5-e6294154f1be"
+                    "id": "2d58fe5c-6c1a-470e-9685-38d24ce0cda8"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 6, 4, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "661d6981-0f02-4754-847b-533d4c8582bb"
                 },
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 1,
                         "__collapseElse": false,
                         "__collapse": true
                     },
@@ -24041,10 +24064,11 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 49
-                                    }
+                                        "value": 78
+                                    },
+                                    "__collapse": true
                                 },
-                                "id": "d8d74361-3fc1-4489-b02c-f437c7eb0bf4"
+                                "id": "6e73aae4-f9ec-498a-9dee-b0a84137b1da"
                             }
                         ],
                         "false": [
@@ -24054,21 +24078,21 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 78
+                                        "value": 49
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
-                                "id": "6e73aae4-f9ec-498a-9dee-b0a84137b1da"
+                                "id": "d8d74361-3fc1-4489-b02c-f437c7eb0bf4"
                             }
                         ]
                     },
-                    "id": "4eea572a-0352-4661-9f30-7b3baa61c558"
+                    "id": "7cc5dc5b-7bbe-4294-9a2b-4ba3d4e3c9f8"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 6, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "e1e925b1-a5ff-4486-a5e1-0130370994d1"
                 }
@@ -24077,42 +24101,21 @@
         {
             "id": "11cbb8dd-6f93-412d-a178-6d5175ab74b5",
             "name": "solderR1",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
+            "description": "Paint footprint of R1 soldered or not",
+            "variables": {},
             "actors": {},
             "symbol": "script_21",
             "script": [
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 2,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 39
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "9ad963ba-9132-4ced-91d8-1448f11826c3"
-                            }
-                        ],
-                        "false": [
                             {
                                 "command": "EVENT_SET_VALUE",
                                 "args": {
@@ -24125,24 +24128,37 @@
                                 },
                                 "id": "9fc22d5d-66ca-41ba-a242-4f324f2e7eb5"
                             }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 39
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "9ad963ba-9132-4ced-91d8-1448f11826c3"
+                            }
                         ]
                     },
-                    "id": "2a83b69f-98cf-497a-af7d-298b70ea9072"
+                    "id": "541f210f-334b-4697-9573-7a9e1fafd22b"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 15, 4, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "d4365baa-ad37-4370-8d9c-1cd429a9cf1a"
                 },
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 2,
                         "__collapseElse": false,
                         "__collapse": true
                     },
@@ -24154,10 +24170,11 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 49
-                                    }
+                                        "value": 78
+                                    },
+                                    "__collapse": true
                                 },
-                                "id": "dcd4cac7-0961-4c8d-87b1-4398e18ca058"
+                                "id": "ed07bf05-fcbe-4f53-b4aa-9b690c009a77"
                             }
                         ],
                         "false": [
@@ -24167,21 +24184,21 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 78
+                                        "value": 49
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
-                                "id": "ed07bf05-fcbe-4f53-b4aa-9b690c009a77"
+                                "id": "dcd4cac7-0961-4c8d-87b1-4398e18ca058"
                             }
                         ]
                     },
-                    "id": "522e45f8-9702-4b66-831e-0863e1996d6e"
+                    "id": "df2e7bfc-e858-4ace-8f6c-e164145d0b14"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 15, 7, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "251dd640-71c8-46e8-9a8b-a7236f0cf3c8"
                 }
@@ -24190,42 +24207,21 @@
         {
             "id": "ccb5c6b9-253f-4b83-b312-105528c98ff3",
             "name": "solderR2",
-            "description": "",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "soldered",
-                    "passByReference": true
-                }
-            },
+            "description": "Paint footprint of R2 soldered or not",
+            "variables": {},
             "actors": {},
             "symbol": "script_22",
             "script": [
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 3,
                         "__collapseElse": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 39
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "d35e601c-549b-4e71-95ff-2e4e8efbd395"
-                            }
-                        ],
-                        "false": [
                             {
                                 "command": "EVENT_SET_VALUE",
                                 "args": {
@@ -24238,24 +24234,37 @@
                                 },
                                 "id": "179a76a0-553e-4402-84d2-035e814246ce"
                             }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "12",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 39
+                                    },
+                                    "__collapse": true
+                                },
+                                "id": "d35e601c-549b-4e71-95ff-2e4e8efbd395"
+                            }
                         ]
                     },
-                    "id": "1388187d-4c9b-4d7d-b9aa-9e8412b9720e"
+                    "id": "7b7a9ced-6585-4353-9503-f93740be1cf8"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 17, 5, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "a01c54e0-5038-47c7-9101-6eb41111219c"
                 },
                 {
-                    "command": "EVENT_IF_VALUE",
+                    "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
-                        "operator": "==",
-                        "comparator": "0",
+                        "variable": "75",
+                        "flag": 3,
                         "__collapseElse": false,
                         "__collapse": true
                     },
@@ -24267,10 +24276,11 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 49
-                                    }
+                                        "value": 78
+                                    },
+                                    "__collapse": true
                                 },
-                                "id": "66953b67-f20c-4936-80e3-7981c7ed59d3"
+                                "id": "5aa4b801-0f91-4734-8e25-bc70035addcc"
                             }
                         ],
                         "false": [
@@ -24280,21 +24290,21 @@
                                     "variable": "12",
                                     "value": {
                                         "type": "number",
-                                        "value": 78
+                                        "value": 49
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
-                                "id": "5aa4b801-0f91-4734-8e25-bc70035addcc"
+                                "id": "66953b67-f20c-4936-80e3-7981c7ed59d3"
                             }
                         ]
                     },
-                    "id": "3dd6dc8b-0a01-4989-bd0a-f5f9660938ee"
+                    "id": "2c7e08dc-5322-459f-a4aa-f301f0cd9d9e"
                 },
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 17, 8, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "9ba4568e-d035-420c-b175-bdd4f6b37165"
                 }
@@ -26173,7 +26183,7 @@
             "symbol": "sound_boom_wav",
             "filename": "boom.wav",
             "type": "wav",
-            "inode": "9993352",
+            "inode": "266616",
             "_v": 1718400249513
         },
         {
@@ -26182,7 +26192,7 @@
             "symbol": "sound_thebrutzler_short_wav",
             "filename": "theBrutzler-short.wav",
             "type": "wav",
-            "inode": "9993143",
+            "inode": "266851",
             "_v": 1716757729283
         },
         {
@@ -26191,7 +26201,7 @@
             "symbol": "sound_yay_wav",
             "filename": "yay.wav",
             "type": "wav",
-            "inode": "9993349",
+            "inode": "267055",
             "_v": 1718399640538
         }
     ],
@@ -26773,6 +26783,11 @@
             "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L0",
             "name": "blink",
             "symbol": "var_blink"
+        },
+        {
+            "id": "75",
+            "name": "soldered",
+            "symbol": "var_soldered"
         }
     ],
     "engineFieldValues": [
@@ -26796,9 +26811,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 564,
-        "worldScrollY": 429,
-        "zoom": 270,
+        "worldScrollX": 0,
+        "worldScrollY": 53,
+        "zoom": 111,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -26826,9 +26841,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            665,
-            87
+            148,
+            459,
+            85
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
