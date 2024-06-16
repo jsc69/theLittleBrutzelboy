@@ -424,6 +424,20 @@
                     "id": "4735569e-ee71-4367-bedf-5305dc6216e8"
                 },
                 {
+                    "command": "EVENT_SOUND_PLAY_EFFECT",
+                    "args": {
+                        "type": "885eb683-49e2-4592-a969-a7ecfcd279b1",
+                        "priority": "medium",
+                        "pitch": 4,
+                        "frequency": 200,
+                        "duration": 0.5,
+                        "wait": true,
+                        "effect": 0,
+                        "__collapse": true
+                    },
+                    "id": "f0e8f0d6-20b2-48a5-906d-f79c723c9e57"
+                },
+                {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
                         "sceneId": "25297fd8-b51e-4ae6-a782-8687ff31e928",
@@ -799,18 +813,19 @@
                             "command": "EVENT_ACTOR_EMOTE",
                             "args": {
                                 "actorId": "$self$",
-                                "emoteId": "70a4ce25-1fe4-4ab1-aee9-21255e70fb76"
+                                "emoteId": "70a4ce25-1fe4-4ab1-aee9-21255e70fb76",
+                                "__collapse": true
                             },
                             "id": "90d71de2-9125-44d9-9a01-26f566720fe9"
                         },
                         {
-                            "command": "EVENT_IF_EXPRESSION",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "expression": "$67$== 255 \n|| $68$ == 255 \n|| $69$ == 255 \n|| $70$ == 255 \n|| $71$ == 255 \n|| $72$ == 255\n|| $73$ == 255",
+                                "variable": "75",
+                                "operator": "!=",
+                                "comparator": 127,
                                 "__collapseElse": true,
-                                "__collapse": true,
-                                "__disableElse": true,
-                                "__comment": false
+                                "__collapse": true
                             },
                             "children": {
                                 "true": [
@@ -818,21 +833,24 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Es sind noch nicht\nalle Teile auf der\nPlatine."
+                                                "Es sind noch nicht\nalles verlötet."
                                             ],
-                                            "avatarId": ""
+                                            "avatarId": "",
+                                            "__collapse": true
                                         },
                                         "id": "1b23617d-e6b8-4a04-8c2d-8d5eb67825d7"
                                     },
                                     {
                                         "command": "EVENT_STOP",
-                                        "args": {},
+                                        "args": {
+                                            "__collapse": true
+                                        },
                                         "id": "675bcb63-0e47-4432-8126-d9028eaf96b1"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "ae6ec645-e8f9-4e87-a4ac-cd6713e99c52"
+                            "id": "1a890d0d-4eed-4c98-9b37-9deac543995a"
                         },
                         {
                             "command": "EVENT_IF_EXPRESSION",
@@ -1155,7 +1173,7 @@
                                 "y": 0,
                                 "direction": "",
                                 "fadeSpeed": "2",
-                                "__collapse": false
+                                "__collapse": true
                             },
                             "id": "98635d3b-0fbd-488a-8ce1-a85768dad6bd"
                         }
@@ -2129,7 +2147,7 @@
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "77bb5c9a-ebf0-46b4-8aa5-b50c04f9210c",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": false
                     },
                     "id": "a59459f8-1e13-483d-90ad-e56c7b347afa"
@@ -16792,7 +16810,7 @@
                             "type": "variable",
                             "value": "5"
                         },
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "8bf03595-f220-4c65-973f-771192d7704e"
                 },
@@ -16800,7 +16818,7 @@
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 6, 5, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "5fdb39a2-1703-4de1-bb47-b69867cd8c23"
                 },
@@ -16812,7 +16830,7 @@
                             "type": "variable",
                             "value": "6"
                         },
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "9539744c-5c21-4315-90b3-23eb360cc9db"
                 },
@@ -16820,7 +16838,7 @@
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
                         "script": "VM_REPLACE_TILE_XY 6, 6, ___bank_bg_tileset_tileset, _bg_tileset_tileset, VAR_TILE_NO",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "0f871e1d-1aa4-476d-ac94-29dbb3902ad4"
                 }
@@ -26187,6 +26205,15 @@
             "_v": 1718400249513
         },
         {
+            "id": "885eb683-49e2-4592-a969-a7ecfcd279b1",
+            "name": "mlem.wav",
+            "symbol": "sound_mlem_wav",
+            "filename": "mlem.wav",
+            "type": "wav",
+            "inode": "266934",
+            "_v": 1718542340682
+        },
+        {
             "id": "7f9daeb2-489b-4cd0-932e-f30f631d7926",
             "name": "theBrutzler-short.wav",
             "symbol": "sound_thebrutzler_short_wav",
@@ -26812,7 +26839,7 @@
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
         "worldScrollX": 0,
-        "worldScrollY": 53,
+        "worldScrollY": 0,
         "zoom": 111,
         "customColorsEnabled": false,
         "sgbEnabled": false,
