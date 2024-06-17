@@ -2147,8 +2147,8 @@
                     "command": "EVENT_MUSIC_PLAY",
                     "args": {
                         "musicId": "77bb5c9a-ebf0-46b4-8aa5-b50c04f9210c",
-                        "__collapse": false,
-                        "__comment": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "a59459f8-1e13-483d-90ad-e56c7b347afa"
                 },
@@ -2461,7 +2461,8 @@
                             "type": "number",
                             "value": 53
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "a1881458-2ed6-4ca2-8b3c-3fd9ba41c458"
                 },
@@ -2473,7 +2474,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "68b6faf1-fe7e-4187-81d2-3c0d213c77bf"
                 },
@@ -2485,7 +2487,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "6749c79e-624b-4ddc-9a24-1980cffeb1ea"
                 },
@@ -2497,7 +2500,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "4c6d97ad-ec17-40d3-9702-348e13c66f0a"
                 },
@@ -2509,7 +2513,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "98d89c53-3f37-4c1e-9edc-1a8e853599af"
                 },
@@ -2521,7 +2526,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "d072bba7-8af6-4421-a88e-1d5e7a0455b4"
                 },
@@ -2533,7 +2539,8 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "623f9aa2-72ce-4ad8-b507-547fba185f36"
                 },
@@ -2545,9 +2552,18 @@
                             "type": "number",
                             "value": 255
                         },
-                        "__collapse": true
+                        "__collapse": true,
+                        "__comment": false
                     },
                     "id": "9d815da5-eb0d-4979-a228-50c0e54691d1"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "6babbc0d-19b9-4908-9b0b-b0859ce9add6",
+                        "__collapse": true
+                    },
+                    "id": "ca4f514b-c291-4f20-bb7e-dec2962c6655"
                 },
                 {
                     "command": "EVENT_ACTOR_HIDE",
@@ -2600,14 +2616,6 @@
                     "id": "0a52d4aa-18e3-4af1-8c95-6f3f5d18d0b4"
                 },
                 {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "6babbc0d-19b9-4908-9b0b-b0859ce9add6",
-                        "__collapse": true
-                    },
-                    "id": "ca4f514b-c291-4f20-bb7e-dec2962c6655"
-                },
-                {
                     "command": "EVENT_SET_VALUE",
                     "args": {
                         "variable": "1",
@@ -2622,7 +2630,7 @@
                 {
                     "command": "EVENT_LOOP",
                     "args": {
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": false
                     },
                     "children": {
@@ -2650,7 +2658,7 @@
                                     "operator": "==",
                                     "comparator": 50,
                                     "__collapseElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -2684,7 +2692,7 @@
                                     "operator": "==",
                                     "comparator": 100,
                                     "__collapseElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -2753,7 +2761,7 @@
                                         "start"
                                     ],
                                     "__collapseElse": true,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -2772,7 +2780,7 @@
                                                 "y": 1,
                                                 "direction": "down",
                                                 "fadeSpeed": "2",
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "id": "5802dffb-925a-468f-ba71-f52d36e94cf9"
                                         }
@@ -16521,7 +16529,7 @@
                                                     "type": "variable",
                                                     "value": "21"
                                                 },
-                                                "__collapse": false,
+                                                "__collapse": true,
                                                 "$variable[V4]$": {
                                                     "type": "variable",
                                                     "value": "22"
@@ -17269,6 +17277,16 @@
                         "__comment": false
                     },
                     "id": "b4d6720a-d5a2-4a49-9eaa-e84a715623f7"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "bag = $L1$\npart = $V0$"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "43610ec7-4749-4552-8b4a-cceccf4582b2"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -19066,7 +19084,7 @@
                             "type": "number",
                             "value": 1
                         },
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": false
                     },
                     "children": {
@@ -19118,7 +19136,7 @@
                             "type": "number",
                             "value": 1
                         },
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": false
                     },
                     "children": {
@@ -24588,7 +24606,7 @@
                         "operator": "==",
                         "comparator": 38,
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -25291,6 +25309,16 @@
             "symbol": "var_soldered"
         },
         {
+            "id": "76",
+            "name": "var_index",
+            "symbol": "var_var_index"
+        },
+        {
+            "id": "77",
+            "name": "part_no",
+            "symbol": "var_part_no"
+        },
+        {
             "id": "94361a6f-a1f8-48ac-9be2-3e7ffcb8a484__L0",
             "name": "Menu Choise",
             "symbol": "var_menu_choise"
@@ -25399,16 +25427,6 @@
             "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L0",
             "name": "blink",
             "symbol": "var_blink"
-        },
-        {
-            "id": "76",
-            "name": "var_index",
-            "symbol": "var_var_index"
-        },
-        {
-            "id": "77",
-            "name": "part_no",
-            "symbol": "var_part_no"
         }
     ],
     "engineFieldValues": [
@@ -25432,9 +25450,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 36,
-        "worldScrollY": 0,
-        "zoom": 164,
+        "worldScrollX": 575,
+        "worldScrollY": 477,
+        "zoom": 243.5,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -25463,8 +25481,8 @@
         "playerPaletteId": "",
         "navigatorSplitSizes": [
             204,
-            494,
-            258
+            93,
+            659
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
