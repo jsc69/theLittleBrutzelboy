@@ -1,5 +1,5 @@
 {
-    "name": "theBrutzler",
+    "name": "theLittleBrutzelboy",
     "author": "jsc69",
     "_version": "3.2.0",
     "_release": "1",
@@ -1061,13 +1061,14 @@
                                     {
                                         "command": "EVENT_SOUND_PLAY_EFFECT",
                                         "args": {
-                                            "type": "462368ce-4a52-4680-b90d-570c2272178f",
+                                            "type": "cfe8ae7f-88c3-4836-8ffb-683265b97bef",
                                             "priority": "medium",
                                             "pitch": 4,
                                             "frequency": 200,
                                             "duration": 0.5,
                                             "wait": true,
-                                            "effect": 0
+                                            "effect": 0,
+                                            "__collapse": true
                                         },
                                         "id": "7bfd01f8-2e74-4d00-91a5-829ca0d1f7b4"
                                     },
@@ -1094,7 +1095,8 @@
                                     {
                                         "command": "EVENT_CALL_CUSTOM_EVENT",
                                         "args": {
-                                            "customEventId": "5bc38640-dbe6-4b44-ac76-887fcc7e9f1b"
+                                            "customEventId": "5bc38640-dbe6-4b44-ac76-887fcc7e9f1b",
+                                            "__collapse": true
                                         },
                                         "id": "8e50aaea-2ade-4c3f-863b-811617470bab"
                                     },
@@ -1196,7 +1198,8 @@
                         {
                             "command": "EVENT_CALL_CUSTOM_EVENT",
                             "args": {
-                                "customEventId": "5bc38640-dbe6-4b44-ac76-887fcc7e9f1b"
+                                "customEventId": "5bc38640-dbe6-4b44-ac76-887fcc7e9f1b",
+                                "__collapse": true
                             },
                             "id": "fd44ab22-efd5-49d4-8f03-03b29d2f14d3"
                         },
@@ -2300,18 +2303,6 @@
                         "__collapse": true
                     },
                     "id": "0a52d4aa-18e3-4af1-8c95-6f3f5d18d0b4"
-                },
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "1",
-                        "value": {
-                            "type": "number",
-                            "value": 255
-                        },
-                        "__collapse": true
-                    },
-                    "id": "f3b8d610-a6de-485e-b636-b3a447dad074"
                 },
                 {
                     "command": "EVENT_LOOP",
@@ -4841,7 +4832,7 @@
                         "$actor[0]$": "782fd5ec-c9d7-4882-afa0-171fb118a787",
                         "$actor[1]$": "1a27eeea-e7d2-4b37-a18c-d07f82721515",
                         "$actor[2]$": "406e2fd9-687f-4150-adc5-f0ae3fe9c55b",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__comment": false,
                         "$variable[V1]$": {
                             "type": "variable",
@@ -5002,7 +4993,7 @@
                 {
                     "command": "EVENT_LOOP",
                     "args": {
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -16971,7 +16962,7 @@
                         "operator": "==",
                         "comparator": 0,
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -24778,6 +24769,30 @@
                         "__comment": false
                     },
                     "id": "8ac35769-f171-4e03-b32b-9f3ee6ba3500"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "1",
+                        "value": {
+                            "type": "number",
+                            "value": 255
+                        },
+                        "__collapse": true
+                    },
+                    "id": "7a35d3ea-0071-46cd-b949-667d3d72598a"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "75",
+                        "value": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "__collapse": false
+                    },
+                    "id": "eec04acc-3380-4c0b-ae2d-60330544d039"
                 }
             ]
         }
@@ -24817,17 +24832,17 @@
             "symbol": "sound_boom_wav",
             "filename": "boom.wav",
             "type": "wav",
-            "inode": "9993352",
+            "inode": "9993174",
             "_v": 1718400249513
         },
         {
-            "id": "462368ce-4a52-4680-b90d-570c2272178f",
+            "id": "cfe8ae7f-88c3-4836-8ffb-683265b97bef",
             "name": "erdbeerkaese.wav",
             "symbol": "sound_erdbeerkaese_wav",
             "filename": "erdbeerkaese.wav",
             "type": "wav",
-            "inode": "9993127",
-            "_v": 1718656216483
+            "inode": "9991522",
+            "_v": 1718658603966
         },
         {
             "id": "885eb683-49e2-4592-a969-a7ecfcd279b1",
@@ -24835,7 +24850,7 @@
             "symbol": "sound_mlem_wav",
             "filename": "mlem.wav",
             "type": "wav",
-            "inode": "9991522",
+            "inode": "9993143",
             "_v": 1718542340682
         },
         {
@@ -24844,7 +24859,7 @@
             "symbol": "sound_thebrutzler_short_wav",
             "filename": "theBrutzler-short.wav",
             "type": "wav",
-            "inode": "9993143",
+            "inode": "9993339",
             "_v": 1716757729283
         },
         {
@@ -24853,7 +24868,7 @@
             "symbol": "sound_yay_wav",
             "filename": "yay.wav",
             "type": "wav",
-            "inode": "9993349",
+            "inode": "9991523",
             "_v": 1718399640538
         }
     ],
@@ -25473,8 +25488,8 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 152,
-        "worldScrollY": 0,
+        "worldScrollX": 323.33331298828125,
+        "worldScrollY": 925.8333129882812,
         "zoom": 243.5,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -25503,9 +25518,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            204,
-            574,
-            178
+            168,
+            560,
+            62
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
