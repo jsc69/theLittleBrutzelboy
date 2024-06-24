@@ -82,8 +82,10 @@ FEDCBA9876543210
 000                 -> R
 001                 -> C
 010                 -> L
-011                 -> D
    XXXXXXX          -> values 0-127
+011xxxxxxxFFUUUS    -> xxxxxx = Z-Diode value
+                              = 104 -> 1N4004
+                              = 120 -> LED green
 FEDCBA9876543210
           00        -> * 0.1
           01        -> * 1
@@ -117,6 +119,4 @@ FEDCBA9876543210
 
 Diodes:
 FEDCBA9876543210
-011xxxxxxxFFUUUS Zener -> xxxxxx = 104 -> 1N4004
-                       ->        = 120 -> LED green
 
