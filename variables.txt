@@ -7,6 +7,7 @@ TutorialsFlags:
 3. storage
 4. box
 5. part taken
+6. soldering
 
 Places:
 R3 = 1 (331)
@@ -119,4 +120,28 @@ FEDCBA9876543210
 
 Diodes:
 FEDCBA9876543210
+
+----------
+Solderpads
+----------
+x(1-18), y(1-13) 
+FEDC BA98 7654 3210
+uscp ffdd tttt tttt t = tile position 
+                        -> t = (y-1)*18 + (x-1) -> (0-233)
+                        -> x=t%18 + 1, y=t/18 + 1
+                    u = used (no=0, yes=1)
+                    s = soldered (no=0, yes=1)
+                    c = cold soldered=defect (no=0, yes=1)
+                    p = part placed (no=0, yes=0)
+                    f = footprint (tht=00, smd=01, ic=10)
+                    d = direction (up=00, down=01, left=10, right=11)
+
+Places:
+R3 = 1 (331)
+C1 = 2 (10uF)
+R1 = 3 (473)
+R2 = 4 (563)
+D1 = 5 (LED)
+C2 = 6 (10nF)
+U1 = 7 (NE555)
 
