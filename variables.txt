@@ -77,7 +77,11 @@ Footprint:
 8 = IC SMD 8 pin
 
 ----------------
-coponent types
+bag2part (var 100-139)
+----------------
+
+----------------
+coponent types partData (var 140-179)
 ----------------
 FEDCBA9876543210
 000                 -> R
@@ -122,7 +126,7 @@ Diodes:
 FEDCBA9876543210
 
 ----------
-Solderpads
+Solderpads var 180-199
 ----------
 x(1-18), y(1-13) 
 FEDC BA98 7654 3210
