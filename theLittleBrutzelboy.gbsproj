@@ -21068,7 +21068,7 @@
                         "variable": "1",
                         "operator": "<",
                         "comparator": 255,
-                        "__collapseElse": true,
+                        "__collapseElse": false,
                         "__collapse": false,
                         "condition": {
                             "type": "lt",
@@ -21080,14 +21080,15 @@
                                 "type": "number",
                                 "value": 255
                             }
-                        }
+                        },
+                        "__disableElse": true
                     },
                     "children": {
                         "true": [
                             {
                                 "command": "EVENT_CHOICE",
                                 "args": {
-                                    "variable": "L0",
+                                    "variable": "91",
                                     "trueText": "Nicht hier",
                                     "falseText": "Teil plazieren",
                                     "__collapse": false
@@ -21098,18 +21099,19 @@
                                 "command": "EVENT_IF",
                                 "args": {
                                     "variable": "L0",
-                                    "__collapseElse": true,
+                                    "__collapseElse": false,
                                     "__collapse": false,
                                     "condition": {
                                         "type": "eq",
                                         "valueA": {
                                             "type": "variable",
-                                            "value": "L0"
+                                            "value": "91"
                                         },
                                         "valueB": {
                                             "type": "false"
                                         }
-                                    }
+                                    },
+                                    "__disableElse": true
                                 },
                                 "children": {
                                     "true": [
@@ -32873,7 +32875,7 @@
                             "value": "left"
                         },
                         "__collapseElse": false,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -32912,12 +32914,12 @@
                                         },
                                         "valueB": {
                                             "type": "number",
-                                            "value": 1
+                                            "value": 2
                                         }
                                     },
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
-                                "id": "3b5a54ed-7e40-49f6-bd52-ca86f7f4588f"
+                                "id": "6ea0ee28-bdab-48c5-b890-8b9bf01d6624"
                             }
                         ]
                     },
@@ -33675,7 +33677,7 @@
                     "command": "EVENT_COMMENT",
                     "args": {
                         "text": "Flags:\n16 = used\n15 = soldered\n14 = cold soldered / defect\n13 = part placed\n12+11 = footprint (00=tht, 01=smd, 10=ic)\n10+9  = direction (00=up, 01=down, 10=left, 11=right)",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "e0a2c770-7fdd-480d-8c74-69f70817a3a8"
                 },
@@ -33685,7 +33687,7 @@
                         "variable": "V0",
                         "flag": 15,
                         "__collapseElse": false,
-                        "__disableElse": false
+                        "__disableElse": true
                     },
                     "children": {
                         "true": [
@@ -33745,8 +33747,8 @@
                                 "args": {
                                     "variable": "V0",
                                     "flag": 14,
-                                    "__collapseElse": false,
-                                    "__collapse": true
+                                    "__collapseElse": true,
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -33797,7 +33799,7 @@
                                                 "value15": 15,
                                                 "__collapseElse": false,
                                                 "__disableElse": false,
-                                                "__collapse": true,
+                                                "__collapse": false,
                                                 "__comment": true
                                             },
                                             "children": {
@@ -34405,48 +34407,12 @@
                                         "type": "variable",
                                         "value": "12"
                                     },
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "id": "dcdc27ae-342a-487b-9769-44a993aad296"
-                            },
-                            {
-                                "command": "EVENT_TEXT_SET_ANIMATION_SPEED",
-                                "args": {
-                                    "speedIn": 0,
-                                    "speedOut": 0,
-                                    "speed": 0,
-                                    "allowFastForward": true,
-                                    "__collapse": true,
-                                    "__comment": true
-                                },
-                                "id": "476333b4-ee07-497a-a960-97f0037358ec"
-                            },
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "pos -> ($10$, $11$)\ntile = $12$ ($V0$)"
-                                    ],
-                                    "avatarId": "",
-                                    "__comment": true,
-                                    "__collapse": true
-                                },
-                                "id": "7830cfdc-360c-4938-add8-82f0dbbc2e0e"
                             }
                         ],
-                        "false": [
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "Unknown pad number\n$V0$"
-                                    ],
-                                    "avatarId": "",
-                                    "__comment": false
-                                },
-                                "id": "247ffe22-f616-4362-bd7d-6395113b15e8"
-                            }
-                        ]
+                        "false": []
                     },
                     "id": "9c97b8b7-860e-4929-9b4b-9cb963385636"
                 }
@@ -35057,11 +35023,6 @@
             "symbol": "var_partr1_2"
         },
         {
-            "id": "9",
-            "name": "loop_index",
-            "symbol": "var_loop_index"
-        },
-        {
             "id": "10",
             "name": "tile_x",
             "symbol": "var_tile_x"
@@ -35255,406 +35216,6 @@
             "id": "91",
             "name": "temp1",
             "symbol": "var_temp1"
-        },
-        {
-            "id": "100",
-            "name": "bag2part0",
-            "symbol": "var_bag2part0"
-        },
-        {
-            "id": "101",
-            "name": "bag2part1",
-            "symbol": "var_bag2part1"
-        },
-        {
-            "id": "102",
-            "name": "bag2part2",
-            "symbol": "var_bag2part2"
-        },
-        {
-            "id": "103",
-            "name": "bag2part3",
-            "symbol": "var_bag2part3"
-        },
-        {
-            "id": "104",
-            "name": "bag2part4",
-            "symbol": "var_bag2part4"
-        },
-        {
-            "id": "105",
-            "name": "bag2part5",
-            "symbol": "var_bag2part5"
-        },
-        {
-            "id": "106",
-            "name": "bag2part6",
-            "symbol": "var_bag2part6"
-        },
-        {
-            "id": "107",
-            "name": "bag2part7",
-            "symbol": "var_bag2part7"
-        },
-        {
-            "id": "108",
-            "name": "bag2part8",
-            "symbol": "var_bag2part8"
-        },
-        {
-            "id": "109",
-            "name": "bag2part9",
-            "symbol": "var_bag2part9"
-        },
-        {
-            "id": "110",
-            "name": "bag2part10",
-            "symbol": "var_bag2part10"
-        },
-        {
-            "id": "111",
-            "name": "bag2part11",
-            "symbol": "var_bag2part11"
-        },
-        {
-            "id": "112",
-            "name": "bag2part12",
-            "symbol": "var_bag2part12"
-        },
-        {
-            "id": "113",
-            "name": "bag2part13",
-            "symbol": "var_bag2part13"
-        },
-        {
-            "id": "114",
-            "name": "bag2part14",
-            "symbol": "var_bag2part14_0"
-        },
-        {
-            "id": "115",
-            "name": "bag2part15",
-            "symbol": "var_bag2part15"
-        },
-        {
-            "id": "116",
-            "name": "bag2part16",
-            "symbol": "var_bag2part16"
-        },
-        {
-            "id": "117",
-            "name": "bag2part17",
-            "symbol": "var_bag2part17"
-        },
-        {
-            "id": "118",
-            "name": "bag2part18",
-            "symbol": "var_bag2part18"
-        },
-        {
-            "id": "119",
-            "name": "bag2part19",
-            "symbol": "var_bag2part19"
-        },
-        {
-            "id": "120",
-            "name": "bag2part20",
-            "symbol": "var_bag2part20"
-        },
-        {
-            "id": "121",
-            "name": "bag2part21",
-            "symbol": "var_bag2part21"
-        },
-        {
-            "id": "122",
-            "name": "bag2part22",
-            "symbol": "var_bag2part22"
-        },
-        {
-            "id": "123",
-            "name": "bag2part23",
-            "symbol": "var_bag2part23"
-        },
-        {
-            "id": "124",
-            "name": "bag2part24",
-            "symbol": "var_bag2part24"
-        },
-        {
-            "id": "125",
-            "name": "bag2part25",
-            "symbol": "var_bag2part25"
-        },
-        {
-            "id": "126",
-            "name": "bag2part26",
-            "symbol": "var_bag2part26"
-        },
-        {
-            "id": "127",
-            "name": "bag2part27",
-            "symbol": "var_bag2part27"
-        },
-        {
-            "id": "128",
-            "name": "bag2part28",
-            "symbol": "var_bag2part28"
-        },
-        {
-            "id": "129",
-            "name": "bag2part29",
-            "symbol": "var_bag2part29"
-        },
-        {
-            "id": "130",
-            "name": "bag2part30",
-            "symbol": "var_bag2part30"
-        },
-        {
-            "id": "131",
-            "name": "bag2part31",
-            "symbol": "var_bag2part31"
-        },
-        {
-            "id": "132",
-            "name": "bag2part32",
-            "symbol": "var_bag2part32"
-        },
-        {
-            "id": "133",
-            "name": "bag2part33",
-            "symbol": "var_bag2part33"
-        },
-        {
-            "id": "134",
-            "name": "bag2part34",
-            "symbol": "var_bag2part34"
-        },
-        {
-            "id": "135",
-            "name": "bag2part35",
-            "symbol": "var_bag2part35"
-        },
-        {
-            "id": "136",
-            "name": "bag2part36",
-            "symbol": "var_bag2part36"
-        },
-        {
-            "id": "137",
-            "name": "bag2part37",
-            "symbol": "var_bag2part37"
-        },
-        {
-            "id": "138",
-            "name": "bag2part38",
-            "symbol": "var_bag2part38"
-        },
-        {
-            "id": "139",
-            "name": "bag2part39",
-            "symbol": "var_bag2part39"
-        },
-        {
-            "id": "140",
-            "name": "partData0",
-            "symbol": "var_partdata0"
-        },
-        {
-            "id": "141",
-            "name": "partData1",
-            "symbol": "var_partdata1"
-        },
-        {
-            "id": "142",
-            "name": "partData2",
-            "symbol": "var_partdata2"
-        },
-        {
-            "id": "143",
-            "name": "partData3",
-            "symbol": "var_partdata3"
-        },
-        {
-            "id": "144",
-            "name": "partData4",
-            "symbol": "var_partdata4"
-        },
-        {
-            "id": "145",
-            "name": "partData5",
-            "symbol": "var_partdata5"
-        },
-        {
-            "id": "146",
-            "name": "partData6",
-            "symbol": "var_partdata6"
-        },
-        {
-            "id": "147",
-            "name": "partData7",
-            "symbol": "var_partdata7"
-        },
-        {
-            "id": "148",
-            "name": "partData8",
-            "symbol": "var_partdata8"
-        },
-        {
-            "id": "149",
-            "name": "partData9",
-            "symbol": "var_partdata9"
-        },
-        {
-            "id": "150",
-            "name": "partData10",
-            "symbol": "var_partdata10"
-        },
-        {
-            "id": "151",
-            "name": "partData11",
-            "symbol": "var_partdata11"
-        },
-        {
-            "id": "152",
-            "name": "partData12",
-            "symbol": "var_partdata12"
-        },
-        {
-            "id": "153",
-            "name": "partData13",
-            "symbol": "var_partdata13"
-        },
-        {
-            "id": "154",
-            "name": "partData14",
-            "symbol": "var_partdata14"
-        },
-        {
-            "id": "155",
-            "name": "partData15",
-            "symbol": "var_partdata15"
-        },
-        {
-            "id": "156",
-            "name": "partData16",
-            "symbol": "var_partdata16"
-        },
-        {
-            "id": "157",
-            "name": "partData17",
-            "symbol": "var_partdata17"
-        },
-        {
-            "id": "158",
-            "name": "partData18",
-            "symbol": "var_partdata18"
-        },
-        {
-            "id": "159",
-            "name": "partData19",
-            "symbol": "var_partdata19"
-        },
-        {
-            "id": "160",
-            "name": "partData20",
-            "symbol": "var_partdata20"
-        },
-        {
-            "id": "161",
-            "name": "partData21",
-            "symbol": "var_partdata21"
-        },
-        {
-            "id": "162",
-            "name": "partData22",
-            "symbol": "var_partdata22"
-        },
-        {
-            "id": "163",
-            "name": "partData23",
-            "symbol": "var_partdata23"
-        },
-        {
-            "id": "164",
-            "name": "partData24",
-            "symbol": "var_partdata24"
-        },
-        {
-            "id": "165",
-            "name": "partData25",
-            "symbol": "var_partdata25"
-        },
-        {
-            "id": "166",
-            "name": "partData26",
-            "symbol": "var_partdata26"
-        },
-        {
-            "id": "167",
-            "name": "partData27",
-            "symbol": "var_partdata27"
-        },
-        {
-            "id": "168",
-            "name": "partData28",
-            "symbol": "var_partdata28"
-        },
-        {
-            "id": "169",
-            "name": "partData29",
-            "symbol": "var_partdata29"
-        },
-        {
-            "id": "170",
-            "name": "partData30",
-            "symbol": "var_partdata30"
-        },
-        {
-            "id": "171",
-            "name": "partData31",
-            "symbol": "var_partdata31"
-        },
-        {
-            "id": "172",
-            "name": "partData32",
-            "symbol": "var_partdata32"
-        },
-        {
-            "id": "173",
-            "name": "partData33",
-            "symbol": "var_partdata33"
-        },
-        {
-            "id": "174",
-            "name": "partData34",
-            "symbol": "var_partdata34"
-        },
-        {
-            "id": "175",
-            "name": "partData35",
-            "symbol": "var_partdata35"
-        },
-        {
-            "id": "176",
-            "name": "partData36",
-            "symbol": "var_partdata36"
-        },
-        {
-            "id": "177",
-            "name": "partData37",
-            "symbol": "var_partdata37"
-        },
-        {
-            "id": "178",
-            "name": "partData38",
-            "symbol": "var_partdata38"
-        },
-        {
-            "id": "179",
-            "name": "partData39",
-            "symbol": "var_partdata39"
         },
         {
             "id": "180",
@@ -35908,8 +35469,8 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 437.4999694824219,
-        "worldScrollY": 948.3333129882812,
+        "worldScrollX": 489.1666564941406,
+        "worldScrollY": 916.6666259765625,
         "zoom": 243.5,
         "sgbEnabled": false,
         "customHead": "",
@@ -35938,8 +35499,8 @@
         "playerPaletteId": "",
         "navigatorSplitSizes": [
             94,
-            319,
-            377
+            285,
+            411
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
@@ -35997,7 +35558,7 @@
         "customControlsSelect": [
             "Shift"
         ],
-        "debuggerEnabled": false,
+        "debuggerEnabled": true,
         "debuggerScriptType": "gbvm",
         "debuggerVariablesFilter": "all",
         "debuggerCollapsedPanes": [],
