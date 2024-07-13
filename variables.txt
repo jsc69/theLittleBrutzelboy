@@ -18,7 +18,7 @@ D1 = 5 (LED)
 C2 = 6 (10nF)
 U1 = 7 (NE555)
 
-Components:
+Components: (saved in variable 200-239)
 -Resistors
 00 = 151 - 150          1000
 01 = 153 - 15k          986
@@ -77,11 +77,11 @@ Footprint:
 8 = IC SMD 8 pin
 
 ----------------
-bag2part (var 100-139)
+bag2part (saved in variable 240-279)
 ----------------
 
 ----------------
-coponent types partData (var 140-179)
+coponent types partData (saved in variable 200-239)
 ----------------
 FEDCBA9876543210
 000                 -> R
@@ -126,7 +126,7 @@ Diodes:
 FEDCBA9876543210
 
 ----------
-Solderpads var 180-199
+Solderpads var 280-299
 ----------
 x(1-18), y(1-13) 
 FEDC BA98 7654 3210
@@ -140,12 +140,13 @@ uscp ffdd tttt tttt t = tile position
                     f = footprint (tht=00, smd=01, ic=10)
                     d = direction (up=00, down=01, left=10, right=11)
 
-Places:
-R3 = 1 (331)
-C1 = 2 (10uF)
-R1 = 3 (473)
-R2 = 4 (563)
-D1 = 5 (LED)
-C2 = 6 (10nF)
-U1 = 7 (NE555)
+Pads:
+R3: up=0, down=1
+C1: up=2, down=3
+R1: up=4, down=5
+R2: up=6, down=7
+D1: left=8, right=9
+C2: left=10, right=11
+U1: pad1=12, pad2=13, pad3=14, pad4=15
+    pad5=16, pad6=17, pad7=18, pad8=19
 
