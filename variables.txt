@@ -9,7 +9,7 @@ TutorialsFlags:
 5. part taken
 6. soldering
 
-Places:
+Places PCB:
 R3 = 1 (331)
 C1 = 2 (10uF)
 R1 = 3 (473)
@@ -17,6 +17,46 @@ R2 = 4 (563)
 D1 = 5 (LED)
 C2 = 6 (10nF)
 U1 = 7 (NE555)
+
+Places Level 1 (https://bwir.de/led-an-230v-netzspannung-betreiben/):
+R1 = 1 (2K2) RotRotOrange GGW
+D1 = 2 (1N4007 . 250V)
+D2 = 3 (LED)
+R2 = 4 (220) RotRotBraun GGS
+C1 = 5 (220nF - 250V)
+
+Places Level 2 (https://www.elektronik-kompendium.de/sites/praxis/bausatz_led-blitzer.htm):
+R2 = 1 (6K8) BlauGrauRot GGG
+C1 = 2 (1N4007 . 250V)
+D1 = 3 (1N4148)
+T2 = 4 (BC 547 B)
+T1 = 5 (BC 557 B)
+D2 = 6 (LED)
+R1 = 7 (330K) OrangeOrangeGelb WWW
+
+Places Level 3 (https://www.meine-schaltung.de/schaltung/el/blinker/blinker_mit_ne555/):
+C1 = 1 (33uF)
+R4 = 2 (331)
+R1 = 3 (102)
+D1 = 4 (LED)
+D2 = 5 (LED)
+R3 = 6 (330)
+C2 = 7 (100nF)
+R2 = 8 (153)
+U1 = 9 (NE555)
+
+THT Widerstände
+0 Schwarz   - S
+1 Braun     - S
+2 Rot       - G
+3 Orange    - W
+4 Gelb      - W
+5 Grün      - G
+6 Blau      - G
+7 Lila      - S
+8 Grau      - G
+9 Weiß      - W
+
 
 Components: (saved in variable 200-239)
 -Resistors
@@ -124,6 +164,18 @@ FEDCBA9876543210
 
 Diodes:
 FEDCBA9876543210
+
+--------------
+Part footprint
+--------------
+FEDC BA98 7654 3210
+uscp ffdd tttt tttt t = part position (upper left corner)
+                    d = direction (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)
+                    u = used (no=0, yes=1)
+                    c = defect (no=0, yes=1)
+                    p = part placed (no=0, yes=0)
+                    s = ?
+                    f = ?
 
 ----------
 Solderpads var 280-299
