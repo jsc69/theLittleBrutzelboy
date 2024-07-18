@@ -117,10 +117,6 @@ Footprint:
 8 = IC SMD 8 pin
 
 ----------------
-bag2part (saved in variable 240-279)
-----------------
-
-----------------
 coponent types partData (saved in variable 200-239)
 ----------------
 FEDCBA9876543210
@@ -166,7 +162,7 @@ Diodes:
 FEDCBA9876543210
 
 --------------
-Part footprint
+Part footprint var 240-279
 --------------
 FEDC BA98 7654 3210
 uscp ffdd tttt tttt t = part position (upper left corner)
@@ -177,9 +173,13 @@ uscp ffdd tttt tttt t = part position (upper left corner)
                     s = ?
                     f = ?
 
-----------
-Solderpads var 280-299
-----------
+----------------
+bag2part (saved in variable 280-319)
+----------------
+
+----------------
+Solderpads var 320-339
+----------------
 x(1-18), y(1-13) 
 FEDC BA98 7654 3210
 uscp ffdd tttt tttt t = tile position 

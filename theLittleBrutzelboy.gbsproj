@@ -440,8 +440,8 @@
                         "frequency": 200,
                         "duration": 0.5,
                         "wait": true,
-                        "effect": 0,
-                        "__collapse": true
+                        "effect": 24,
+                        "__collapse": false
                     },
                     "id": "f0e8f0d6-20b2-48a5-906d-f79c723c9e57"
                 },
@@ -2807,7 +2807,7 @@
                             "type": "number",
                             "value": 1
                         },
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -2819,7 +2819,7 @@
                                         "type": "variable",
                                         "value": "37"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "id": "8f418dc5-dbd6-40e0-94c3-556a43e129ef"
                             },
@@ -3060,13 +3060,13 @@
                             {
                                 "command": "EVENT_SOUND_PLAY_EFFECT",
                                 "args": {
-                                    "type": "tone",
+                                    "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                     "priority": "medium",
                                     "pitch": 1,
                                     "frequency": 25,
                                     "duration": 0.06,
                                     "wait": false,
-                                    "effect": 0,
+                                    "effect": 34,
                                     "__collapse": true
                                 },
                                 "id": "9a67e172-7f5f-4322-b330-be99847a0596"
@@ -4402,7 +4402,7 @@
                                         "a"
                                     ],
                                     "__collapseElse": false,
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -11821,8 +11821,8 @@
     "customEvents": [
         {
             "id": "6c19d75d-f786-41c8-bc79-68881fa91a46",
-            "name": "PickupPart",
-            "description": "Set Inventory with part from selected bag in selected box",
+            "name": "pickupPart",
+            "description": "Sets Inventory with part number from selected bag in selected box",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -11918,7 +11918,7 @@
         },
         {
             "id": "65611ea1-436b-4a76-8bc3-27f23b8081e9",
-            "name": "PlacePart",
+            "name": "placePart",
             "description": "Putting part from Inventory onto footprint <placeNumber>",
             "variables": {
                 "V0": {
@@ -11965,7 +11965,7 @@
                                 "value": 13
                             }
                         },
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "5b22eeb8-2ead-41f9-ae97-3e70d5d34034"
                 },
@@ -12026,7 +12026,7 @@
                     "args": {
                         "variable": "V0",
                         "choices": 7,
-                        "__collapseCase0": true,
+                        "__collapseCase0": false,
                         "value0": 1,
                         "__collapseCase1": true,
                         "value1": 2,
@@ -12089,13 +12089,13 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
+                                                "effect": 32,
                                                 "__collapse": true
                                             },
                                             "id": "9e14ac09-a04a-4b19-aa74-fd63f787b30e"
@@ -12231,7 +12231,7 @@
                                             "command": "EVENT_CALL_CUSTOM_EVENT",
                                             "args": {
                                                 "customEventId": "54102a06-9881-4d45-b498-eb66684c49a1",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "id": "6e55e0eb-2d9d-45c0-ac31-04a7191071f2"
                                         },
@@ -12291,13 +12291,13 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
+                                                "effect": 32,
                                                 "__collapse": false
                                             },
                                             "id": "aa53d750-d0b7-45f6-a6d3-e1bfff38b315"
@@ -12493,14 +12493,14 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
-                                                "__collapse": true
+                                                "effect": 32,
+                                                "__collapse": false
                                             },
                                             "id": "8ac4f780-547a-4b6a-81b9-3eac8c8ac06e"
                                         },
@@ -12695,14 +12695,14 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
-                                                "__collapse": true
+                                                "effect": 32,
+                                                "__collapse": false
                                             },
                                             "id": "0b31466b-91c8-45fb-8b65-c32491233a4a"
                                         },
@@ -12897,14 +12897,14 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
-                                                "__collapse": true
+                                                "effect": 32,
+                                                "__collapse": false
                                             },
                                             "id": "303323fe-b5aa-4a09-9e8d-70b39a765727"
                                         },
@@ -13085,7 +13085,7 @@
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": false,
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "condition": {
                                         "type": "eq",
                                         "valueA": {
@@ -13103,14 +13103,14 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
-                                                "__collapse": true
+                                                "effect": 32,
+                                                "__collapse": false
                                             },
                                             "id": "f67f168f-a132-44b1-aed4-7f171b23954f"
                                         },
@@ -13295,7 +13295,7 @@
                                     "operator": "==",
                                     "comparator": 8,
                                     "__collapseElse": false,
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "condition": {
                                         "type": "eq",
                                         "valueA": {
@@ -13313,14 +13313,14 @@
                                         {
                                             "command": "EVENT_SOUND_PLAY_EFFECT",
                                             "args": {
-                                                "type": "tone",
+                                                "type": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
                                                 "priority": "medium",
                                                 "pitch": 4,
                                                 "frequency": 90,
                                                 "duration": 0.01,
                                                 "wait": false,
-                                                "effect": 0,
-                                                "__collapse": true
+                                                "effect": 32,
+                                                "__collapse": false
                                             },
                                             "id": "149cc779-7459-431b-adab-9e15f0b68f8c"
                                         },
@@ -13526,8 +13526,8 @@
         },
         {
             "id": "2eecc448-a593-4196-870c-832df89f867e",
-            "name": "PlayerOnPlace",
-            "description": "Player is on a  place with part in inventorty\nWant to place it?",
+            "name": "playerOnPlace",
+            "description": "Player is on a  place with part in inventory\nWant to place it?",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -13617,7 +13617,7 @@
         {
             "id": "54102a06-9881-4d45-b498-eb66684c49a1",
             "name": "PaintR3",
-            "description": "Sets tiles for footprint R3 on background pcb",
+            "description": "Sets tiles for footprint R3 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_5",
@@ -13691,7 +13691,7 @@
         {
             "id": "e2577b1e-dcfd-43c8-af1f-b5d1b3289f51",
             "name": "PaintC1",
-            "description": "Sets tiles for footprint C1 on background pcb",
+            "description": "Sets tiles for footprint C1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_6",
@@ -13763,7 +13763,7 @@
         {
             "id": "54910f04-e2dc-4e67-b11b-ce0b68dd259e",
             "name": "PaintR1",
-            "description": "Sets tiles for footprint R1 on background pcb",
+            "description": "Sets tiles for footprint R1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_7",
@@ -13837,7 +13837,7 @@
         {
             "id": "365db853-5d16-4031-98f9-bff91317e437",
             "name": "PaintR2",
-            "description": "Sets tiles for footprint R2 on background pcb",
+            "description": "Sets tiles for footprint R2 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_8",
@@ -13911,7 +13911,7 @@
         {
             "id": "de283f28-2eb3-4898-839b-fb7173b3ff50",
             "name": "PaintD1",
-            "description": "Sets tiles for footprint D1 on background pcb",
+            "description": "Sets tiles for footprint D1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_9",
@@ -13953,7 +13953,7 @@
         {
             "id": "3c1cb4b9-4bc7-4095-9f9f-7814f175e574",
             "name": "PaintC2",
-            "description": "Sets tiles for footprint C2 on background pcb",
+            "description": "Sets tiles for footprint C2 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_10",
@@ -14025,7 +14025,7 @@
         {
             "id": "06eddc75-a8cb-4b9b-b7fd-337a24255100",
             "name": "PaintU1",
-            "description": "Sets tiles for footprint U1 on background pcb",
+            "description": "Sets tiles for footprint U1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
             "variables": {},
             "actors": {},
             "symbol": "script_11",
@@ -14362,8 +14362,8 @@
         },
         {
             "id": "6babbc0d-19b9-4908-9b0b-b0859ce9add6",
-            "name": "PackBags",
-            "description": "pack the bags",
+            "name": "packBags",
+            "description": "Packs the bags with parts\nSets the bag array with the part numbers\nTODO: randomize, by now it is one to one (bag1=part1 etc.)",
             "variables": {},
             "actors": {},
             "symbol": "script_13",
@@ -14374,9 +14374,9 @@
                         "variable": "36",
                         "value": {
                             "type": "number",
-                            "value": 240
+                            "value": 280
                         },
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "6425e60f-d7a0-4d72-8e65-9c183ac0d20c"
                 },
@@ -14497,7 +14497,7 @@
         {
             "id": "7180eb6f-961d-4003-b58a-4a7c28800dd1",
             "name": "getPartFromBag",
-            "description": "Set PartNo with number of part of the given bag",
+            "description": "Sets PartNo with number of part of the given bag",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -14558,7 +14558,7 @@
         {
             "id": "95e66e93-4616-4f30-9996-57f87739202b",
             "name": "setPartTileSmd2",
-            "description": "set the tiles of an 2 pin smd part on the pcb",
+            "description": "set the tiles of an 2 pin smd part on the pcb\nTODO: replace with a more generic function",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -16761,7 +16761,7 @@
                         "operator": "==",
                         "comparator": 21,
                         "__collapseElse": true,
-                        "__collapse": true,
+                        "__collapse": false,
                         "condition": {
                             "type": "eq",
                             "valueA": {
@@ -18302,412 +18302,9 @@
             ]
         },
         {
-            "id": "479123f7-748c-4960-a9a9-335a1d24b9ec",
-            "name": "solderR3",
-            "description": "Paint footprint of R3 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_16",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 0
-                        }
-                    },
-                    "id": "b55ab5c8-0090-4bd9-9f69-d05ca893aef5"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        }
-                    },
-                    "id": "93c6d54a-bdc2-47a5-9e41-9c68f7d9615d"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 1
-                        }
-                    },
-                    "id": "c972aa03-a886-4f95-8a9d-0c767ff592f4"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        }
-                    },
-                    "id": "ca34deef-5929-49c5-8cf8-faa74d46399e"
-                }
-            ]
-        },
-        {
-            "id": "4ba704ac-1d73-430c-b851-1476e2a34f42",
-            "name": "solderC2",
-            "description": "Paint footprint of C2 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_17",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 10
-                        },
-                        "__collapse": false
-                    },
-                    "id": "82b6664d-2e92-4f78-aeaa-2b70a2c4d9d7"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "bf713c7a-8705-4773-b5e3-231c1e6dbdc6"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 11
-                        },
-                        "__collapse": false
-                    },
-                    "id": "ab337754-db4c-4c2b-aad2-39169691e22e"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "2b19a823-8c33-4c58-800f-4113a0eb04f6"
-                }
-            ]
-        },
-        {
-            "id": "015a4c12-1c1d-496b-b1ef-f69308a82866",
-            "name": "solderU1",
-            "description": "",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_18",
-            "script": [
-                {
-                    "command": "EVENT_LOOP_FOR",
-                    "args": {
-                        "variable": "91",
-                        "from": {
-                            "type": "number",
-                            "value": 12
-                        },
-                        "comparison": "<=",
-                        "to": {
-                            "type": "number",
-                            "value": 19
-                        },
-                        "operation": "+=",
-                        "value": {
-                            "type": "number",
-                            "value": 1
-                        },
-                        "__collapse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                                    "$variable[V0]$": {
-                                        "type": "variable",
-                                        "value": "91"
-                                    }
-                                },
-                                "id": "66f61340-c182-4fe5-93a1-fe08845d3493"
-                            },
-                            {
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                                    "$variable[V0]$": {
-                                        "type": "variable",
-                                        "value": "9"
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "2a0cf911-82a6-49b4-8a86-c07220e8a74a"
-                            }
-                        ]
-                    },
-                    "id": "e8e98556-febb-45e2-9f0f-a6970fe35350"
-                }
-            ]
-        },
-        {
-            "id": "77386164-ffc6-4ff9-b741-0b35464f2fdc",
-            "name": "solderD1",
-            "description": "Paint footprint of D1 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_19",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 8
-                        },
-                        "__collapse": false
-                    },
-                    "id": "73fe2155-b6d8-4b05-afa0-c54d2e899a27"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "c80b9b52-be4f-4921-91b2-e358f31b6d20"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 9
-                        },
-                        "__collapse": false
-                    },
-                    "id": "34458cd0-5365-47de-9ca5-f87e1da9a2c8"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "286b0bee-b297-41ac-b3bf-d57792a0d24f"
-                }
-            ]
-        },
-        {
-            "id": "a2b954d9-566c-4e64-8875-7dea8527cfc8",
-            "name": "solderC1",
-            "description": "Paint footprint of C1 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_20",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 3
-                        },
-                        "__collapse": true
-                    },
-                    "id": "03f08c45-7335-4aeb-878c-53c65e42d0d1"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "1434aa73-7a87-4ac5-a455-52191ca7700d"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 4
-                        },
-                        "__collapse": true
-                    },
-                    "id": "3e3f0a77-50d2-4ea2-aa75-81dbd29a1030"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "d3941680-8054-4b51-841e-3f573c43d665"
-                }
-            ]
-        },
-        {
-            "id": "11cbb8dd-6f93-412d-a178-6d5175ab74b5",
-            "name": "solderR1",
-            "description": "Paint footprint of R1 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_21",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 4
-                        },
-                        "__collapse": true
-                    },
-                    "id": "793cbd83-3508-431b-b9f6-771a523f858a"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "3e5e79e7-a657-482c-964d-5eb45a8f44bc"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 5
-                        },
-                        "__collapse": true
-                    },
-                    "id": "508c3aa9-4ae2-4bcc-b70e-52956cc6cd9e"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "62640d0c-5ffa-43a3-a9c5-65266d661632"
-                }
-            ]
-        },
-        {
-            "id": "ccb5c6b9-253f-4b83-b312-105528c98ff3",
-            "name": "solderR2",
-            "description": "Paint footprint of R2 soldered or not",
-            "variables": {},
-            "actors": {},
-            "symbol": "script_22",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 6
-                        },
-                        "__collapse": true
-                    },
-                    "id": "aec65301-0ee6-4422-a0da-1002eee6fff6"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "218ed141-d285-4c25-b06e-92ba4c3d2e62"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
-                        "$variable[V0]$": {
-                            "type": "number",
-                            "value": 7
-                        },
-                        "__collapse": true
-                    },
-                    "id": "6dcc920d-53e5-44e3-8704-9310c806153c"
-                },
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "9"
-                        },
-                        "__collapse": true
-                    },
-                    "id": "61a54228-18c4-4509-a9a0-a2c11a17cae0"
-                }
-            ]
-        },
-        {
             "id": "5f234535-7d5f-449d-8bc7-3564f2b754eb",
             "name": "setPartTileTht2",
-            "description": "set the tiles of an 2 pin tht part on the pcb",
+            "description": "set the tiles of an 2 pin tht part on the pcb\nTODO: replace with a more generic function",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -18868,7 +18465,7 @@
         {
             "id": "ecdd45c8-2b4d-486b-82fd-ff4e19f7c3bb",
             "name": "setPartTileSmd8",
-            "description": "set the tiles of an 8 pin smd part on the pcb",
+            "description": "set the tiles of an 8 pin smd part on the pcb\nTODO: replace with a more generic function",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -20216,7 +19813,7 @@
                         "choices": 5,
                         "__collapseCase0": false,
                         "value0": 0,
-                        "__collapseCase1": true,
+                        "__collapseCase1": false,
                         "value1": 1,
                         "__collapseCase2": true,
                         "value2": 2,
@@ -20665,348 +20262,6 @@
                         ]
                     },
                     "id": "d8bcd00e-d7a6-42fb-8713-48250d1ee73b"
-                }
-            ]
-        },
-        {
-            "id": "46fa193e-eb57-42a4-a711-119389968127",
-            "name": "writeSMD",
-            "description": "Writes \"SMD\" on the bags",
-            "variables": {
-                "V1": {
-                    "id": "V1",
-                    "name": "bagNo",
-                    "passByReference": false
-                }
-            },
-            "actors": {},
-            "symbol": "script_28",
-            "script": [
-                {
-                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
-                    "args": {
-                        "variable": "V1",
-                        "expression": "$V1$ - (($V1$ / 4) * 4)",
-                        "__collapse": true
-                    },
-                    "id": "4cf8fd8f-e0ea-41c2-8fa7-7b8eb5469a7d"
-                },
-                {
-                    "command": "EVENT_SWITCH",
-                    "args": {
-                        "variable": "V1",
-                        "choices": 4,
-                        "__collapseCase0": false,
-                        "value0": 0,
-                        "__collapseCase1": false,
-                        "value1": 1,
-                        "__collapseCase2": false,
-                        "value2": 2,
-                        "__collapseCase3": false,
-                        "value3": 3,
-                        "__collapseCase4": false,
-                        "value4": 5,
-                        "__collapseCase5": false,
-                        "value5": 6,
-                        "__collapseCase6": false,
-                        "value6": 7,
-                        "__collapseCase7": false,
-                        "value7": 8,
-                        "__collapseCase8": false,
-                        "value8": 9,
-                        "__collapseCase9": false,
-                        "value9": 10,
-                        "__collapseCase10": false,
-                        "value10": 11,
-                        "__collapseCase11": false,
-                        "value11": 12,
-                        "__collapseCase12": false,
-                        "value12": 13,
-                        "__collapseCase13": false,
-                        "value13": 14,
-                        "__collapseCase14": false,
-                        "value14": 15,
-                        "__collapseCase15": false,
-                        "value15": 16,
-                        "__collapseElse": false,
-                        "__collapse": false
-                    },
-                    "children": {
-                        "true0": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 28
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "f3628880-2151-4926-be38-23419343525b"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 10, 4, ___bank_bg_letters_tileset, _bg_letters_tileset, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "6b717a85-ecd4-4527-83bd-4eb08b5aa140"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 22
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "769abeeb-6197-44f6-b0a1-1f8876642ff4"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 11, 4, ___bank_bg_letters_tileset, _bg_letters_tileset, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "18a8f089-1b42-46c2-95a2-699ddafdf179"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 13
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "af39c773-408b-42e9-b807-4a1b57a3c466"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 12, 4, ___bank_bg_letters_tileset, _bg_letters_tileset, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "98504068-d271-4486-8eda-552866d9b5f1"
-                            }
-                        ],
-                        "true1": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 28
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "ff63bc12-a89d-4ef2-854b-d883eb9fba32"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 10, 7, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "aec3272a-a98e-451e-bba3-ffffd573ed56"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 22
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "318e0f7c-b2d6-45f0-97a0-1b7af13d3038"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 11, 7, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "dd6d9e2f-36c1-4675-a586-421df93d0739"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 13
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "a3819d31-3f83-4cb6-8a9a-bf45fecfc304"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 12, 7, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "ba0461fb-0c7b-40c4-8388-7ad05b745137"
-                            }
-                        ],
-                        "true2": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 28
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "096c96d3-c5ca-48e7-a241-8a8cac979901"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 10, 10, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "9673ef74-f96d-466e-ae5c-788bafe5567f"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 22
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "c2fc4711-f51e-49f3-a8fe-05b19fe5a084"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 11, 10, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "61f549ab-3d79-4a79-9b4a-9b49304dda3d"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 13
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "e0faa95b-3f75-4083-a9a4-00d647098edb"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 12, 10, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "a0b2e944-1063-4e7e-b08f-5aa9ac131b7c"
-                            }
-                        ],
-                        "true3": [
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 28
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "5f623311-a3e2-4635-b9de-b6e73bc36fd6"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 9, 13, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "fa4f78eb-6775-4fb8-a19c-f2b6ffb8a545"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 22
-                                    },
-                                    "__collapse": false
-                                },
-                                "id": "f3446923-2b3c-432d-9fea-0a27381b0677"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 10, 13, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "5fab5656-fa52-4f4f-9d59-823e9e6578ba"
-                            },
-                            {
-                                "command": "EVENT_SET_VALUE",
-                                "args": {
-                                    "variable": "12",
-                                    "value": {
-                                        "type": "number",
-                                        "value": 13
-                                    },
-                                    "__collapse": true
-                                },
-                                "id": "8ba7d43d-43c5-4f20-8b47-39b3952434fe"
-                            },
-                            {
-                                "command": "EVENT_GBVM_SCRIPT",
-                                "args": {
-                                    "script": "VM_REPLACE_TILE_XY 11, 13, ___bank_bg_letters, _bg_letters, VAR_TILE_NO",
-                                    "references": [],
-                                    "__collapse": false
-                                },
-                                "id": "b1a40d28-8d0b-4aec-8406-02481bb8907a"
-                            }
-                        ],
-                        "true4": [],
-                        "true5": [],
-                        "true6": [],
-                        "true7": [],
-                        "true8": [],
-                        "true9": [],
-                        "true10": [],
-                        "true11": [],
-                        "true12": [],
-                        "true13": [],
-                        "true14": [],
-                        "true15": [],
-                        "false": []
-                    },
-                    "id": "bb916915-10b8-4409-bfd2-38a472d19b3f"
                 }
             ]
         },
@@ -23314,11 +22569,19 @@
         {
             "id": "731e172c-328f-48da-8c99-421a98828db0",
             "name": "initParts",
-            "description": "Defines the parts by setting their data\n\n",
+            "description": "Defines the parts by setting their data and footprint\nUndependent from level",
             "variables": {},
             "actors": {},
             "symbol": "script_2",
             "script": [
+                {
+                    "command": "EVENT_COMMENT",
+                    "args": {
+                        "text": "---------------\ncoponent types\n----------------\nFEDCBA9876543210\n000                 -> R\n001                 -> C\n010                 -> L\n   XXXXXXX          -> values 0-127\n011xxxxxxxFFUUUS    -> xxxxxx = Z-Diode value\n                              = 104 -> 1N4004\n                              = 120 -> LED green\nFEDCBA9876543210\n          00        -> * 0.1\n          01        -> * 1\n          10        -> * 10\n          11        -> * 100\nFEDCBA9876543210\n            000     -> p pico\n            001     -> n nano\n            010     -> µ my\n            011     -> m milli\n            100     -> 0\n            101     -> k kilo\n            110     -> M mega\n            111     -> \nFEDCBA9876543210\n               0    -> SMD\n               1    -> THT\nFEDCBA9876543210\n100            S    -> J\n101            S    -> U IC 8 pin\n   XXXXXXX          -> values 0-127 pins\n101000100000000S    -> U1: NE555\n101000100000001S    -> U2: MC34063A  M34063\n101000100000010S    -> U3: ATTINY13A ATTi13\n111000000000000S    -> switch\n111            S    ->\nFEDCBA9876543210",
+                        "__collapse": true
+                    },
+                    "id": "828502d4-10fc-4ab0-ac61-0d613e82e024"
+                },
                 {
                     "command": "EVENT_SET_VALUE",
                     "args": {
@@ -23330,14 +22593,6 @@
                         "__collapse": true
                     },
                     "id": "7c24c68d-2d8d-44ef-8c36-89dba9d92f92"
-                },
-                {
-                    "command": "EVENT_COMMENT",
-                    "args": {
-                        "text": "---------------\ncoponent types\n----------------\nFEDCBA9876543210\n000                 -> R\n001                 -> C\n010                 -> L\n   XXXXXXX          -> values 0-127\n011xxxxxxxFFUUUS    -> xxxxxx = Z-Diode value\n                              = 104 -> 1N4004\n                              = 120 -> LED green\nFEDCBA9876543210\n          00        -> * 0.1\n          01        -> * 1\n          10        -> * 10\n          11        -> * 100\nFEDCBA9876543210\n            000     -> p pico\n            001     -> n nano\n            010     -> µ my\n            011     -> m milli\n            100     -> 0\n            101     -> k kilo\n            110     -> M mega\n            111     -> \nFEDCBA9876543210\n               0    -> SMD\n               1    -> THT\nFEDCBA9876543210\n100            S    -> J\n101            S    -> U IC 8 pin\n   XXXXXXX          -> values 0-127 pins\n101000100000000S    -> U1: NE555\n101000100000001S    -> U2: MC34063A  M34063\n101000100000010S    -> U3: ATTINY13A ATTi13\n111000000000000S    -> switch\n111            S    ->\nFEDCBA9876543210",
-                        "__collapse": true
-                    },
-                    "id": "828502d4-10fc-4ab0-ac61-0d613e82e024"
                 },
                 {
                     "command": "EVENT_CLEAR_FLAGS",
@@ -24042,6 +23297,69 @@
                         "__label": "setPartData(39, 32257)"
                     },
                     "id": "a0fd94b4-83b4-4928-bbf4-ef3f677190bf"
+                },
+                {
+                    "command": "EVENT_COMMENT",
+                    "args": {
+                        "text": "Part footprint var 240-279\n--------------\nFEDC BA98 7654 3210\nuscp ffdd tttt tttt t = part position (upper left corner)\n                    d = direction (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)\n                    u = used (no=0, yes=1)\n                    c = defect (no=0, yes=1)\n                    p = part placed (no=0, yes=0)\n                    s = ?\n                    f = ?\n",
+                        "__collapse": true
+                    },
+                    "id": "9a89ad37-6c51-4111-829a-b31af0203428"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "26",
+                        "value": {
+                            "type": "number",
+                            "value": 240
+                        },
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "f3a51c9f-1a8c-4dca-8f9b-80f65e115e39"
+                },
+                {
+                    "command": "EVENT_CLEAR_FLAGS",
+                    "args": {
+                        "variable": "27",
+                        "flag1": false,
+                        "flag2": false,
+                        "flag3": false,
+                        "flag4": false,
+                        "flag5": false,
+                        "flag6": false,
+                        "flag7": false,
+                        "flag8": false,
+                        "flag9": false,
+                        "flag10": false,
+                        "flag11": false,
+                        "flag12": false,
+                        "flag13": false,
+                        "flag14": false,
+                        "flag15": false,
+                        "flag16": false,
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "b04509d2-b04d-4a31-9a03-a87a43f16b27"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "452c4f63-1fb1-42f3-ac3c-9ad56f305cba",
+                        "$variable[V1]$": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "$variable[V0]$": {
+                            "type": "number",
+                            "value": 12
+                        },
+                        "__collapse": true,
+                        "__comment": true
+                    },
+                    "id": "7c1df23e-5e0b-4d58-96d7-f2eebb8171f6"
                 }
             ]
         },
@@ -24555,7 +23873,7 @@
         {
             "id": "1afcf2e0-9894-45f7-ad0b-2653d112c85f",
             "name": "getPadToSolder",
-            "description": "get the pad number where the player stand by so it can be soldered\nSet PadBeingSoldered with its number",
+            "description": "Gets the pad number where the player stands by so it can be soldered\nSet PadBeingSoldered with its number",
             "variables": {},
             "actors": {},
             "symbol": "script_32",
@@ -24734,8 +24052,8 @@
         },
         {
             "id": "62b341f9-d9b8-435d-848f-533fb1e654e3",
-            "name": "drawFootprint",
-            "description": "change background tile of footprint for given pad",
+            "name": "drawPad",
+            "description": "Changes background tile for given pad",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -24817,17 +24135,6 @@
                                 "id": "8608d9f7-e0c5-40bc-95f0-9c677ebe19c9"
                             },
                             {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "Draw pad $12$\nat ($10$, $11$)\n$V0$"
-                                    ],
-                                    "avatarId": "",
-                                    "__comment": true
-                                },
-                                "id": "373c1c13-2069-4571-8ae7-19de35507fe6"
-                            },
-                            {
                                 "command": "EVENT_IF_FLAGS_COMPARE",
                                 "args": {
                                     "variable": "V0",
@@ -24840,203 +24147,10 @@
                                         {
                                             "command": "EVENT_COMMENT",
                                             "args": {
-                                                "text": "Pad is soldered",
+                                                "text": "Pad is soldered - tileNo is correct",
                                                 "__collapse": true
                                             },
                                             "id": "308a971f-6440-44ab-9e8b-8fb89858f5b4"
-                                        },
-                                        {
-                                            "command": "EVENT_SWITCH",
-                                            "args": {
-                                                "variable": "91",
-                                                "choices": 12,
-                                                "__collapseCase0": false,
-                                                "value0": 0,
-                                                "__collapseCase1": false,
-                                                "value1": 1,
-                                                "__collapseCase2": false,
-                                                "value2": 2,
-                                                "__collapseCase3": false,
-                                                "value3": 3,
-                                                "__collapseCase4": false,
-                                                "value4": 4,
-                                                "__collapseCase5": false,
-                                                "value5": 5,
-                                                "__collapseCase6": false,
-                                                "value6": 6,
-                                                "__collapseCase7": false,
-                                                "value7": 7,
-                                                "__collapseCase8": false,
-                                                "value8": 8,
-                                                "__collapseCase9": false,
-                                                "value9": 9,
-                                                "__collapseCase10": false,
-                                                "value10": 10,
-                                                "__collapseCase11": false,
-                                                "value11": 11,
-                                                "__collapseCase12": false,
-                                                "value12": 12,
-                                                "__collapseCase13": false,
-                                                "value13": 13,
-                                                "__collapseCase14": false,
-                                                "value14": 14,
-                                                "__collapseCase15": false,
-                                                "value15": 15,
-                                                "__collapseElse": false,
-                                                "__disableElse": false,
-                                                "__collapse": true,
-                                                "__comment": true
-                                            },
-                                            "children": {
-                                                "true0": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is THT and direction is up",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "9762cb91-de30-4585-bdb3-ea968effa36d"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_SET_VALUE",
-                                                        "args": {
-                                                            "variable": "12",
-                                                            "value": {
-                                                                "type": "number",
-                                                                "value": 0
-                                                            }
-                                                        },
-                                                        "id": "9fccf7f1-de43-4c5f-880b-19f136c61cb3"
-                                                    }
-                                                ],
-                                                "true1": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is THT and direction is down",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "9cd3f8d4-ca31-45cf-b342-4cafb636ae5d"
-                                                    }
-                                                ],
-                                                "true2": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is THT and direction is left",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "338540a9-c6ba-4858-b0b7-9d94e9bb0cb1"
-                                                    }
-                                                ],
-                                                "true3": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is THT and direction is right",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "adee80a0-0920-41f8-8c12-1576a9d2659b"
-                                                    }
-                                                ],
-                                                "true4": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is SMD and direction is up",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "225ef7d5-0018-4ab4-b605-6ff30f2783c4"
-                                                    }
-                                                ],
-                                                "true5": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad os SMD and direction is down",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "c3161979-ce17-410f-9ad1-1dd405727f12"
-                                                    }
-                                                ],
-                                                "true6": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is SMD and direction is left",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "cae09682-f228-4335-a07a-ae95e92b0f81"
-                                                    }
-                                                ],
-                                                "true7": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is SMD and direction is right",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "28c79114-1d76-49c4-a0e4-a76645dbcfea"
-                                                    }
-                                                ],
-                                                "true8": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is IC and direction is up",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "8a4d172f-a4d5-4815-8749-b772ac86408b"
-                                                    }
-                                                ],
-                                                "true9": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is IC and direction is down",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "00ab6b05-78ef-4254-9ad5-222e9501139f"
-                                                    }
-                                                ],
-                                                "true10": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is IC and direction is left",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "ad3ef3cd-2cfd-45cb-8fb4-72937128a559"
-                                                    }
-                                                ],
-                                                "true11": [
-                                                    {
-                                                        "command": "EVENT_COMMENT",
-                                                        "args": {
-                                                            "text": "Pad is IC and direction is right",
-                                                            "__collapse": true
-                                                        },
-                                                        "id": "b2497979-8134-4373-b07f-0bf702cdafad"
-                                                    }
-                                                ],
-                                                "true12": [],
-                                                "true13": [],
-                                                "true14": [],
-                                                "true15": [],
-                                                "false": [
-                                                    {
-                                                        "command": "EVENT_TEXT",
-                                                        "args": {
-                                                            "text": [
-                                                                "<ERROR> unknown footprint"
-                                                            ],
-                                                            "avatarId": ""
-                                                        },
-                                                        "id": "dba20f5b-4b26-4757-8eb7-6934f7222aa8"
-                                                    }
-                                                ]
-                                            },
-                                            "id": "9cd9fce6-b13a-4f79-b8b7-a69efc417d77"
                                         }
                                     ],
                                     "false": [
@@ -25067,188 +24181,6 @@
                                                         "id": "53e69f66-1e39-46ba-a91a-9cf21aff65f3"
                                                     },
                                                     {
-                                                        "command": "EVENT_SWITCH",
-                                                        "args": {
-                                                            "variable": "91",
-                                                            "choices": 12,
-                                                            "__collapseCase0": false,
-                                                            "value0": 0,
-                                                            "__collapseCase1": false,
-                                                            "value1": 1,
-                                                            "__collapseCase2": false,
-                                                            "value2": 2,
-                                                            "__collapseCase3": false,
-                                                            "value3": 3,
-                                                            "__collapseCase4": false,
-                                                            "value4": 4,
-                                                            "__collapseCase5": false,
-                                                            "value5": 5,
-                                                            "__collapseCase6": false,
-                                                            "value6": 6,
-                                                            "__collapseCase7": false,
-                                                            "value7": 7,
-                                                            "__collapseCase8": false,
-                                                            "value8": 8,
-                                                            "__collapseCase9": false,
-                                                            "value9": 9,
-                                                            "__collapseCase10": false,
-                                                            "value10": 10,
-                                                            "__collapseCase11": false,
-                                                            "value11": 11,
-                                                            "__collapseCase12": false,
-                                                            "value12": 12,
-                                                            "__collapseCase13": false,
-                                                            "value13": 13,
-                                                            "__collapseCase14": false,
-                                                            "value14": 14,
-                                                            "__collapseCase15": false,
-                                                            "value15": 15,
-                                                            "__collapseElse": false,
-                                                            "__disableElse": false,
-                                                            "__collapse": true,
-                                                            "__comment": true
-                                                        },
-                                                        "children": {
-                                                            "true0": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "fc36759e-4bdc-48a4-a2ab-9e1f73ab0f29"
-                                                                }
-                                                            ],
-                                                            "true1": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "2f8add44-eb9f-4af5-b62a-f671680d7b8c"
-                                                                }
-                                                            ],
-                                                            "true2": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "fb56f02e-43d7-41ff-88eb-4a20181ed732"
-                                                                }
-                                                            ],
-                                                            "true3": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "6f23a45a-2744-4b38-a222-a6199c45c01b"
-                                                                }
-                                                            ],
-                                                            "true4": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "00f826c6-cc9b-4c5d-aae8-3439bd80dc03"
-                                                                }
-                                                            ],
-                                                            "true5": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad os SMD and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "d3d222d9-9a86-4abf-b0a1-bd90f7748bd1"
-                                                                }
-                                                            ],
-                                                            "true6": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "46658383-7ee2-4ee6-b16f-909bc6d8d4e9"
-                                                                }
-                                                            ],
-                                                            "true7": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "0ebf221e-b520-427a-a464-535f14a91439"
-                                                                }
-                                                            ],
-                                                            "true8": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "b2b16ac7-9d00-4665-9b49-d30dec484de4"
-                                                                }
-                                                            ],
-                                                            "true9": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "bffd4848-af59-4027-9abb-feb983b94156"
-                                                                }
-                                                            ],
-                                                            "true10": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "31e8ee4d-b31a-4f62-8166-dd77b2746ed1"
-                                                                }
-                                                            ],
-                                                            "true11": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "d988da44-c1da-4a0c-8203-b5da5fcc4784"
-                                                                }
-                                                            ],
-                                                            "true12": [],
-                                                            "true13": [],
-                                                            "true14": [],
-                                                            "true15": [],
-                                                            "false": [
-                                                                {
-                                                                    "command": "EVENT_TEXT",
-                                                                    "args": {
-                                                                        "text": [
-                                                                            "<ERROR> unknown footprint"
-                                                                        ],
-                                                                        "avatarId": ""
-                                                                    },
-                                                                    "id": "1f15f4c8-0181-4871-98de-b4403e060092"
-                                                                }
-                                                            ]
-                                                        },
-                                                        "id": "22157787-eb92-4d1c-914e-9eec127dbe2f"
-                                                    },
-                                                    {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
                                                             "vectorX": "12",
@@ -25272,188 +24204,6 @@
                                                             "__collapse": true
                                                         },
                                                         "id": "67d92e0c-877b-451f-881a-b3b983c1fa87"
-                                                    },
-                                                    {
-                                                        "command": "EVENT_SWITCH",
-                                                        "args": {
-                                                            "variable": "91",
-                                                            "choices": 12,
-                                                            "__collapseCase0": false,
-                                                            "value0": 0,
-                                                            "__collapseCase1": false,
-                                                            "value1": 1,
-                                                            "__collapseCase2": false,
-                                                            "value2": 2,
-                                                            "__collapseCase3": false,
-                                                            "value3": 3,
-                                                            "__collapseCase4": false,
-                                                            "value4": 4,
-                                                            "__collapseCase5": false,
-                                                            "value5": 5,
-                                                            "__collapseCase6": false,
-                                                            "value6": 6,
-                                                            "__collapseCase7": false,
-                                                            "value7": 7,
-                                                            "__collapseCase8": false,
-                                                            "value8": 8,
-                                                            "__collapseCase9": false,
-                                                            "value9": 9,
-                                                            "__collapseCase10": false,
-                                                            "value10": 10,
-                                                            "__collapseCase11": false,
-                                                            "value11": 11,
-                                                            "__collapseCase12": false,
-                                                            "value12": 12,
-                                                            "__collapseCase13": false,
-                                                            "value13": 13,
-                                                            "__collapseCase14": false,
-                                                            "value14": 14,
-                                                            "__collapseCase15": false,
-                                                            "value15": 15,
-                                                            "__collapseElse": false,
-                                                            "__disableElse": false,
-                                                            "__collapse": false,
-                                                            "__comment": true
-                                                        },
-                                                        "children": {
-                                                            "true0": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "041a1755-9a48-4401-aa38-16a83e45719a"
-                                                                }
-                                                            ],
-                                                            "true1": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "93e60c24-7afd-4fa3-8993-aae8e694b439"
-                                                                }
-                                                            ],
-                                                            "true2": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "e2b47b40-c1cc-491d-8db2-751f2becf059"
-                                                                }
-                                                            ],
-                                                            "true3": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is THT and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "dce1ef2b-2238-426d-ad4b-f5e4723cad15"
-                                                                }
-                                                            ],
-                                                            "true4": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "8cba1182-69be-48bf-8285-5612b90e6228"
-                                                                }
-                                                            ],
-                                                            "true5": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad os SMD and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "3a5ceb68-dbf0-475e-9c5e-00400de0a82a"
-                                                                }
-                                                            ],
-                                                            "true6": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "d8488f56-22f1-47c9-9280-11b00008d909"
-                                                                }
-                                                            ],
-                                                            "true7": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is SMD and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "a75f31f9-883f-4d67-aed4-8f690d9658ea"
-                                                                }
-                                                            ],
-                                                            "true8": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is up",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "e1e81b08-b6ab-4582-a617-1f87a1f5d9c8"
-                                                                }
-                                                            ],
-                                                            "true9": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is down",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "c3189b79-c3da-46f3-bf4c-40d41eba7ab0"
-                                                                }
-                                                            ],
-                                                            "true10": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is left",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "15a42cb7-f8e6-48c6-b4e2-ac7af7dafdd5"
-                                                                }
-                                                            ],
-                                                            "true11": [
-                                                                {
-                                                                    "command": "EVENT_COMMENT",
-                                                                    "args": {
-                                                                        "text": "Pad is IC and direction is right",
-                                                                        "__collapse": true
-                                                                    },
-                                                                    "id": "6d761969-6d9a-48bb-a7f4-4790468da6e5"
-                                                                }
-                                                            ],
-                                                            "true12": [],
-                                                            "true13": [],
-                                                            "true14": [],
-                                                            "true15": [],
-                                                            "false": [
-                                                                {
-                                                                    "command": "EVENT_TEXT",
-                                                                    "args": {
-                                                                        "text": [
-                                                                            "<ERROR> unknown footprint"
-                                                                        ],
-                                                                        "avatarId": ""
-                                                                    },
-                                                                    "id": "02131969-ed74-4fb2-aeb4-76ece3f7cf5b"
-                                                                }
-                                                            ]
-                                                        },
-                                                        "id": "971fa6d7-94e0-4baf-909c-6545055926e4"
                                                     },
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
@@ -25494,7 +24244,7 @@
                                         "type": "variable",
                                         "value": "12"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "id": "dcdc27ae-342a-487b-9769-44a993aad296"
                             }
@@ -25508,7 +24258,7 @@
         {
             "id": "5c50c314-3ea5-4d36-832f-6818e1466218",
             "name": "initPads",
-            "description": "Defines the solder pads by setting their data",
+            "description": "Defines the solder pads by setting their data\nIs dependent from level\nTODO: replace calls of setPadDataDirect and delete function setPadPadaDirect",
             "variables": {},
             "actors": {},
             "symbol": "script_34",
@@ -25516,8 +24266,8 @@
                 {
                     "command": "EVENT_COMMENT",
                     "args": {
-                        "text": "----------\nSolderpads (saved in variable 280-299)\n----------\nx(1-18), y(1-13) \nFEDC BA98 7654 3210\nuscp ffdd tttt tttt t = tile position \n                        -> t = (y-1)*18 + (x-1) -> (0-233)\n                        -> x=t%18 + 1, y=t/18 + 1\n                    u = used (no=0, yes=1)\n                    s = soldered (no=0, yes=1)\n                    c = cold soldered=defect (no=0, yes=1)\n                    p = part placed (no=0, yes=0)\n                    f = footprint (tht=00, smd=01, ic=10)\n                    d = direction (up=00, down=01, left=10,\n                                   right=11)",
-                        "__collapse": true
+                        "text": "----------\nSolderpads (saved in variable 320-339)\n----------\nx(1-18), y(1-13) \nFEDC BA98 7654 3210\nuscp ffdd tttt tttt t = tile position \n                        -> t = (y-1)*18 + (x-1) -> (0-233)\n                        -> x=t%18 + 1, y=t/18 + 1\n                    u = used (no=0, yes=1)\n                    s = soldered (no=0, yes=1)\n                    c = cold soldered=defect (no=0, yes=1)\n                    p = part placed (no=0, yes=0)\n                    f = footprint (tht=00, smd=01, ic=10)\n                    d = direction (up=00, down=01, left=10,\n                                   right=11)",
+                        "__collapse": false
                     },
                     "id": "0c9dd970-e121-4efe-b388-8c2438b5d8b5"
                 },
@@ -25527,11 +24277,67 @@
                         "variable": "39",
                         "value": {
                             "type": "number",
-                            "value": 280
+                            "value": 320
                         },
                         "__collapse": true
                     },
                     "id": "966102a7-6730-4148-a5ec-94533c041ce0"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "ae5452fa-9e59-4367-8287-26f807ebc9a6",
+                        "$variable[V0]$": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "$variable[V1]$": {
+                            "type": "number",
+                            "value": 3
+                        },
+                        "$variable[V2]$": {
+                            "type": "number",
+                            "value": 5
+                        },
+                        "$variable[V3]$": {
+                            "type": "number",
+                            "value": 1
+                        },
+                        "$variable[V4]$": {
+                            "type": "number",
+                            "value": 1
+                        },
+                        "__collapse": false
+                    },
+                    "id": "f8c9fbbd-3efc-4ffb-8248-7fa2646a4f93"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "ae5452fa-9e59-4367-8287-26f807ebc9a6",
+                        "$variable[V0]$": {
+                            "type": "number",
+                            "value": 1
+                        },
+                        "$variable[V1]$": {
+                            "type": "number",
+                            "value": 3
+                        },
+                        "$variable[V2]$": {
+                            "type": "number",
+                            "value": 8
+                        },
+                        "$variable[V3]$": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "$variable[V4]$": {
+                            "type": "number",
+                            "value": 1
+                        },
+                        "__collapse": true
+                    },
+                    "id": "27cd61a7-c04a-449b-b4b6-f1c2679da1a6"
                 },
                 {
                     "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -25545,7 +24351,8 @@
                             "type": "number",
                             "value": 34122
                         },
-                        "__collapse": true
+                        "__collapse": false,
+                        "__comment": true
                     },
                     "id": "9f938a89-7714-4bea-b4a9-6fb074cb7e93"
                 },
@@ -25561,7 +24368,8 @@
                             "type": "number",
                             "value": 33920
                         },
-                        "__collapse": true
+                        "__collapse": false,
+                        "__comment": true
                     },
                     "id": "bbb7eb51-d508-4a01-8a44-c272040a16bd"
                 },
@@ -25858,7 +24666,7 @@
         {
             "id": "381cdf31-c55a-4749-b368-60bd97e8a92d",
             "name": "setPartData",
-            "description": "setPartData",
+            "description": "sets the data for the part <index==partNo> in PartArray",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -25922,7 +24730,7 @@
         {
             "id": "5eef02d5-ff92-4b15-842e-c94323acf924",
             "name": "getPartData",
-            "description": "set PartData with the data of part no <index>",
+            "description": "Sets PartData with the data of part no <index>",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -26040,8 +24848,8 @@
         },
         {
             "id": "c6ade8df-3948-45ef-82e1-d32eda1e2b1a",
-            "name": "setPadData",
-            "description": "sets the data for the pad <padNo>",
+            "name": "setPadDataDirect",
+            "description": "sets the data for the pad <padNo> in PadArray",
             "variables": {
                 "V0": {
                     "id": "V0",
@@ -26101,6 +24909,510 @@
                     "id": "f5bebb15-28ae-4c75-a7a6-44a2ec5a6bd9"
                 }
             ]
+        },
+        {
+            "id": "7845caf0-0882-4e61-9932-085306e19f50",
+            "name": "drawPart",
+            "description": "Changes background tile for part at given pad (upper left)\nTODO: set position for transistors\nTODO: check 2 pin or more \nTODO: check IC or Transistor\nTODO: replace tile",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "partNo",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "padNo",
+                    "passByReference": true
+                }
+            },
+            "actors": {},
+            "symbol": "script_16",
+            "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "5eef02d5-ff92-4b15-842e-c94323acf924",
+                        "$variable[V0]$": {
+                            "type": "variable",
+                            "value": "V0"
+                        },
+                        "__collapse": true
+                    },
+                    "id": "436cd3f6-24a5-4477-9bb4-061aa1c097b9"
+                },
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
+                        "$variable[V0]$": {
+                            "type": "variable",
+                            "value": "V1"
+                        },
+                        "__collapse": true
+                    },
+                    "id": "02d095aa-264d-4063-93c1-8136e26af0a1"
+                },
+                {
+                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                    "args": {
+                        "variable": "10",
+                        "expression": "(($09$ & 255) % 18) + 1",
+                        "__collapse": true
+                    },
+                    "id": "47eea360-0dfb-4518-8c6d-df76f31b22d2"
+                },
+                {
+                    "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                    "args": {
+                        "variable": "11",
+                        "expression": "(($09$ & 255) / 18) + 1",
+                        "__collapse": true
+                    },
+                    "id": "f947e3f0-9845-4b82-ac81-095eb3728442"
+                },
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "9",
+                        "flag": 9,
+                        "__collapseElse": false,
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_COMMENT",
+                                "args": {
+                                    "text": "horizontal",
+                                    "__collapse": true
+                                },
+                                "id": "2a46e751-a03d-4c53-a2f0-8c2cbdfd2a1d"
+                            },
+                            {
+                                "command": "EVENT_IF_FLAGS_COMPARE",
+                                "args": {
+                                    "variable": "28",
+                                    "flag": 15,
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "more than 2 pins horizontal",
+                                                "__collapse": true
+                                            },
+                                            "id": "7a3bdcb0-4f7e-43cb-9f87-8490628a5ab3"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
+                                            "args": {
+                                                "variable": "28",
+                                                "flag": 13,
+                                                "__collapseElse": false,
+                                                "__collapse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_COMMENT",
+                                                        "args": {
+                                                            "text": "Part is IC horizontal",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "be5b6823-b635-4381-9208-0c82dcc0e024"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "10",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "68055f26-9fa0-46f6-8c55-884e9b59a339"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_COMMENT",
+                                                        "args": {
+                                                            "text": "TODO: Part is Transistor horizontal",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "4fa47c45-8a24-4743-9fd0-ab50c94806ad"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "2729703e-8dbc-4a52-8adc-aa425255fb0f"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "2 pin2 horizontal",
+                                                "__collapse": true
+                                            },
+                                            "id": "cee5dbda-f32b-49de-aede-13494757d0b7"
+                                        },
+                                        {
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "__collapse": true
+                                            },
+                                            "id": "aa59cc89-4a4e-4e5b-8c4e-16bad6d6aef7"
+                                        }
+                                    ]
+                                },
+                                "id": "53789fad-42ea-4021-b389-e2b136cf04c7"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_COMMENT",
+                                "args": {
+                                    "text": "vertical",
+                                    "__collapse": true
+                                },
+                                "id": "fb16b6ce-0a28-4b84-aa84-2c7d4e534f4b"
+                            },
+                            {
+                                "command": "EVENT_IF_FLAGS_COMPARE",
+                                "args": {
+                                    "variable": "28",
+                                    "flag": 15,
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "more than 2 pins vertical",
+                                                "__collapse": true
+                                            },
+                                            "id": "bcbcd4ee-3656-4c61-a0cd-1242c2e2c5dd"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
+                                            "args": {
+                                                "variable": "28",
+                                                "flag": 13,
+                                                "__collapseElse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_COMMENT",
+                                                        "args": {
+                                                            "text": "Part is IC vertical",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "77df50c5-c764-43c0-81ee-72914a5eaa99"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_INC_VALUE",
+                                                        "args": {
+                                                            "variable": "11",
+                                                            "__collapse": false
+                                                        },
+                                                        "id": "6578ac65-8640-464b-a46f-2d641b623e4e"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "command": "EVENT_COMMENT",
+                                                        "args": {
+                                                            "text": "TODO: Part is Transistor vertical",
+                                                            "__collapse": true
+                                                        },
+                                                        "id": "98a03292-3118-4bd5-a4e3-dbe1ffbf7a69"
+                                                    }
+                                                ]
+                                            },
+                                            "id": "46d6fe5f-187f-41ee-a199-25594def41af"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "2 pins vertical\n",
+                                                "__collapse": true
+                                            },
+                                            "id": "9337f826-41cd-4f16-8d0a-33f35bfea9af"
+                                        },
+                                        {
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "11",
+                                                "__collapse": false
+                                            },
+                                            "id": "c8b998fd-4a38-43ce-a7e7-255b9dc3330d"
+                                        }
+                                    ]
+                                },
+                                "id": "4066b9a4-d26e-4138-859d-9e075e01bc9f"
+                            }
+                        ]
+                    },
+                    "id": "a9c3428b-eb1b-4ae1-ba3f-a8b859ee6713"
+                }
+            ]
+        },
+        {
+            "id": "452c4f63-1fb1-42f3-ac3c-9ad56f305cba",
+            "name": "setPartFootprint",
+            "description": "Sets position and orientation of part",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "index",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "value",
+                    "passByReference": true
+                }
+            },
+            "actors": {},
+            "symbol": "script_30",
+            "script": [
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "37",
+                        "value": {
+                            "type": "variable",
+                            "value": "V0"
+                        }
+                    },
+                    "id": "ad6e1ba1-99c5-415f-b785-962d865a1000"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "38",
+                        "value": {
+                            "type": "variable",
+                            "value": "V1"
+                        }
+                    },
+                    "id": "f5fe39a3-295d-4fc3-b8c4-d7cef3e488ab"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_RPN\n.R_REF VAR_PARTFOOTPRINTARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+                        "references": [
+                            {
+                                "type": "variable",
+                                "id": "37"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "38"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "26"
+                            }
+                        ]
+                    },
+                    "id": "abb76fcc-9fd5-4ea2-b85f-fcdfa2c0a843"
+                }
+            ]
+        },
+        {
+            "id": "ae5452fa-9e59-4367-8287-26f807ebc9a6",
+            "name": "setPadData",
+            "description": "Sets the data of pad <padNo>\norientation (facing to part): up=0, down=1, left=2, right=3\nfootprint: tht=0, smd=1, ic=2",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "padNo",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "posX",
+                    "passByReference": true
+                },
+                "V2": {
+                    "id": "V2",
+                    "name": "posY",
+                    "passByReference": true
+                },
+                "V3": {
+                    "id": "V3",
+                    "name": "orientation",
+                    "passByReference": true
+                },
+                "V4": {
+                    "id": "V4",
+                    "name": "footprint",
+                    "passByReference": true
+                }
+            },
+            "actors": {},
+            "symbol": "script_17",
+            "script": [
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "37",
+                        "value": {
+                            "type": "variable",
+                            "value": "V0"
+                        },
+                        "__collapse": true
+                    },
+                    "id": "90f1f745-4a96-40e2-b834-5194227cdb61"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "38",
+                        "value": {
+                            "type": "add",
+                            "valueA": {
+                                "type": "mul",
+                                "valueA": {
+                                    "type": "sub",
+                                    "valueA": {
+                                        "type": "variable",
+                                        "value": "V2"
+                                    },
+                                    "valueB": {
+                                        "type": "number",
+                                        "value": 1
+                                    }
+                                },
+                                "valueB": {
+                                    "type": "number",
+                                    "value": 18
+                                }
+                            },
+                            "valueB": {
+                                "type": "sub",
+                                "valueA": {
+                                    "type": "variable",
+                                    "value": "V1"
+                                },
+                                "valueB": {
+                                    "type": "number",
+                                    "value": 1
+                                }
+                            }
+                        },
+                        "__collapse": true
+                    },
+                    "id": "dde6a563-e25a-4e14-8c79-bb533c3a6522"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "38",
+                        "value": {
+                            "type": "add",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "38"
+                            },
+                            "valueB": {
+                                "type": "shl",
+                                "valueA": {
+                                    "type": "variable",
+                                    "value": "V3"
+                                },
+                                "valueB": {
+                                    "type": "number",
+                                    "value": 8
+                                }
+                            }
+                        },
+                        "__collapse": true
+                    },
+                    "id": "52d35356-c769-4eca-9bc8-cf5ee2e637d4"
+                },
+                {
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "38",
+                        "value": {
+                            "type": "bOR",
+                            "valueA": {
+                                "type": "variable",
+                                "value": "38"
+                            },
+                            "valueB": {
+                                "type": "shl",
+                                "valueA": {
+                                    "type": "variable",
+                                    "value": "V4"
+                                },
+                                "valueB": {
+                                    "type": "number",
+                                    "value": 10
+                                }
+                            }
+                        },
+                        "__collapse": true
+                    },
+                    "id": "31b8de7e-7ce4-41cc-96c5-eeab4ec24bec"
+                },
+                {
+                    "command": "EVENT_ADD_FLAGS",
+                    "args": {
+                        "variable": "38",
+                        "flag1": false,
+                        "flag2": false,
+                        "flag3": false,
+                        "flag4": false,
+                        "flag5": false,
+                        "flag6": false,
+                        "flag7": false,
+                        "flag8": false,
+                        "flag9": false,
+                        "flag10": false,
+                        "flag11": false,
+                        "flag12": false,
+                        "flag13": false,
+                        "flag14": false,
+                        "flag15": false,
+                        "flag16": true,
+                        "__collapse": true
+                    },
+                    "id": "700d9c21-55dc-426a-97f2-e3fbcb27f178"
+                },
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "VM_RPN\n.R_REF VAR_PADARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+                        "references": [
+                            {
+                                "type": "variable",
+                                "id": "37"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "38"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "39"
+                            }
+                        ],
+                        "__collapse": false
+                    },
+                    "id": "ed54329e-269c-477d-8dbb-02d8905883a7"
+                }
+            ]
         }
     ],
     "music": [
@@ -26133,11 +25445,32 @@
     ],
     "sounds": [
         {
+            "id": "7c79582c-6a23-4a9b-ae5e-5dc246fdbcdc",
+            "name": "die.wav",
+            "symbol": "sound_die_wav",
+            "filename": "die.wav",
+            "type": "wav"
+        },
+        {
             "id": "cfe8ae7f-88c3-4836-8ffb-683265b97bef",
             "name": "erdbeerkaese.wav",
             "symbol": "sound_erdbeerkaese_wav",
             "filename": "erdbeerkaese.wav",
             "type": "wav"
+        },
+        {
+            "id": "9178f0bb-89d0-482e-adb8-6fee84bf2535",
+            "name": "GBFX.sav",
+            "symbol": "sound_gbfx_sav",
+            "filename": "GBFX.sav",
+            "type": "fxhammer"
+        },
+        {
+            "id": "3e0eb44a-0ee0-4b5e-ac6f-d44e3dad5fda",
+            "name": "GBFX2.sav",
+            "symbol": "sound_gbfx2_sav",
+            "filename": "GBFX2.sav",
+            "type": "fxhammer"
         },
         {
             "id": "885eb683-49e2-4592-a969-a7ecfcd279b1",
@@ -26438,6 +25771,34 @@
             "symbol": "var_partu1_6"
         },
         {
+            "id": "26",
+            "name": "PartFootPrintArray",
+            "symbol": "var_partfootprintarray"
+        },
+        {
+            "id": "27",
+            "name": "PartFootprint",
+            "symbol": "var_partfootprint",
+            "flags": {
+                "flag1": "position 0",
+                "flag2": "position 1",
+                "flag3": "position 2",
+                "flag4": "position 3",
+                "flag5": "position 4",
+                "flag6": "position 5",
+                "flag7": "position 6",
+                "flag8": "position 7",
+                "flag9": "direction 1",
+                "flag10": "direction 2",
+                "flag11": "footprint 1",
+                "flag12": "footprint 2",
+                "flag13": "part placed",
+                "flag14": "part defect",
+                "flag15": "Flag 15",
+                "flag16": "part used"
+            }
+        },
+        {
             "id": "28",
             "name": "PartData",
             "symbol": "var_partdata",
@@ -26705,9 +26066,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 163.3333282470703,
-        "worldScrollY": 204.99998474121094,
-        "zoom": 137.5,
+        "worldScrollX": 270,
+        "worldScrollY": 0,
+        "zoom": 164,
         "sgbEnabled": false,
         "customHead": "",
         "defaultBackgroundPaletteIds": [
@@ -26794,7 +26155,7 @@
         "customControlsSelect": [
             "Shift"
         ],
-        "debuggerEnabled": true,
+        "debuggerEnabled": false,
         "debuggerScriptType": "gbvm",
         "debuggerVariablesFilter": "all",
         "debuggerCollapsedPanes": [],

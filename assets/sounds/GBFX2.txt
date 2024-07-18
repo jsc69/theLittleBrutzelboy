@@ -1,0 +1,79 @@
+GBFX2
+more complex FX HAMMER sound effects for Game Boy
+/ by Yogi (Tronimal)
+59 sound effects, CC-BY 4.0 license 
+
+$=Hex Value used in FX Hammer ROM
+I=Index Value used in GB Studio
+
+Designed for CH2 
+/ DUTY2
+$00 I00 - Rising
+$01 I01 - Higher Pitch
+$02 I02 - Short Squeak
+$03 I03 - Slide
+$04 I04 - Bleep
+$05 I05 - Uplifting
+$06 I06 - Downwards Slide
+$07 I07 - High Beep
+$08 I08 - Low Beep
+$09 I09 - Jingle
+$0A I10 - Bump
+$0B I11 - Falling
+$0C I12 - Pull
+$0D I13 - Echo
+$0E I14 - Sparkle
+$0F I15 - Bell
+
+Designed for CH4 
+/ NOISE
+$10 I16 - Metallic Hit
+$11 I17 - Smash
+$12 I18 - Crash
+$13 I19 - Exploding Echo
+$14 I20 - Explode
+$15 I21 - Stutter
+$16 I22 - Fast
+$17 I23 - Rush
+$18 I24 - Knock
+$19 I25 - Stopping
+$1A I26 - Slosh
+$1B I27 - Rattle
+$1C I28 - Echo
+$1D I29 - Metallic Downhill
+$1E I30 - Burst
+$1F I31 - Swoosh
+
+Designed for CH2 & CH4 simultaneously 
+/ DUTY2 & NOISE
+$20 I32 - Smooth Clap
+$21 I33 - Punch
+$22 I34 - Attention
+$23 I35 - Hard Pull
+$24 I36 - Collapse
+$25 I37 - Tap
+$26 I38 - Closure
+$27 I39 - Electric
+$28 I40 - Gong
+$29 I41 - Confirmation
+$2A I42 - Hit
+$2B I43 - Ring
+$2C I44 - Laser
+$2D I45 - Drop
+$2E I46 - Enter
+$2F I47 - Metallic Shield
+
+Designed for CH2 
+/ DUTY2
+$30 I48 - Validation
+$31 I49 - Clutch
+$32 I50 - Advantage
+$33 I51 - Bounce
+$34 I52 - Clunk
+$35 I53 - Positive
+$36 I54 - Rapid
+$37 I55 - Float
+$38 I56 - Device
+$39 I57 - Charge
+$3A I58 - Medium Drop
+$3B I59 - Tone

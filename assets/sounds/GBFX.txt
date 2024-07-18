@@ -1,0 +1,81 @@
+GBFX - FX HAMMER sound effects for Game Boy
+/ by Tronimal
+48 sound effects, CC-BY 4.0 license 
+
+$=Hex Value used in FX Hammer ROM
+I=Index Value used in GB Studio
+
+Designed for CH2 
+/ DUTY2
+$00 I00 - Beep
+$01 I01 - Beep
+$02 I02 - Beep Up
+$03 I03 - Beep Down
+$04 I04 - Pitch Up
+$05 I05 - Pitch Down
+$06 I06 - Sweep Up
+$07 I07 - Sweep Down
+$08 I08 - Bling
+$09 I09 - Bling
+$0A I10 - Bling Up
+$0B I11 - Bling Down
+$0C I12 - Vibrato
+$0D I13 - Vibrato
+$0E I14 - Ring
+$0F I15 - Ring
+
+Designed for CH4 
+/ NOISE
+$10 I16 - Beep
+$11 I17 - Beep
+$12 I18 - Beep Up
+$13 I19 - Beep Down
+$14 I20 - Pitch Up
+$15 I21 - Pitch Down
+$16 I22 - Pitch Up Echo
+$17 I23 - Pitch Down Echo
+$18 I24 - Click
+$19 I25 - Click
+$1A I26 - Knock
+$1B I27 - Knock
+$1C I28 - Buzz
+$1D I29 - Buzz
+$1E I30 - Explosion
+$1F I31 - Explosion
+
+Special sounds designed for CH2 
+/ DUTY2
+$20 I32 - Weird Pitch
+$21 I33 - Weird Pitch Up
+$22 I34 - Weird Pitch Down
+$23 I35 - Pitch Up Echo
+$24 I36 - Pitch Down Echo
+$25 I37 - Slow Pitch Up
+$26 I38 - Slow Pitch Down
+$27 I39 - Pitch Down Vibrato
+
+Combined sounds designed for CH2 & CH4 simultaneously 
+/ DUTY2 & NOISE
+$28 I40 - Pitch Up
+$29 I41 - Pitch Down
+$2A I42 - Pitch Up
+$2B I43 - Pitch Down
+$2C I44 - Sweep Up
+$2D I45 - Sweep Down
+$2E I46 - Shutter
+$2F I47 - Shutter
+
+For your own SFX 
+/ EMPTY
+$30 I48 - Nintendo
+$31 I49 - (empty)
+$32 I50 - (empty)
+$33 I51 - (empty)
+$34 I52 - (empty)
+$35 I53 - (empty)
+$36 I54 - (empty)
+$37 I55 - (empty)
+$38 I56 - (empty)
+$39 I57 - (empty)
+$3A I58 - (empty)
+$3B I59 - (empty)
