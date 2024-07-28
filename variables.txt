@@ -40,7 +40,7 @@ R4 = 2 (331)
 R1 = 3 (102)
 D1 = 4 (LED)
 D2 = 5 (LED)
-R3 = 6 (330)
+R3 = 6 (331)
 C2 = 7 (100nF)
 R2 = 8 (153)
 U1 = 9 (NE555)
@@ -63,9 +63,9 @@ Components: (saved in variable 200-239)
 00 = 151 - 150          1000
 01 = 153 - 15k          986
 02 = 155 - 1500k 1,5M   972
-03 = 361 - 360          2344
-04 = 363 - 36k          2330
-05 = 365 - 3600k 3,6M   2316
+03 = 391 - 390          
+04 = 393 - 39k          
+05 = 395 - 3900k 3,9M   
 06 = 561 - 560          3624
 *07 = 563 - 56k         3610
 08 = 565 - 5600k 5,6M   3596
@@ -131,7 +131,7 @@ FEDCBA9876543210
           00        -> * 0.1
           01        -> * 1
           10        -> * 10
-          11        -> * 100
+          11        -> not used
 FEDCBA9876543210
             000     -> p pico
             001     -> n nano
@@ -140,7 +140,7 @@ FEDCBA9876543210
             100     -> 0
             101     -> k kilo
             110     -> M mega
-            111     -> 
+            111     -> not used
 FEDCBA9876543210
                0    -> SMD
                1    -> THT
@@ -158,6 +158,21 @@ FEDCBA9876543210
 56k     5,6     560 01&!100 00&100  10&100  -> F=1&U!=4 || F=0&U=4 || F=2&U=4
 5,6k    560k        00&!100 10&!100         -> F=0&U=5 || F=2&U=U!=4
 
+SMD middle digit
+0,3,7,8,9 - |
+2 -         !
+5,6 -       i
+R ?
+
+SMD last digit
+0 (56)  : F=1 & U=4 (01100=12)
+1 (560) : F=2 & U=4 (10100=20)
+2 (5.6k): F=0 & U=5 (00101= 5)
+3 (56k) : F=1 & U=5 (01101=13)
+4 (560k): F=2 & U=5 (10101=21)
+5 (5.6M): F=0 & U=6 (00110= 6)
+6 (56M) : F=1 & U=6 (01110=14)
+
 Diodes:
 FEDCBA9876543210
 
@@ -165,13 +180,9 @@ FEDCBA9876543210
 Part footprint var 240-279
 --------------
 FEDC BA98 7654 3210
-uscp ffdd tttt tttt t = part position (upper left corner)
-                    d = direction (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)
-                    u = used (no=0, yes=1)
-                    c = defect (no=0, yes=1)
-                    p = part placed (no=0, yes=0)
-                    s = ?
-                    f = ?
+ddnn nnnn tttt tttt t = part position (upper left corner)
+                    d = orientation (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)
+                    n = part number (0-39, 48=not placed)
 
 ----------------
 bag2part (saved in variable 280-319)
@@ -188,7 +199,7 @@ uscp ffdd tttt tttt t = tile position
                     u = used (no=0, yes=1)
                     s = soldered (no=0, yes=1)
                     c = cold soldered=defect (no=0, yes=1)
-                    p = part placed (no=0, yes=0)
+                    p = part placed (no=0, yes=1)
                     f = footprint (tht=00, smd=01, ic=10)
                     d = direction (up=00, down=01, left=10, right=11)
 
@@ -201,4 +212,12 @@ D1: left=8, right=9
 C2: left=10, right=11
 U1: pad1=12, pad2=13, pad3=14, pad4=15
     pad5=16, pad6=17, pad7=18, pad8=19
+
+
+----------------
+Tiles for Pads and Parts 340-xxx (TileArray=340)
+----------------
+nnnn nnnn tttt tttt -> t = tile position
+                       n = tile number in tileset
+
 
