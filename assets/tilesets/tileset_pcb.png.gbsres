@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "2d13d2f2-db26-49ea-b08c-613b6fcf1688",
+  "name": "tileset_pcb",
+  "symbol": "tileset_tileset_pcb",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "tileset_pcb.png"
+}

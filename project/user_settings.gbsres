@@ -1,0 +1,31 @@
+{
+  "_resourceType": "settings",
+  "worldScrollX": 685,
+  "worldScrollY": 459.9999694824219,
+  "zoom": 267.5,
+  "navigatorSplitSizes": [
+    89,
+    403,
+    259
+  ],
+  "showNavigator": true,
+  "showCollisions": true,
+  "showConnections": true,
+  "showSceneScreenGrid": false,
+  "previewAsMono": false,
+  "showCollisionSlopeTiles": false,
+  "favoriteEvents": [
+    "EVENT_TEXT",
+    "EVENT_SWITCH_SCENE",
+    "EVENT_SET_VALUE"
+  ],
+  "debuggerEnabled": false,
+  "debuggerScriptType": "gbvm",
+  "debuggerVariablesFilter": "all",
+  "debuggerCollapsedPanes": [],
+  "debuggerPauseOnScriptChanged": false,
+  "debuggerPauseOnWatchedVariableChanged": false,
+  "debuggerBreakpoints": [],
+  "debuggerWatchedVariables": [],
+  "openBuildLogOnWarnings": true
+}

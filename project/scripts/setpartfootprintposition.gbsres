@@ -1,0 +1,170 @@
+{
+  "_resourceType": "script",
+  "id": "452c4f63-1fb1-42f3-ac3c-9ad56f305cba",
+  "name": "setPartFootprintPosition",
+  "symbol": "script_30",
+  "description": "Sets position and orientation of part",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "index",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "posX",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "posY",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "orientation",
+      "passByReference": true
+    },
+    "V4": {
+      "id": "V4",
+      "name": "partNo",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "Part footprint var 240-279\n--------------\nFEDC BA98 7654 3210\nddnn nnnn tttt tttt t = part position (upper left corner)\n                    d = direction (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)\n                    n = part number (0-39, 48=not placed)"
+      },
+      "id": "776ece06-4692-490a-92e1-56da7609cbe2"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "1b9a203b-8e88-477a-b304-baf0c43064a0"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "mul",
+            "valueA": {
+              "type": "sub",
+              "valueA": {
+                "type": "variable",
+                "value": "V2"
+              },
+              "valueB": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "valueB": {
+              "type": "number",
+              "value": 18
+            }
+          },
+          "valueB": {
+            "type": "sub",
+            "valueA": {
+              "type": "variable",
+              "value": "V1"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "87146c01-bdff-4465-8fdc-fc3fe8cb5f96"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V4"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 8
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "4cd841e3-9833-4045-b4f1-8024e71bce28"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V3"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 14
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "c72b8aab-0dd5-49d1-81c7-472eb0c14a2e"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTFOOTPRINTARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "26"
+          }
+        ],
+        "__collapse": false
+      },
+      "id": "f19a9691-1f9b-45cf-bd26-1d76224e3a32"
+    }
+  ]
+}

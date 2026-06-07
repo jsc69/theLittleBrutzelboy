@@ -1,0 +1,95 @@
+{
+  "_resourceType": "script",
+  "id": "2eecc448-a593-4196-870c-832df89f867e",
+  "name": "playerOnPlace",
+  "symbol": "script_0",
+  "description": "Player is on a  place with part in inventory\nWant to place it?",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "placeNumber",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "1",
+        "operator": "<",
+        "comparator": 255,
+        "__collapseElse": false,
+        "__collapse": false,
+        "condition": {
+          "type": "lt",
+          "valueA": {
+            "type": "variable",
+            "value": "1"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 255
+          }
+        },
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CHOICE",
+            "args": {
+              "variable": "91",
+              "trueText": "Nicht hier",
+              "falseText": "Teil plazieren",
+              "__collapse": false
+            },
+            "id": "64679122-878b-4510-bcfa-ddd7bfc7dadd"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "L0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "91"
+                },
+                "valueB": {
+                  "type": "false"
+                }
+              },
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "65611ea1-436b-4a76-8bc3-27f23b8081e9",
+                    "$variable[V0]$": {
+                      "type": "variable",
+                      "value": "V0"
+                    },
+                    "$variable[V1]$": {
+                      "type": "variable",
+                      "value": "1"
+                    }
+                  },
+                  "id": "90da32a5-97eb-49ae-acfb-958368d1fb0e"
+                }
+              ],
+              "false": []
+            },
+            "id": "bffc69be-2066-4241-915d-565a7b2c5989"
+          }
+        ],
+        "false": []
+      },
+      "id": "51292326-ea9c-4cd9-ad31-61c0b4693a41"
+    }
+  ]
+}

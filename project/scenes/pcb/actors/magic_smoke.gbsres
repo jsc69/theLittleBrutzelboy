@@ -1,0 +1,103 @@
+{
+  "_resourceType": "actor",
+  "id": "444e0e50-ba0d-4af0-a982-fa15a1e5126b",
+  "_index": 2,
+  "symbol": "actor_12",
+  "prefabId": "",
+  "name": "Magic Smoke",
+  "coordinateType": "tiles",
+  "x": 17,
+  "y": 1,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1d9cebc1-fc64-4f41-8602-af3b0b035d43",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 0.25,
+  "animSpeed": 7,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "34",
+        "flag": 0,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "34",
+              "flag": 2,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "property",
+                      "target": "84be5320-d10a-4842-9831-96d9d82a6f1c",
+                      "property": "xpos"
+                    },
+                    "y": {
+                      "type": "property",
+                      "target": "84be5320-d10a-4842-9831-96d9d82a6f1c",
+                      "property": "ypos"
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": true,
+                    "collideWith": []
+                  },
+                  "id": "c4923dba-5eb4-416e-bf68-b4508adad828"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_TO",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "property",
+                      "target": "player",
+                      "property": "xpos"
+                    },
+                    "y": {
+                      "type": "property",
+                      "target": "player",
+                      "property": "ypos"
+                    },
+                    "moveType": "vertical",
+                    "useCollisions": false,
+                    "__collapse": true,
+                    "collideWith": []
+                  },
+                  "id": "97cec8b2-339a-42f4-a53e-5e2d4cc54f9d"
+                }
+              ]
+            },
+            "id": "d2b604af-31e6-44e3-9713-fea5cf8b2dd6"
+          }
+        ],
+        "false": []
+      },
+      "id": "3061d562-509f-4cd3-8f7c-079b3764b83c"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

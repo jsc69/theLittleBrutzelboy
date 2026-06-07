@@ -1,0 +1,187 @@
+{
+  "_resourceType": "script",
+  "id": "ae5452fa-9e59-4367-8287-26f807ebc9a6",
+  "name": "setPadData",
+  "symbol": "script_17",
+  "description": "Sets the data of pad <padNo>\norientation (facing to part): up=0, down=1, left=2, right=3\nfootprint: tht=0, smd=1, ic=2",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "padNo",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "posX",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "posY",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "orientation",
+      "passByReference": true
+    },
+    "V4": {
+      "id": "V4",
+      "name": "footprint",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "90f1f745-4a96-40e2-b834-5194227cdb61"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "mul",
+            "valueA": {
+              "type": "sub",
+              "valueA": {
+                "type": "variable",
+                "value": "V2"
+              },
+              "valueB": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "valueB": {
+              "type": "number",
+              "value": 18
+            }
+          },
+          "valueB": {
+            "type": "sub",
+            "valueA": {
+              "type": "variable",
+              "value": "V1"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "dde6a563-e25a-4e14-8c79-bb533c3a6522"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V3"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 8
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "52d35356-c769-4eca-9bc8-cf5ee2e637d4"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V4"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 10
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "31b8de7e-7ce4-41cc-96c5-eeab4ec24bec"
+    },
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "38",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": true,
+        "__collapse": true
+      },
+      "id": "700d9c21-55dc-426a-97f2-e3fbcb27f178"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PADARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "39"
+          }
+        ],
+        "__collapse": false
+      },
+      "id": "ed54329e-269c-477d-8dbb-02d8905883a7"
+    }
+  ]
+}

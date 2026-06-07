@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "73d24839-8073-42c4-8700-97c8e3d8573e",
+  "name": "box",
+  "symbol": "bg_box",
+  "tileColors": "",
+  "filename": "box.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "autoColor": false
+}

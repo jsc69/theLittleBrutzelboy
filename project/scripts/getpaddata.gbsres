@@ -1,0 +1,61 @@
+{
+  "_resourceType": "script",
+  "id": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
+  "name": "getPadData",
+  "symbol": "script_4",
+  "description": "sets PadData with the data of pad <padNo>",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "padNo",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        }
+      },
+      "id": "6f9bcd6f-1d2b-4f57-a1c4-0dee9c8e3b42"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PADARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_GET_INDIRECT VAR_ARRAYVALUE, .ARG0\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "39"
+          }
+        ]
+      },
+      "id": "f01233d3-e1c0-4ecb-be5d-7e2654f9078c"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "9",
+        "value": {
+          "type": "variable",
+          "value": "38"
+        },
+        "__collapse": true
+      },
+      "id": "158b8af1-57d7-434c-a550-8565d8968664"
+    }
+  ]
+}

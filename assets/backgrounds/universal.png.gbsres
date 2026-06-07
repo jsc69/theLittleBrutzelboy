@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "af6a4536-b275-4931-a82c-7b80f3af3812",
+  "name": "universal",
+  "symbol": "bg_universal",
+  "tileColors": "",
+  "filename": "universal.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "autoColor": false
+}

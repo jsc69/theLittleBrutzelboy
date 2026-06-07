@@ -1,0 +1,43 @@
+{
+  "_resourceType": "script",
+  "id": "de283f28-2eb3-4898-839b-fb7173b3ff50",
+  "name": "PaintD1",
+  "symbol": "script_9",
+  "description": "Sets tiles for footprint D1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "variable",
+          "value": "16"
+        },
+        "__collapse": true
+      },
+      "id": "3edb2c22-fae4-4b1b-b5b1-c41ba227c5e5"
+    },
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 6
+        },
+        "y": {
+          "type": "number",
+          "value": 9
+        },
+        "tilesetId": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+        "tileIndex": {
+          "type": "variable",
+          "value": "12"
+        },
+        "__collapse": true
+      },
+      "id": "474bc503-e558-4926-a6b8-e0d8280c5170"
+    }
+  ]
+}

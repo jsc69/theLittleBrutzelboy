@@ -1,0 +1,11 @@
+{
+  "_resourceType": "tileset",
+  "id": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+  "name": "tileset",
+  "symbol": "tileset_tileset",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "tileset.png"
+}

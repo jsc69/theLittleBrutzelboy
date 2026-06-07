@@ -1,0 +1,11 @@
+{
+  "_resourceType": "music",
+  "id": "77bb5c9a-ebf0-46b4-8aa5-b50c04f9210c",
+  "name": "theBrutzler",
+  "symbol": "song_test",
+  "settings": {
+    "disableSpeedConversion": false
+  },
+  "filename": "theBrutzler.mod",
+  "type": "mod"
+}

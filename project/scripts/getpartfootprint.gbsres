@@ -1,0 +1,61 @@
+{
+  "_resourceType": "script",
+  "id": "5655f040-9889-4d01-9dd3-8216a449e7a5",
+  "name": "getPartFootprint",
+  "symbol": "script_18",
+  "description": "sets PartFootprint with the data of pad <padNo>",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "padNo",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        }
+      },
+      "id": "7fff2582-922b-4b60-a6ec-ce38c96e83bf"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTFOOTPRINTARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_GET_INDIRECT VAR_ARRAYVALUE, .ARG0\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "26"
+          }
+        ]
+      },
+      "id": "4b8203d9-daf1-4fa1-a345-e33f24ba72a7"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "27",
+        "value": {
+          "type": "variable",
+          "value": "38"
+        },
+        "__collapse": true
+      },
+      "id": "7dc9645c-cc43-4afb-a3aa-1ee291ad13c7"
+    }
+  ]
+}

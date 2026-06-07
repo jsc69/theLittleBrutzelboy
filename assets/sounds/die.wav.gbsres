@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "7c79582c-6a23-4a9b-ae5e-5dc246fdbcdc",
+  "name": "die.wav",
+  "symbol": "sound_die_wav",
+  "type": "wav",
+  "filename": "die.wav"
+}

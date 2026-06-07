@@ -1,0 +1,62 @@
+{
+  "_resourceType": "script",
+  "id": "7180eb6f-961d-4003-b58a-4a7c28800dd1",
+  "name": "getPartFromBag",
+  "symbol": "script_14",
+  "description": "Sets PartNo with number of part of the given bag",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "bagNo",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "9a1a7ec8-350b-4598-8686-77034dae332a"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_BAGARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_GET_INDIRECT VAR_ARRAYVALUE, .ARG0\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "36"
+          }
+        ]
+      },
+      "id": "7547bae5-6c7a-46f4-b9af-37e974b34404"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "32",
+        "value": {
+          "type": "variable",
+          "value": "38"
+        },
+        "__collapse": true
+      },
+      "id": "6b101a54-321e-40ac-841f-ee322db1f621"
+    }
+  ]
+}

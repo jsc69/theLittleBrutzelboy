@@ -1,0 +1,65 @@
+{
+  "_resourceType": "script",
+  "id": "381cdf31-c55a-4749-b368-60bd97e8a92d",
+  "name": "setPartDataDirect",
+  "symbol": "script_35",
+  "description": "sets the data for the part <index==partNo> in PartArray",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "index",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "value",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        }
+      },
+      "id": "b701682e-90e9-406d-9eb9-79229fd9214d"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "variable",
+          "value": "V1"
+        }
+      },
+      "id": "04627873-85c5-4d8e-b3b7-7053caafeb43"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTDATAARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "35"
+          },
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          }
+        ]
+      },
+      "id": "289aa527-2990-485b-a490-ecf029a7e8b5"
+    }
+  ]
+}

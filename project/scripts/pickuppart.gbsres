@@ -1,0 +1,98 @@
+{
+  "_resourceType": "script",
+  "id": "6c19d75d-f786-41c8-bc79-68881fa91a46",
+  "name": "pickupPart",
+  "symbol": "script_1",
+  "description": "Sets Inventory with part number from selected bag in selected box",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "selectedBox",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "selectedBag",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "91",
+        "value": {
+          "type": "mul",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 4
+          }
+        }
+      },
+      "id": "3f60b39d-71b4-4bb6-a129-03b9d0588646"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "91",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "variable",
+            "value": "91"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "V1"
+          }
+        }
+      },
+      "id": "c0905f84-ad72-4150-a9f6-27e1d0619ac3"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "7180eb6f-961d-4003-b58a-4a7c28800dd1",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "91"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "1"
+        },
+        "__collapse": false
+      },
+      "id": "baa2fd51-cde6-484f-9e47-dab3d7608152"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "1",
+        "value": {
+          "type": "variable",
+          "value": "32"
+        },
+        "__collapse": false
+      },
+      "id": "9ef940b5-de28-4ce2-89ca-638a7582b17b"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "picked up part\nnumber $01$"
+        ],
+        "avatarId": "",
+        "__comment": true,
+        "__collapse": true
+      },
+      "id": "1ea4b644-58bb-4d9b-8e21-8a5ef9b2c092"
+    }
+  ]
+}

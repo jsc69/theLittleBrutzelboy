@@ -1,0 +1,181 @@
+{
+  "_resourceType": "script",
+  "id": "1afcf2e0-9894-45f7-ad0b-2653d112c85f",
+  "name": "getPadToSolder",
+  "symbol": "script_32",
+  "description": "Gets the pad number where the player stands by so it can be soldered\nSet PadBeingSoldered with its number",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "33",
+        "value": {
+          "type": "number",
+          "value": -1
+        },
+        "__collapse": true
+      },
+      "id": "d670a9f5-f022-4d57-ba8a-2cc68be985bf"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "11",
+        "value": {
+          "type": "property",
+          "target": "player",
+          "property": "ypos"
+        },
+        "__collapse": true
+      },
+      "id": "a73f5c35-d81b-490f-9016-0b0a41011559"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_DIRECTION",
+      "args": {
+        "actorId": "player",
+        "direction": {
+          "type": "direction",
+          "value": "left"
+        },
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "sub",
+                "valueA": {
+                  "type": "property",
+                  "target": "player",
+                  "property": "xpos"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapse": true
+            },
+            "id": "66a92346-4ad4-40f4-8e2d-a2fbf448e52c"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "add",
+                "valueA": {
+                  "type": "property",
+                  "target": "player",
+                  "property": "xpos"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              },
+              "__collapse": false
+            },
+            "id": "6ea0ee28-bdab-48c5-b890-8b9bf01d6624"
+          }
+        ]
+      },
+      "id": "3af0bce9-4270-428e-a34e-84225fb6c89e"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "91",
+        "value": {
+          "type": "expression",
+          "value": "($11$-1)*18 + ($10$-1)"
+        },
+        "__collapse": true
+      },
+      "id": "ce8c3a8a-eb9c-457c-8248-4bc982d2197f"
+    },
+    {
+      "command": "EVENT_LOOP_FOR",
+      "args": {
+        "variable": "37",
+        "from": {
+          "type": "number",
+          "value": 0
+        },
+        "comparison": "<=",
+        "to": {
+          "type": "number",
+          "value": 19
+        },
+        "operation": "+=",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "9712d004-63c9-4227-acd1-8f8f5c3d10a2",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "37"
+              },
+              "__collapse": true
+            },
+            "id": "a31e47c1-ea2f-4b28-aa9f-e9d907bfa6e2"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "91"
+                },
+                "valueB": {
+                  "type": "expression",
+                  "value": "$09$ & 255"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "33",
+                    "value": {
+                      "type": "variable",
+                      "value": "37"
+                    },
+                    "__collapse": false
+                  },
+                  "id": "c0a5f3ec-e895-4aaa-952a-53a546454e76"
+                }
+              ],
+              "false": []
+            },
+            "id": "8e2457ed-b6f5-4749-b7e2-08afd9f0e577"
+          }
+        ]
+      },
+      "id": "3bffc779-d918-474c-b764-a61ee6b0cc24"
+    }
+  ]
+}

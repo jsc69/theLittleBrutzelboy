@@ -1,0 +1,1178 @@
+{
+  "_resourceType": "script",
+  "id": "8e45ebed-f0bc-4a24-a879-1dce0de579f3",
+  "name": "initBackgroundTiles",
+  "symbol": "script_16",
+  "description": "Initialize background tiles for pads and parts",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "40",
+        "value": {
+          "type": "number",
+          "value": 340
+        },
+        "__collapse": true
+      },
+      "id": "23128449-9a18-4d19-bd65-6c2cc2524a67"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 0",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 0
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 45
+              },
+              "__collapse": false
+            },
+            "id": "6f3ea8df-72b5-49a5-8d81-4b6d40e065ed"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 1
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 18
+              },
+              "__collapse": false
+            },
+            "id": "ea51688f-46dc-4f47-866f-b1d243273609"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 2
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 38
+              },
+              "__collapse": false
+            },
+            "id": "ff05e5c6-12e8-40b2-ae78-008be8c6902e"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 44
+              },
+              "__collapse": false
+            },
+            "id": "9f7f87fe-034a-4241-ada6-e99bd5d2d95f"
+          }
+        ]
+      },
+      "id": "8126caf0-9438-4796-8676-c9846e82d6d1"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 1",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 4
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 4
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 45
+              },
+              "__collapse": false
+            },
+            "id": "a9e58145-1a91-4c62-a40a-a270ca28200e"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 18
+              },
+              "__collapse": false
+            },
+            "id": "9c9d37fc-2d47-4744-8404-68565fc1443f"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 38
+              },
+              "__collapse": false
+            },
+            "id": "d455d19b-5d09-4108-9b48-5d0b4617614f"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 44
+              },
+              "__collapse": false
+            },
+            "id": "89b8bbc7-25e6-4515-877c-b66d1c84ec1a"
+          }
+        ]
+      },
+      "id": "07331905-1d50-4209-a1aa-1a962eb0a05d"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 2",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 4
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 45
+              },
+              "__collapse": false
+            },
+            "id": "b02a6fd5-66d4-4870-89f5-488dfb959216"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 18
+              },
+              "__collapse": false
+            },
+            "id": "766ed369-4dbd-4620-8431-b9800618de3c"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 38
+              },
+              "__collapse": false
+            },
+            "id": "0234309a-b368-4f79-9cfd-5061623f0c56"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 44
+              },
+              "__collapse": false
+            },
+            "id": "df9f55c1-a8e3-4eaa-8c67-7d26554997a3"
+          }
+        ]
+      },
+      "id": "09c38bb4-4afa-493e-84a9-b539f37a7bba"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 3",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 17
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 45
+              },
+              "__collapse": false
+            },
+            "id": "b408a373-3018-4b3a-9e73-577609302ba8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 13
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 17
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 18
+              },
+              "__collapse": false
+            },
+            "id": "66a00385-cd0b-42d4-8cc5-2459bac1b3a5"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 14
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 17
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 38
+              },
+              "__collapse": false
+            },
+            "id": "39f56d1b-ab3a-436a-93af-048bbd928c5a"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 17
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 44
+              },
+              "__collapse": false
+            },
+            "id": "79185a86-ff03-4419-b345-a79f12f3d1ef"
+          }
+        ]
+      },
+      "id": "c52dea17-d62f-418a-af3e-aaf790d62117"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 4",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 16
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 4
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 43
+              },
+              "__collapse": false
+            },
+            "id": "fc7a9efe-e163-4e92-a425-64813def77ae"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 17
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 219
+              },
+              "__collapse": false
+            },
+            "id": "024de0c7-0070-4258-8630-e0ba31eeceff"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 18
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 198
+              },
+              "__collapse": false
+            },
+            "id": "7721e12d-6e89-46ee-bbb0-346b58b47a0a"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 19
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 42
+              },
+              "__collapse": false
+            },
+            "id": "12b85328-10d3-4e6c-b638-c5d80621a0ba"
+          }
+        ]
+      },
+      "id": "9e98f58a-09a0-45a7-b14b-a3b9d3a3d344"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 5",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 20
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 13
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 47
+              },
+              "__collapse": false
+            },
+            "id": "165168ba-a196-47df-914f-c4c86d1500c8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 21
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 14
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 56
+              },
+              "__collapse": false
+            },
+            "id": "9ce96a2b-2bc4-45e7-bdda-82e743a88329"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 22
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 15
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 57
+              },
+              "__collapse": false
+            },
+            "id": "d2e7fe81-f5f4-4482-846d-65b09e01f0fb"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 23
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 16
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 46
+              },
+              "__collapse": false
+            },
+            "id": "9130ee71-d634-408b-a35e-ba1de2b3e5fc"
+          }
+        ]
+      },
+      "id": "b4126d31-5765-455f-b25a-a867229e4965"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Place 6",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 24
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 51
+              },
+              "__collapse": false
+            },
+            "id": "f4a7d48b-f778-4b0d-b660-ed3db4d6f5de"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 25
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 98
+              },
+              "__collapse": false
+            },
+            "id": "4b18f342-1590-4331-bbba-17d61a0b45a1"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 26
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 194
+              },
+              "__collapse": false
+            },
+            "id": "b4626812-68ce-4907-826d-f2bfb713fa55"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 27
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 97
+              },
+              "__collapse": false
+            },
+            "id": "12eff705-7a8c-4918-a4e1-9ed7dc187a2f"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 28
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 7
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 50
+              },
+              "__collapse": false
+            },
+            "id": "b7b9bcc6-c7cf-46e1-87f3-7385fe2253cb"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 29
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 51
+              },
+              "__collapse": false
+            },
+            "id": "e1877bad-0635-4423-8e87-8f72fe0555a1"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 30
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 98
+              },
+              "__collapse": false
+            },
+            "id": "598e6740-e9c3-4bbb-9425-a6e6d8207778"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 31
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 198
+              },
+              "__collapse": false
+            },
+            "id": "daf64da5-d27c-4cf9-b834-0d36bf66d486"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 32
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 97
+              },
+              "__collapse": false
+            },
+            "id": "493a9db2-325c-4de9-805f-5f9bc2410a57"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 33
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 50
+              },
+              "__collapse": false
+            },
+            "id": "14704470-4c58-4291-bcbc-e6d0a1ab9236"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 34
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 51
+              },
+              "__collapse": false
+            },
+            "id": "adcffc60-5714-43ad-9fc7-89f57e800200"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 35
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 98
+              },
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "51bd2c27-db17-40e5-9519-3a0fa3aa3d1c"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 36
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 198
+              },
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "3b10d8e0-3eed-49bf-a246-e7b1551af874"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 37
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 97
+              },
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "70175490-4391-423b-ad51-5314a06ecc2d"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 38
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 50
+              },
+              "__collapse": false
+            },
+            "id": "188ab681-aa7b-4926-8cb3-54372f6f3c7c"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 39
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 8
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 51
+              },
+              "__collapse": false
+            },
+            "id": "0c370547-901d-44e1-9d15-f5399eb957ac"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 40
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 98
+              },
+              "__collapse": false
+            },
+            "id": "f29a7dd5-fffb-4708-a030-6e2cdaaa6fc2"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 41
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 197
+              },
+              "__collapse": false
+            },
+            "id": "bf78eacd-09ba-459a-a3db-3c1fed16c239"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 42
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 97
+              },
+              "__collapse": false
+            },
+            "id": "76a8309d-7af3-4175-9ba3-76373e56a51d"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 43
+              },
+              "$variable[V1]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V2]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V3]$": {
+                "type": "number",
+                "value": 50
+              },
+              "__collapse": false
+            },
+            "id": "a82949c3-e58e-4244-8bf9-c8afdbf31a6f"
+          }
+        ]
+      },
+      "id": "7afa360b-5516-4473-bded-0408719289ca"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "41",
+        "value": {
+          "type": "number",
+          "value": 43
+        },
+        "__collapse": false
+      },
+      "id": "f3776304-7606-49ca-961b-18aac99ed23e"
+    }
+  ]
+}

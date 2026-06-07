@@ -1,0 +1,78 @@
+{
+  "_resourceType": "scene",
+  "id": "b7cb7e98-5f86-4bc8-bf9d-4d0559ac6972",
+  "_index": 4,
+  "type": "TOPDOWN",
+  "name": "storage",
+  "symbol": "scene_0",
+  "x": 471.2653432653434,
+  "y": 283.40747426461735,
+  "width": 32,
+  "height": 32,
+  "backgroundId": "25172119-880c-49b7-94e9-8aa5cef2afe7",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "1fa70697-e172-499a-9327-189df1d9af0e",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "0",
+        "flag": 2,
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "0",
+              "flag1": false,
+              "flag2": false,
+              "flag3": true,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "21f27eb2-66c3-4580-95af-f37bac14a6d0"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "     WTF!!!\n \nWas ein Chaos!",
+                "   Ich muß hier \n     DRINGEND \n    aufräumen!",
+                "\n...irgendwann...\n",
+                "Aber jetzt lass \nuns erst mal die\nTeile suchen."
+              ],
+              "avatarId": "e5bfc939-f4ec-41d3-bff5-ca73bde15f14",
+              "__collapse": false
+            },
+            "id": "4ee26313-bfa2-4e70-be41-53f40fbc49bb"
+          }
+        ]
+      },
+      "id": "4c476112-2ecd-460d-b6e8-84d9cde7323a"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "003+0f!0011+0f!008+0f!004+0f7+009+0f3+008+0f2+003+0f!005+0f!008+0f!0010+0f!005+0f!008+0f!0010+0f!005+0f!005+0f4+0010+0f!005+0f!002+0f4+0010+0f4+005+0f4+00c+0f7+0019+0f!001f+0f!001f+0f!006+0f7+004+0f9+005+0f!00c+0f!004+0f!007+0f!005+0f7+006+0f!004+0f!007+0f!0012+0f!004+0f9+0012+0f!0019+0f7+0030+0f9+0017+0f!0014+0f7+004+0f!0014+0f!005+0f!004+0f!0012+0f2+006+0f!004+0f!008+0f3+007+0f!007+0f!004+0f9+002+0f!007+0f!007+0f!00f+0f!007+0f9+00f+0f!005+0f3+0017+0f!005+0f!00!0f!0017+0f!005+0f!00!0f!0017+0f!005+0f!00!0f7+006+0f9+002+0f!005+0f!007+0f!006+0f!00a+0f!005+0f!007+0f!006+0f!00a+0f!005+0f!007+0f!006+0f!00a+0f!005+0f!007+0f!006+0f!008+"
+}

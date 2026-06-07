@@ -1,0 +1,112 @@
+{
+  "_resourceType": "script",
+  "id": "c9ad74f6-9cf6-45cc-a49a-fb7819bb509c",
+  "name": "setText",
+  "symbol": "script_12",
+  "description": "Sets the text for the given part. Use to draw bags in box.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "bagNo",
+      "passByReference": false
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH_EVALUATE",
+      "args": {
+        "variable": "91",
+        "expression": "3 * ($V0$ % 4)",
+        "__collapse": true
+      },
+      "id": "42f46eeb-8e88-4466-823f-771709dd8b5c"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "7180eb6f-961d-4003-b58a-4a7c28800dd1",
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "b4d6720a-d5a2-4a49-9eaa-e84a715623f7"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "5eef02d5-ff92-4b15-842e-c94323acf924",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "32"
+        },
+        "__collapse": true
+      },
+      "id": "18389ba0-741b-4ab2-a97e-99eb1b265404"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "ne",
+          "valueA": {
+            "type": "variable",
+            "value": "28"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "0f6f5032-94f9-4573-910c-61d246753441",
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "V0"
+              },
+              "__collapse": true,
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "28"
+              }
+            },
+            "id": "82bc33a8-4656-4cd7-97f1-ac45b5eae2d7"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "bdc615f1-2e9e-4277-a2bf-7f04a64e2c9e",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "28"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "V0"
+              },
+              "__collapse": true
+            },
+            "id": "e81fe02b-fe90-4570-bdf4-b6ab16ce631f"
+          }
+        ],
+        "false": []
+      },
+      "id": "a9cbc569-207a-4d7f-a336-24ebc13aeb92"
+    }
+  ]
+}

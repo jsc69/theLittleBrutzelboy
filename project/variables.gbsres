@@ -1,0 +1,507 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "TutorialsFlags",
+      "symbol": "var_tutorialsflags",
+      "flags": {
+        "flag1": "pcb",
+        "flag2": "bom",
+        "flag3": "storage",
+        "flag4": "box",
+        "flag5": "part taken",
+        "flag6": "soldering",
+        "flag7": "magic smoke"
+      }
+    },
+    {
+      "id": "1",
+      "name": "Inventory",
+      "symbol": "var_inventory"
+    },
+    {
+      "id": "2",
+      "name": "selectedBox",
+      "symbol": "var_selectedbox"
+    },
+    {
+      "id": "3",
+      "name": "partR3_1",
+      "symbol": "var_partr3_1"
+    },
+    {
+      "id": "4",
+      "name": "partR3_2",
+      "symbol": "var_partr3_2"
+    },
+    {
+      "id": "5",
+      "name": "partC1_1",
+      "symbol": "var_partc1_1"
+    },
+    {
+      "id": "6",
+      "name": "partC1_2",
+      "symbol": "var_partc1_2"
+    },
+    {
+      "id": "7",
+      "name": "partR1_1",
+      "symbol": "var_partr1_1"
+    },
+    {
+      "id": "8",
+      "name": "partR1_2",
+      "symbol": "var_partr1_2"
+    },
+    {
+      "id": "9",
+      "name": "PadData",
+      "symbol": "var_paddata",
+      "flags": {
+        "flag16": "used",
+        "flag15": "soldered",
+        "flag14": "soldering has defect",
+        "flag13": "part places",
+        "flag12": "footprint high",
+        "flag11": "footprint low",
+        "flag10": "direction high (isHorizontal)",
+        "flag9": "direction low (isRight | isDown)",
+        "flag8": "tile pos 7",
+        "flag7": "tile pos 6",
+        "flag6": "tile pos 5",
+        "flag5": "tile pos 4",
+        "flag4": "tile pos 3",
+        "flag3": "tile pos 2",
+        "flag2": "tile pos 1",
+        "flag1": "tile pos 0"
+      }
+    },
+    {
+      "id": "10",
+      "name": "tile_x",
+      "symbol": "var_tile_x"
+    },
+    {
+      "id": "11",
+      "name": "tile_y",
+      "symbol": "var_tile_y"
+    },
+    {
+      "id": "12",
+      "name": "tile_no",
+      "symbol": "var_tile_no"
+    },
+    {
+      "id": "13",
+      "name": "partR2_1",
+      "symbol": "var_partr2_1"
+    },
+    {
+      "id": "14",
+      "name": "partR2_2",
+      "symbol": "var_partr2_2"
+    },
+    {
+      "id": "15",
+      "name": "partD1_1",
+      "symbol": "var_partd1_1"
+    },
+    {
+      "id": "16",
+      "name": "partD1_2",
+      "symbol": "var_partd1_2"
+    },
+    {
+      "id": "17",
+      "name": "partD1_3",
+      "symbol": "var_partd1_3"
+    },
+    {
+      "id": "18",
+      "name": "partC2_1",
+      "symbol": "var_partc2_1"
+    },
+    {
+      "id": "19",
+      "name": "partC2_2",
+      "symbol": "var_partc2_2"
+    },
+    {
+      "id": "20",
+      "name": "partU1_1",
+      "symbol": "var_partu1_1"
+    },
+    {
+      "id": "21",
+      "name": "partU1_2",
+      "symbol": "var_partu1_2"
+    },
+    {
+      "id": "22",
+      "name": "partU1_3",
+      "symbol": "var_partu1_3"
+    },
+    {
+      "id": "23",
+      "name": "partU1_4",
+      "symbol": "var_partu1_4"
+    },
+    {
+      "id": "24",
+      "name": "partU1_5",
+      "symbol": "var_partu1_5"
+    },
+    {
+      "id": "25",
+      "name": "partU1_6",
+      "symbol": "var_partu1_6"
+    },
+    {
+      "id": "26",
+      "name": "PartFootprintArray",
+      "symbol": "var_partfootprintarray"
+    },
+    {
+      "id": "27",
+      "name": "PartFootprint",
+      "symbol": "var_partfootprint",
+      "flags": {
+        "flag1": "position 0",
+        "flag2": "position 1",
+        "flag3": "position 2",
+        "flag4": "position 3",
+        "flag5": "position 4",
+        "flag6": "position 5",
+        "flag7": "position 6",
+        "flag8": "position 7",
+        "flag9": "part no 0",
+        "flag10": "part no 1",
+        "flag11": "part no 2",
+        "flag12": "part no 3",
+        "flag13": "part no 4",
+        "flag14": "part no 5",
+        "flag15": "orientation low",
+        "flag16": "orientation high"
+      }
+    },
+    {
+      "id": "28",
+      "name": "PartData",
+      "symbol": "var_partdata",
+      "flags": {
+        "flag1": "SMD/THT",
+        "flag16": "type 2",
+        "flag15": "type 1",
+        "flag14": "type 0"
+      }
+    },
+    {
+      "id": "29",
+      "name": "partFactor",
+      "symbol": "var_partfactor"
+    },
+    {
+      "id": "30",
+      "name": "partUnit",
+      "symbol": "var_partunit"
+    },
+    {
+      "id": "31",
+      "name": "partType",
+      "symbol": "var_parttype"
+    },
+    {
+      "id": "32",
+      "name": "PartNo",
+      "symbol": "var_partno"
+    },
+    {
+      "id": "33",
+      "name": "PadBeingSoldered",
+      "symbol": "var_padbeingsoldered"
+    },
+    {
+      "id": "34",
+      "name": "GameState",
+      "symbol": "var_gamestate",
+      "flags": {
+        "flag1": "Soldering",
+        "flag2": "playerSoldering",
+        "flag3": "playerDisabled"
+      }
+    },
+    {
+      "id": "35",
+      "name": "PartDataArray",
+      "symbol": "var_partdataarray"
+    },
+    {
+      "id": "36",
+      "name": "BagArray",
+      "symbol": "var_bagarray"
+    },
+    {
+      "id": "37",
+      "name": "ArrayIndex",
+      "symbol": "var_arrayindex"
+    },
+    {
+      "id": "38",
+      "name": "ArrayValue",
+      "symbol": "var_arrayvalue"
+    },
+    {
+      "id": "39",
+      "name": "PadArray",
+      "symbol": "var_padarray"
+    },
+    {
+      "id": "40",
+      "name": "TileArray",
+      "symbol": "var_tilearray"
+    },
+    {
+      "id": "41",
+      "name": "maxTiles",
+      "symbol": "var_maxtiles"
+    },
+    {
+      "id": "42",
+      "name": "orientation",
+      "symbol": "var_orientation"
+    },
+    {
+      "id": "43",
+      "name": "tile_pos",
+      "symbol": "var_tile_pos"
+    },
+    {
+      "id": "44",
+      "name": "PadNo",
+      "symbol": "var_padno"
+    },
+    {
+      "id": "45",
+      "name": "padToDestroy",
+      "symbol": "var_padtodestroy"
+    },
+    {
+      "id": "66",
+      "name": "footprint",
+      "symbol": "var_footprint"
+    },
+    {
+      "id": "67",
+      "name": "place1",
+      "symbol": "var_place1"
+    },
+    {
+      "id": "68",
+      "name": "place2",
+      "symbol": "var_place2"
+    },
+    {
+      "id": "69",
+      "name": "place3",
+      "symbol": "var_place3"
+    },
+    {
+      "id": "70",
+      "name": "place4",
+      "symbol": "var_place4"
+    },
+    {
+      "id": "71",
+      "name": "place5",
+      "symbol": "var_place5"
+    },
+    {
+      "id": "72",
+      "name": "place6",
+      "symbol": "var_place6"
+    },
+    {
+      "id": "73",
+      "name": "place7",
+      "symbol": "var_place7"
+    },
+    {
+      "id": "74",
+      "name": "partU1_7",
+      "symbol": "var_partu1_7"
+    },
+    {
+      "id": "90",
+      "name": "partValue",
+      "symbol": "var_partvalue_0"
+    },
+    {
+      "id": "91",
+      "name": "temp",
+      "symbol": "var_temp"
+    },
+    {
+      "id": "94361a6f-a1f8-48ac-9be2-3e7ffcb8a484__L0",
+      "name": "Menu Choise",
+      "symbol": "var_menu_choise"
+    },
+    {
+      "id": "7875db98-6091-46dc-9dd9-d214bd6553b7__L0",
+      "name": "Part",
+      "symbol": "var_part"
+    },
+    {
+      "id": "25297fd8-b51e-4ae6-a782-8687ff31e928__L0",
+      "name": "loop_index",
+      "symbol": "var_loop_index_0"
+    },
+    {
+      "id": "297c5a5e-e18b-4f27-b75c-0f06bb9e2a50__L0",
+      "name": "selectedBag",
+      "symbol": "var_selectedbag"
+    },
+    {
+      "id": "70d6c5c9-9bbf-4e99-8866-02bff97e054b__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_0"
+    },
+    {
+      "id": "ac29717c-9085-4615-9a9b-16a444ba7233__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing"
+    },
+    {
+      "id": "4576eaa5-350e-4791-8052-607ed251b2fd__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_1"
+    },
+    {
+      "id": "a781b8e8-5f7b-4c08-8091-5ebbe9029ab0__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_2"
+    },
+    {
+      "id": "1563b7a8-6a2f-40cc-99f3-55078fe185a1__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_3"
+    },
+    {
+      "id": "718bf1f9-5c72-4df0-b7c5-16ceeb228607__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_4"
+    },
+    {
+      "id": "01b83513-cf4b-4796-bd8c-8b7636703538__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_5"
+    },
+    {
+      "id": "f1adea4d-18fd-402b-b265-fb2b6c91175e__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_6"
+    },
+    {
+      "id": "efb36a8c-b5e6-43e7-8b49-10350ebb51fa__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_7"
+    },
+    {
+      "id": "fc17d73f-839e-4ab7-b9b8-ba99bec250d0__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_8"
+    },
+    {
+      "id": "6df522e6-c9d3-46df-a82b-7e810eb99b01__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_9"
+    },
+    {
+      "id": "1569a41a-1512-454e-89f2-0f80f1ef4c2b__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_10"
+    },
+    {
+      "id": "a790ff90-8380-418d-ae73-5224fe95f234__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_11"
+    },
+    {
+      "id": "36bb30a8-0881-45f5-b317-0681fce072be__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_12"
+    },
+    {
+      "id": "b58ea47e-f0b0-4ea9-af95-777f13f0e3ed__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_13"
+    },
+    {
+      "id": "84b7440c-7d9b-4104-bc3e-944d5b818d20__L0",
+      "name": "isPlacing",
+      "symbol": "var_isplacing_14"
+    },
+    {
+      "id": "297c5a5e-e18b-4f27-b75c-0f06bb9e2a50__L1",
+      "name": "bagNo",
+      "symbol": "var_bagno"
+    },
+    {
+      "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L0",
+      "name": "isCorrect",
+      "symbol": "var_iscorrect"
+    },
+    {
+      "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L1",
+      "name": "loopIndex",
+      "symbol": "var_loopindex"
+    },
+    {
+      "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L2",
+      "name": "isSoldered",
+      "symbol": "var_issoldered"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L0",
+      "name": "index",
+      "symbol": "var_index"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L2",
+      "name": "smallestDistance",
+      "symbol": "var_smallestdistance"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L1",
+      "name": "distance",
+      "symbol": "var_distance"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L3",
+      "name": "nearestPad",
+      "symbol": "var_nearestpad"
+    },
+    {
+      "id": "444e0e50-ba0d-4af0-a982-fa15a1e5126b__L0",
+      "name": "targetPosition",
+      "symbol": "var_targetposition"
+    },
+    {
+      "id": "d30d61ce-12b0-4c06-aa4f-0bc8185f21c2__L3",
+      "name": "partNo",
+      "symbol": "var_partno_0"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L4",
+      "name": "targetPosition",
+      "symbol": "var_targetposition_0"
+    },
+    {
+      "id": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf__L5",
+      "name": "destroyed",
+      "symbol": "var_destroyed"
+    }
+  ],
+  "constants": []
+}

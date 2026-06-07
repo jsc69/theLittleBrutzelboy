@@ -1,0 +1,138 @@
+{
+  "_resourceType": "scene",
+  "id": "57e54ea3-29ac-45a4-86e3-8a3505d56c22",
+  "_index": 2,
+  "type": "TOPDOWN",
+  "name": "bom",
+  "symbol": "scene_4",
+  "x": 64,
+  "y": 240,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "17f302c2-55ff-4921-ac53-8cf898d96eb7",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "default-bg-2",
+    "default-bg-1"
+  ],
+  "spritePaletteIds": [
+    "default-bg-2"
+  ],
+  "autoFadeSpeed": 1,
+  "autoFadeEventCollapse": true,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "fe542bb1-587a-4eea-99b9-3a39eef7f766"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "0",
+        "flag": 1,
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [],
+        "false": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "0",
+              "flag1": false,
+              "flag2": true,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "26849b29-b879-4f7f-ae4f-905b5decfb48"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ok,nun weiß ich,\nwelche Teile ich\nbrauche.",
+                "Habe ich doch \ngerade erst bei\nLCSC bestellt.",
+                "Sind sicher alle\nin Lager noch in\nder Box.",
+                "Mit (B) schließt\ndie BOM wieder."
+              ],
+              "avatarId": "e5bfc939-f4ec-41d3-bff5-ca73bde15f14",
+              "__collapse": false
+            },
+            "id": "7625820e-2638-4ab7-8f8c-a67a8b9655a9"
+          }
+        ]
+      },
+      "id": "f8c59108-234e-40d4-856f-86da5422c854"
+    },
+    {
+      "command": "EVENT_LOOP",
+      "args": {
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_INPUT",
+            "args": {
+              "input": [
+                "b"
+              ],
+              "__collapseElse": false,
+              "__collapse": false,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "b8f3b01f-338c-4a51-9c7a-2321be4dceaf",
+                    "x": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "direction": "up",
+                    "fadeSpeed": "2",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "31935f05-e7ed-4d8b-95e5-4a844643b95e"
+                }
+              ],
+              "false": []
+            },
+            "id": "7e62b4c8-ae68-40e8-9444-ba81de9fb4ab"
+          }
+        ]
+      },
+      "id": "dbe01b82-69bf-4b51-988c-178465c27463"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00168+"
+}

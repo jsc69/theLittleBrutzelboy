@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "f4a518f9-771f-4b2e-932b-c21a47ace9f1",
+  "name": "fail.wav",
+  "symbol": "sound_fail_wav",
+  "type": "wav",
+  "filename": "fail.wav"
+}

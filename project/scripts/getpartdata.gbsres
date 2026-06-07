@@ -1,0 +1,98 @@
+{
+  "_resourceType": "script",
+  "id": "5eef02d5-ff92-4b15-842e-c94323acf924",
+  "name": "getPartData",
+  "symbol": "script_36",
+  "description": "Sets PartData with the data of part no <index>",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "index",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 48
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "28",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "f17c24f3-bf75-469b-bf21-0e1a363dfb8b"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "37",
+              "value": {
+                "type": "variable",
+                "value": "V0"
+              },
+              "__collapse": true
+            },
+            "id": "64474516-0002-45a4-a02e-04191f54d908"
+          },
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_RPN\n.R_REF VAR_PARTDATAARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_GET_INDIRECT VAR_ARRAYVALUE, .ARG0\nVM_POP 1",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "35"
+                },
+                {
+                  "type": "variable",
+                  "id": "37"
+                },
+                {
+                  "type": "variable",
+                  "id": "38"
+                }
+              ]
+            },
+            "id": "00ee3c73-d4e0-411e-99bf-65c13dead460"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "28",
+              "value": {
+                "type": "variable",
+                "value": "38"
+              },
+              "__collapse": true
+            },
+            "id": "416accba-54b8-44c4-bacd-01802fa7f3e5"
+          }
+        ]
+      },
+      "id": "318cfe86-b54d-4474-8655-176a5b660a1a"
+    }
+  ]
+}

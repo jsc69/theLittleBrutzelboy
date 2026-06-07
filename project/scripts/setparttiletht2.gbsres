@@ -1,0 +1,162 @@
+{
+  "_resourceType": "script",
+  "id": "5f234535-7d5f-449d-8bc7-3564f2b754eb",
+  "name": "setPartTileTht2",
+  "symbol": "script_24",
+  "description": "set the tiles of an 2 pin tht part on the pcb\nTODO: replace with a more generic function",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "partNo",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "orientation",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "tileLeft",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "tileMiddle",
+      "passByReference": true
+    },
+    "V4": {
+      "id": "V4",
+      "name": "tileRight",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "V0",
+        "operator": "==",
+        "comparator": 39,
+        "__collapseElse": true,
+        "__collapse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 39
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V1",
+              "operator": "==",
+              "comparator": "0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V1"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V2",
+                    "value": {
+                      "type": "number",
+                      "value": 28
+                    },
+                    "__collapse": false
+                  },
+                  "id": "9f027a42-0697-4bd9-8536-9442a5db198b"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V3",
+                    "value": {
+                      "type": "number",
+                      "value": 29
+                    }
+                  },
+                  "id": "1377aa10-55a3-49e0-beba-d1e1620fb1b5"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V4",
+                    "value": {
+                      "type": "number",
+                      "value": 31
+                    },
+                    "__collapse": false
+                  },
+                  "id": "6b17f0d8-07aa-49c3-b27d-0e393c43d7e6"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V2",
+                    "value": {
+                      "type": "number",
+                      "value": 238
+                    },
+                    "__collapse": false
+                  },
+                  "id": "e6948aea-f7d9-4a88-b0d6-3ed6aa793fe4"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V3",
+                    "value": {
+                      "type": "number",
+                      "value": 258
+                    }
+                  },
+                  "id": "3e95a97b-4554-4fea-bb51-3a9f219a7b18"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V3",
+                    "value": {
+                      "type": "number",
+                      "value": 239
+                    },
+                    "__collapse": false
+                  },
+                  "id": "3477cc1d-2497-462d-901a-162aab681405"
+                }
+              ]
+            },
+            "id": "16868382-f6a3-4518-9b1a-0ad555dc2775"
+          }
+        ],
+        "false": []
+      },
+      "id": "2207dc06-9845-4a66-8d4c-96a983125fc7"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "_resourceType": "script",
+  "id": "459b5591-751c-465d-a24c-7fb86e295f98",
+  "name": "setPartFootprint",
+  "symbol": "script_38",
+  "description": "sets the part for footprint in array partFootprint\nand sets variable PartFootprint",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "placeNo",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "partNo",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "Part footprint var 240-279\n--------------\nFEDC BA98 7654 3210\nddnn nnnn tttt tttt t = part position (upper left corner)\n                    d = direction (0°(horizontal)=00, 90°(vertical)=01, 180°=10, 270°=11)\n                    n = part number (0-39, 48=not placed)"
+      },
+      "id": "d7530ab8-7137-47a3-b984-5c209863de73"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "ae9d1cc6-ffa1-4cb1-9d2a-82deb1c424e2"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTFOOTPRINTARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_GET_INDIRECT VAR_ARRAYVALUE, .ARG0\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "26"
+          }
+        ],
+        "__collapse": true
+      },
+      "id": "a77495b7-e855-4c66-9ec8-c9cce72f68af"
+    },
+    {
+      "command": "EVENT_CLEAR_FLAGS",
+      "args": {
+        "variable": "38",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": true,
+        "flag10": true,
+        "flag11": true,
+        "flag12": true,
+        "flag13": true,
+        "flag14": true,
+        "flag15": false,
+        "flag16": false,
+        "__collapse": true
+      },
+      "id": "4efa121d-fd16-4da4-8ad1-7c56beb13313"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V1"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 8
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "0ff9fbcf-de32-4ce8-a571-2a18c0fcb798"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTFOOTPRINTARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "26"
+          }
+        ],
+        "__collapse": true
+      },
+      "id": "ca30d007-a7ab-43fc-85c9-774738c236ac"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "27",
+        "value": {
+          "type": "variable",
+          "value": "38"
+        },
+        "__collapse": true
+      },
+      "id": "0d3e1703-93ed-4683-817c-cb32af134de8"
+    }
+  ]
+}

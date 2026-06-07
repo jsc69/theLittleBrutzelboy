@@ -1,0 +1,135 @@
+{
+  "_resourceType": "script",
+  "id": "bc2d9eda-2e54-4933-a111-563877d9def6",
+  "name": "calculateFootprint",
+  "symbol": "script_19",
+  "description": "calculates footprint from the partData\nsets footprint\n0: 2 pin THT\n1: 2 pin SMD\n2: others",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "partData",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "footprint",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "FEDCBA9876543210\nXXX            0    -> SMD\nXXX            1    -> THT\n000            S    -> R\n001            S    -> C\n010            S    -> L\n100            S    -> Q (3 pin - transistor)\n101            S    -> U IC 8 pin\n   XXXXXXX          -> IC: number of pins (0-127)\n          TTTTT     -> IC: type (o=NE555, 1=MC34063A, 2=ATTINY13A)\n"
+      },
+      "id": "eaabde56-74aa-4fba-84db-29d3d9dff4c1"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lt",
+          "valueA": {
+            "type": "shr",
+            "valueA": {
+              "type": "variable",
+              "value": "V0"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 13
+            }
+          },
+          "valueB": {
+            "type": "number",
+            "value": 4
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "V0",
+              "flag": 0,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "2 pin THT",
+                    "__collapse": true
+                  },
+                  "id": "858fff31-2513-4067-bbc5-475007369660"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V1",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "__collapse": true
+                  },
+                  "id": "ca47b268-6bbd-4c6c-927b-c92748b32ff2"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "2 pin SMD",
+                    "__collapse": true
+                  },
+                  "id": "f568b925-3f91-4eac-9f76-e33de4548bd5"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "V1",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "ff289f99-572d-4fad-9e87-4a03be6e34a9"
+                }
+              ]
+            },
+            "id": "23fcfd54-a3b0-42c3-8d12-cbf5d8273d70"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "TODO: footprint is IC or transistor",
+              "__collapse": true
+            },
+            "id": "ecb8011e-153e-434f-972d-9038005c9731"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V1",
+              "value": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": true
+            },
+            "id": "0965b17c-2d0b-4dcc-b6a7-94f4d21fbf16"
+          }
+        ]
+      },
+      "id": "0bc618ef-e79d-451e-b224-a38aaf67b7c7"
+    }
+  ]
+}

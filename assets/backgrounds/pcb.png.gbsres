@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "38a9a6e6-a05a-4169-a818-55e4d0d7dc4b",
+  "name": "pcb",
+  "symbol": "bg_pcb",
+  "tileColors": "00400+",
+  "filename": "pcb.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "autoColor": false
+}

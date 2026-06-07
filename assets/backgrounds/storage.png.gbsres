@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "25172119-880c-49b7-94e9-8aa5cef2afe7",
+  "name": "storage",
+  "symbol": "bg_storage",
+  "tileColors": "",
+  "filename": "storage.png",
+  "width": 32,
+  "height": 32,
+  "imageWidth": 256,
+  "imageHeight": 256,
+  "autoColor": false
+}

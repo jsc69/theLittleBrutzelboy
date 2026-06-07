@@ -1,0 +1,73 @@
+{
+  "_resourceType": "script",
+  "id": "e2577b1e-dcfd-43c8-af1f-b5d1b3289f51",
+  "name": "PaintC1",
+  "symbol": "script_6",
+  "description": "Sets tiles for footprint C1 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "variable",
+          "value": "5"
+        },
+        "__collapse": true
+      },
+      "id": "8bf03595-f220-4c65-973f-771192d7704e"
+    },
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 6
+        },
+        "y": {
+          "type": "number",
+          "value": 5
+        },
+        "tilesetId": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+        "tileIndex": {
+          "type": "variable",
+          "value": "12"
+        }
+      },
+      "id": "7cb7f83b-9e69-4f8d-ab22-75318b2198aa"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "variable",
+          "value": "6"
+        },
+        "__collapse": true
+      },
+      "id": "9539744c-5c21-4315-90b3-23eb360cc9db"
+    },
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 6
+        },
+        "y": {
+          "type": "number",
+          "value": 6
+        },
+        "tilesetId": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+        "tileIndex": {
+          "type": "variable",
+          "value": "12"
+        }
+      },
+      "id": "f22f88eb-669a-4e21-af45-430ef64714fc"
+    }
+  ]
+}

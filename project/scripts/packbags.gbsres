@@ -1,0 +1,135 @@
+{
+  "_resourceType": "script",
+  "id": "6babbc0d-19b9-4908-9b0b-b0859ce9add6",
+  "name": "packBags",
+  "symbol": "script_13",
+  "description": "Packs the bags with parts\nSets the bag array with the part numbers\nTODO: randomize, by now it is one to one (bag1=part1 etc.)",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "36",
+        "value": {
+          "type": "number",
+          "value": 280
+        },
+        "__collapse": false
+      },
+      "id": "6425e60f-d7a0-4d72-8e65-9c183ac0d20c"
+    },
+    {
+      "command": "EVENT_LOOP_FOR",
+      "args": {
+        "variable": "37",
+        "from": {
+          "type": "number",
+          "value": 0
+        },
+        "comparison": "<=",
+        "to": {
+          "type": "number",
+          "value": 39
+        },
+        "operation": "+=",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_RPN\n.R_REF VAR_BAGARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_PUSH_CONST 255\nVM_SET_INDIRECT .ARG0, 255\nVM_POP 2",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "36"
+                },
+                {
+                  "type": "variable",
+                  "id": "37"
+                },
+                {
+                  "type": "variable",
+                  "id": "38"
+                }
+              ],
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "7a4138c5-dae3-4ae2-b886-691d037a0cf5"
+          }
+        ]
+      },
+      "id": "b12f3202-71be-4fc3-a1d8-2d2492fd7b59"
+    },
+    {
+      "command": "EVENT_LOOP_FOR",
+      "args": {
+        "variable": "37",
+        "from": {
+          "type": "number",
+          "value": 0
+        },
+        "comparison": "<=",
+        "to": {
+          "type": "number",
+          "value": 39
+        },
+        "operation": "+=",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_RPN\n.R_REF VAR_BAGARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYINDEX\nVM_POP 1",
+              "references": [
+                {
+                  "type": "variable",
+                  "id": "36"
+                },
+                {
+                  "type": "variable",
+                  "id": "37"
+                },
+                {
+                  "type": "variable",
+                  "id": "38"
+                }
+              ],
+              "__collapse": false,
+              "__comment": false
+            },
+            "id": "9341f71b-11b5-44a9-b088-5ebbd2c065b8"
+          }
+        ]
+      },
+      "id": "5d534153-1ebe-4507-bb62-ced941c59c26"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "123",
+        "value": {
+          "type": "number",
+          "value": 255
+        },
+        "__collapse": true
+      },
+      "id": "f4d06726-8627-4503-9dfb-5bb95f3b02ea"
+    }
+  ]
+}

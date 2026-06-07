@@ -1,0 +1,132 @@
+{
+  "_resourceType": "script",
+  "id": "77b34c8d-9cdc-4fd7-9f26-74342f2d7fe0",
+  "name": "setBackgroundTile",
+  "symbol": "script_21",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "index",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "posX",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "posY",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "tileNo",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "791c990e-a4a3-4a6d-a8cd-b5b6cf83238c"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "add",
+          "valueA": {
+            "type": "mul",
+            "valueA": {
+              "type": "sub",
+              "valueA": {
+                "type": "variable",
+                "value": "V2"
+              },
+              "valueB": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "valueB": {
+              "type": "number",
+              "value": 18
+            }
+          },
+          "valueB": {
+            "type": "sub",
+            "valueA": {
+              "type": "variable",
+              "value": "V1"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "d8e8c0bc-1987-493c-ab3c-035383f5d655"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V3"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 8
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "41c1f1cb-7b82-4188-a539-3740c3d375db"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_TILEARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          },
+          {
+            "type": "variable",
+            "id": "40"
+          }
+        ],
+        "__collapse": false
+      },
+      "id": "580b865e-35a3-4d32-b69e-88a834c146ea"
+    }
+  ]
+}

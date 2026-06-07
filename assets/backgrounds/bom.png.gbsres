@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "17f302c2-55ff-4921-ac53-8cf898d96eb7",
+  "name": "bom",
+  "symbol": "bg_bom",
+  "tileColors": "",
+  "filename": "bom.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "autoColor": false
+}

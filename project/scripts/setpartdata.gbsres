@@ -1,0 +1,191 @@
+{
+  "_resourceType": "script",
+  "id": "934e555b-3e1c-473d-b11f-77eac0190e6f",
+  "name": "setPartData",
+  "symbol": "script_40",
+  "description": "sets the part data in PartArray (200-239)\ntype: R=0, C=1, L=2, D=3, Q=4, IC=5\nvalue: 1-127\nfactor: 0=0.1, 1=1, 2=10, 3=100\nunit: 0=p, 1=n, 2=u, 3=m, 4=0, 5=k, 6=M\nmounting 0=SMD, 1=THT",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "partNo",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "type",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "value",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "factor",
+      "passByReference": true
+    },
+    "V4": {
+      "id": "V4",
+      "name": "unit",
+      "passByReference": true
+    },
+    "V5": {
+      "id": "V5",
+      "name": "mounting",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "37",
+        "value": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "__collapse": true
+      },
+      "id": "1512df9f-0605-48dd-844d-27ec0239416f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "shl",
+          "valueA": {
+            "type": "variable",
+            "value": "V1"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 13
+          }
+        },
+        "__collapse": true
+      },
+      "id": "71c9fe31-021f-4990-8fbb-70aaab529132"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V2"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 6
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "5bcf9d65-86f7-4a28-b0df-0f89d30a2a6b"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V3"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 4
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "763e0762-934c-456c-8675-0840064291d6"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "shl",
+            "valueA": {
+              "type": "variable",
+              "value": "V4"
+            },
+            "valueB": {
+              "type": "number",
+              "value": 1
+            }
+          }
+        },
+        "__collapse": true
+      },
+      "id": "6497c4c2-70ee-4b3b-a178-811c94f62166"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "38",
+        "value": {
+          "type": "bOR",
+          "valueA": {
+            "type": "variable",
+            "value": "38"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "V5"
+          }
+        },
+        "__collapse": true
+      },
+      "id": "fbcbb010-2f1c-4fd5-af2c-d9d82e8b162b"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "VM_RPN\n.R_REF VAR_PARTDATAARRAY\n.R_REF VAR_ARRAYINDEX\n.R_OPERATOR .ADD\n.R_STOP\nVM_SET_INDIRECT .ARG0, VAR_ARRAYVALUE\nVM_POP 1",
+        "references": [
+          {
+            "type": "variable",
+            "id": "35"
+          },
+          {
+            "type": "variable",
+            "id": "37"
+          },
+          {
+            "type": "variable",
+            "id": "38"
+          }
+        ]
+      },
+      "id": "2d5b61d2-bb14-47f6-a7b9-828112deab32"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "_resourceType": "script",
+  "id": "365db853-5d16-4031-98f9-bff91317e437",
+  "name": "PaintR2",
+  "symbol": "script_8",
+  "description": "Sets tiles for footprint R2 on background pcb\nTODO: replace by more generic function\nUsed in scene PCB and placePart",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "variable",
+          "value": "13"
+        },
+        "__collapse": true
+      },
+      "id": "6324f8fd-8cd3-472f-8257-16328c006f13"
+    },
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 17
+        },
+        "y": {
+          "type": "number",
+          "value": 6
+        },
+        "tilesetId": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+        "tileIndex": {
+          "type": "variable",
+          "value": "12"
+        },
+        "__collapse": true
+      },
+      "id": "1ea6c6db-2efc-4f4b-92e7-2d6484632299"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "12",
+        "value": {
+          "type": "variable",
+          "value": "14"
+        },
+        "__collapse": true
+      },
+      "id": "71966322-b0b9-4646-a2d3-87c19df9a507"
+    },
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 17
+        },
+        "y": {
+          "type": "number",
+          "value": 7
+        },
+        "tilesetId": "201ec80f-7bbb-4b9f-a1bc-cdc0eb7e5697",
+        "tileIndex": {
+          "type": "variable",
+          "value": "12"
+        },
+        "__collapse": true
+      },
+      "id": "66fe3e86-bf28-4be5-85b0-3d447a17320f"
+    }
+  ]
+}

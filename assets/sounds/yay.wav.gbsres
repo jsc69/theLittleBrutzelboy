@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "b61a9c53-91d4-4e8f-940b-d768a22b2203",
+  "name": "yay.wav",
+  "symbol": "sound_yay_wav",
+  "type": "wav",
+  "filename": "yay.wav"
+}
