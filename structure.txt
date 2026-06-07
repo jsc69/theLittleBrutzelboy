@@ -1,0 +1,248 @@
+Description on program structure
+=================================
+
+
+Scenes
+======
+
+logo
+  - Zeigt das JSC69-Logo
+  - Init: ruft resetValues -> initialisiert das gesamte Spiel (Teile, Pads, Tiles, Bags)
+
+title
+  - Titelbildschirm
+  - Actors: little_top, little_bottom (Titelanimation)
+
+bom
+  - Bill of Materials / Bauteileliste
+  - Keine Actors, keine Trigger
+
+storage
+  - Lagerregal mit 10 Boxen (box1–box10)
+  - Jede Box ist ein Actor; bei Interaktion:
+      1. selectedBox = Boxnummer (0–9)
+      2. SCENE_PUSH_STATE (Rückkehr möglich)
+      3. Wechsel zur box-Szene
+  - Trigger (oben): Wechsel zur pcb-Szene
+
+box  (id: 297c5a5e...)
+  - Zeigt Inhalt einer Box (4 Bag-Slots)
+  - Init:
+      L1 = selectedBox * 4   (erster Bag-Index)
+      setText(L1)            (Slot 0)
+      INC L1 -> setText(L1)  (Slot 1)
+      INC L1 -> setText(L1)  (Slot 2)
+      INC L1 -> setText(L1)  (Slot 3)
+      Overlay fährt schrittweise rein (y: 7 -> 10 -> 13 -> 18)
+  - Game-Loop: Hoch/Runter navigiert zwischen Slots (L0 = gewählter Slot)
+      A: pickupPart -> zurück zur storage-Szene (mit Bauteil in der Hand)
+      B: zurück ohne aufzunehmen
+
+pcb
+  - Hauptspielszene: Platine bestücken und löten
+  - Actors: Flash, Led, Magic Smoke, standingPlayer, Target
+  - Trigger pro Bauteilplatz: Trigger_R3, _C1, _R1, _R2, _D1, _C2, _U1
+      -> jeweils: playerOnPlace(placeNumber)
+  - Init: zeichnet vorhandene Bauteile und Pads, startet GameLoop
+  - Trigger (Reset): ruft resetValues, wechselt zurück zu logo
+
+
+Custom Events
+=============
+
+--- Initialisierung ---
+
+resetValues
+  Ruft auf: initParts, initPads, initBackgroundTiles, packBags
+  Setzt alle Spielzustandsdaten zurück
+
+initParts
+  Ruft auf: setPartData, setPartDataDirect (je Bauteil)
+  Befüllt PartDataArray (var 35) mit Bauteil-Encoding für alle Komponenten
+
+initPads
+  Ruft auf: setPadData, setPadDataDirect, setPartFootprintPosition
+  Befüllt PadArray (var 39) mit Pad-Positionen und -Eigenschaften
+
+initBackgroundTiles
+  Ruft auf: setBackgroundTile
+  Befüllt TileArray (var 40/340) mit Hintergrundkacheln
+
+packBags
+  Verteilt Bauteile zufällig auf Bags (BagArray, var 36)
+  Wird einmal beim Start aufgerufen
+
+
+--- Datenzugriff (Array-Helfer) ---
+
+getPartData (V0: index)
+  Liest PartDataArray[index] -> PartData (var 28)
+  Sonderfall: index=48 -> PartData = 0 (leerer Slot)
+
+setPartData (V0: partNo, V1: type, V2: value, V3: factor, V4: unit, V5: mounting)
+  Encodiert Bauteilparameter als Bitfeld -> schreibt in PartDataArray[partNo]
+
+setPartDataDirect (V0: index, V1: value)
+  Schreibt direkt einen Rohwert in PartDataArray[index]
+
+getPartFromBag (V0: bagNo)
+  Liest BagArray[bagNo] -> PartNo (var 32) und ArrayValue (var 38)
+
+getPadData (V0: padNo)
+  Liest PadArray[padNo] -> PadData (var 9)
+
+setPadData (V0: padNo, V1: posX, V2: posY, V3: orientation, V4: footprint)
+  Encodiert Pad-Parameter -> schreibt in PadArray[padNo]
+
+setPadDataDirect (V0: padNo, V1: padData)
+  Schreibt direkt einen Rohwert in PadArray[padNo]
+
+getPartFootprint (V0: padNo)
+  Liest PartFootprintArray (var 26) -> PartFootprint (var 27)
+
+setPartFootprintPosition (V0: index, V1: posX, V2: posY, V3: orientation, V4: partNo)
+  Schreibt Footprint-Position in PartFootprintArray
+
+getBackgroundTile (V0: index)
+  Liest TileArray[index] -> tile_x, tile_y, tile_no
+
+setBackgroundTile (V0: index, V1: posX, V2: posY, V3: tileNo)
+  Schreibt Kacheldaten in TileArray
+
+setBackGroundTileAt (V0: tilePosition, V1: tileNo)
+  Setzt direkt eine Hintergrundkachel an Position tilePosition
+
+
+--- Darstellung (Tiles zeichnen) ---
+
+setText (V0: bagNo)
+  Ruft auf: getPartFromBag, getPartData, writeType, writeValue
+  Zeichnet Bauteilbeschriftung für einen Bag-Slot im Overlay der box-Szene
+
+writeType (V0: partData, V1: bagPos)
+  Liest Montage-Bit (SMD/THT) und Typ-Bits aus partData
+  Schreibt Typ-Tiles (R/C/L/D/IC + Montage-Symbol) an die richtige Overlay-Position
+
+writeValue (V0: partData, V1: bagPos)
+  Liest Wert-Bits aus partData (Mantisse, Faktor, Einheit)
+  Schreibt Wert-Tiles (Ziffern + Einheiten-Symbol) an die richtige Overlay-Position
+  Sonderfälle: ICs (NE555 etc.), LEDs, Z-Dioden, 1N4004
+
+drawPart (V0: placeNumber)
+  Ruft auf: getBackgroundTile
+  Zeichnet ein platziertes Bauteil auf der Platine (pcb-Szene)
+
+drawPad (V0: padData)
+  Ruft auf: setBackGroundTileAt
+  Zeichnet einen Lötpunkt (Pad) auf der Platine
+
+setPartTileSmd2 (V0: partNo, V1: orientation, V2: tileLeft, V3: tileRight)
+  Setzt Tiles für ein 2-Pin SMD-Bauteil
+
+setPartTileTht2 (V0: partNo, V1: orientation, V2: tileLeft, V3: tileMiddle, V4: tileRight)
+  Setzt Tiles für ein 2-Pin THT-Bauteil
+
+setPartTileSmd8 (V0: partNo, V1: orientation, V2–V8: tile1–tile7)
+  Setzt Tiles für ein 8-Pin SMD-IC
+
+PaintC1 / PaintR1 / PaintR2 / PaintD1 / PaintC2 / PaintU1
+  Zeichnen die jeweiligen Bauteile direkt auf der Platine (statische Paint-Funktionen)
+
+calculateSmdTileIndex (V0: partData, V1: index)
+  Berechnet den Tile-Index für einen SMD-Bauteil-Tile
+
+calculateFootprint (V0: partData, V1: footprint)
+  Berechnet Footprint-Daten aus partData
+
+setPartFootprint (V0: placeNo, V1: partNo)
+  Setzt Footprint-Daten für einen Platz auf der Platine
+
+
+--- Gameplay ---
+
+pickupPart (V0: selectedBox, V1: selectedBag)
+  Ruft auf: getPartFromBag
+  Legt das Teil aus Bag in die Hand des Spielers (setzt Inventory-Variable)
+
+placePart (V0: placeNumber, V1: partNo)
+  Ruft auf: getPartData, getPadData, calculateFootprint, setPartFootprint,
+            getPartTile, setBackGroundTileAt, getPadTile, setPadDataDirect,
+            getBackgroundTile, drawPart, setPartTileSmd2/Tht2/Smd8, drawPad,
+            PaintC1/R1/R2/D1/C2/U1
+  Platziert ein Bauteil auf der Platine und zeichnet es
+
+playerOnPlace (V0: placeNumber)
+  Ruft auf: placePart
+  Trigger-Handler: Spieler betritt einen Bauteilplatz -> placePart
+
+GameLoop (V0: Variable A, actor0: staticPlayer)
+  Ruft auf: getPadToSolder, getPadData, setPadDataDirect, drawPad
+  Haupt-Spielschleife auf der Platine: Löt-Interaktion
+
+getPadToSolder
+  Ruft auf: getPadData
+  Ermittelt den nächsten zu lötenden Pad
+
+
+Assets
+======
+
+Musik:
+  theBrutzler.mod  - Hauptmelodie
+  template.mod     - Template/Platzhalter
+  song_template.uge - Template
+
+Sounds:
+  yay.wav          - Erfolg
+  fail.wav         - Fehler
+  die.wav          - Game Over
+  mlem.wav         - ?
+  erdbeerkaese.wav - ?
+  GBFX.sav / GBFX2.sav - GB-Soundeffekte
+
+Sprites:
+  brutzler_sprite          - Hauptfigur (laufend)
+  brutzler_solder_sprite   - Hauptfigur (lötend)
+  little                   - Titelbildschirm-Figur
+  box                      - Bauteilbox
+  target                   - Zielmarkierung auf Platine
+  flash                    - Blitz-Effekt
+  led                      - LED-Effekt
+  magicsmoke               - Magic Smoke (Fehler-Effekt)
+  debris                   - Trümmer-Effekt
+  pointer                  - Zeiger/Cursor
+
+Hintergründe:
+  pcb       - Platine (Hauptspiel)
+  storage   - Lagerregal
+  box       - Bauteilbox-Ansicht
+  bom       - Bill of Materials
+  title     - Titelbildschirm
+  jsc69_logo - Logo
+  universal  - Universalhintergrund
+
+
+Datenfluss (Überblick)
+======================
+
+Spielstart (logo):
+  resetValues
+    -> initParts    : befüllt PartDataArray[0..48] mit Bauteil-Encodings
+    -> initPads     : befüllt PadArray[0..19] mit Pad-Daten der Platine
+    -> initBackgroundTiles : befüllt TileArray mit Hintergrundkacheln
+    -> packBags     : verteilt Bauteile zufällig auf BagArray[0..39]
+
+Bauteil aufnehmen (storage -> box -> pcb):
+  storage: selectedBox setzen -> PUSH_STATE -> box
+  box: setText x4 (Overlay aufbauen)
+    -> getPartFromBag -> BagArray[bagNo] -> PartNo
+    -> getPartData    -> PartDataArray[PartNo] -> PartData
+    -> writeType/writeValue -> Tiles im Overlay
+  box: A drücken -> pickupPart -> Inventory = PartNo -> POP zurück zu storage
+  storage: zurück zur pcb-Szene
+
+Bauteil platzieren (pcb):
+  Spieler läuft auf Trigger_Xn
+    -> playerOnPlace(placeNumber)
+    -> placePart(placeNumber, Inventory)
+       -> Footprint berechnen, Pads updaten, Tiles zeichnen
